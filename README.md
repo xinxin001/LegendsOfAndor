@@ -11,7 +11,7 @@ Video game adaptation of the eponymous board game
   - Hero.pickupGold() - Alex
   - Node.gold attribute - Xin
 - Picking up a farmer, and dropping the farmer oﬀ at the castle:
-  - Hero.pickupFarmer()
+  - Hero.pickupFarmer() -Weiya
 - Buying strength points at the merchant:
   - Merchant Class
   - Hero.trade()
@@ -20,4 +20,4 @@ Video game adaptation of the eponymous board game
   - GameUnit(Hong Jian) <--Monster Class - Hong Jian
   - Fight Menu - Hong Jian
 - Replenishing willpower by drinking from the well:
-  - Well Class
+  - Well Class -Weiya
