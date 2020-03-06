@@ -21,3 +21,4 @@ Video game adaptation of the eponymous board game
   - Fight Menu - Hong Jian
 - Replenishing willpower by drinking from the well:
   - Well Class -Weiya
+- Hero Time Marker (who will do it?)
