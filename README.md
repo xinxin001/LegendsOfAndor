@@ -12,10 +12,10 @@ Video game adaptation of the eponymous board game
   - Node.gold attribute - Xin
 - Picking up a farmer, and dropping the farmer oﬀ at the castle:
   - Hero.pickupFarmer() -Weiya
-- Buying strength points at the merchant:
-  - Merchant Class
-  - Hero.trade()
-  - Shop Menu
+- Buying strength points at the merchant: 
+  - Merchant Class -Julien
+  - Hero.trade() -julien
+  - Shop Menu -julien
 - Fighting a monster:
   - GameUnit(Hong Jian) <--Monster Class - Hong Jian
   - Fight Menu - Hong Jian
