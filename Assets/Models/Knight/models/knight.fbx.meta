@@ -1,9 +1,7 @@
 fileFormatVersion: 2
-guid: ffaf641b210f5ea41952cf36f1379d66
-timeCreated: 1482777478
-licenseType: Store
+guid: e5e7560ac7d03d86e92e8dae4fc6a9f4
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: body
     100002: chest
@@ -196,17 +194,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: cloth
-    second: {fileID: 2100000, guid: 17e3c38673f990e48adc376e6daac481, type: 2}
+    second: {fileID: 2100000, guid: 3680e2e8be4c3a287adbac85c3dd8af7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: knight
-    second: {fileID: 2100000, guid: 28b2e2a9409a67f4eaee9b9525fd048f, type: 2}
+    second: {fileID: 2100000, guid: abfab318ae7a32d1ca609001c6871792, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: weapons
-    second: {fileID: 2100000, guid: 1c11cbb595d4f3d4a8d109d925aa1ca1, type: 2}
+    second: {fileID: 2100000, guid: 7844b657731a7757393f51d254c550f8, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -225,6 +223,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -239,6 +238,7 @@ ModelImporter:
     globalScale: 0.85
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
@@ -256,11 +256,16 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 0.0085
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -1113,7 +1118,6 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1

@@ -16,6 +16,7 @@ public class TestConnect : MonoBehaviourPunCallbacks
 
     // Update is called once per frame
     public override void OnConnectedToMaster(){
+        print("NAME: " + MasterManager.GameSettings.NickName);
         print("Connected to server.");
         print(PhotonNetwork.LocalPlayer.NickName);
     }
