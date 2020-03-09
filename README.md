@@ -11,6 +11,7 @@ Video game adaptation of the eponymous board game
   - Hero.pickupGold() - Alex
   - Node.gold attribute - Xin
 - Picking up a farmer, and dropping the farmer oﬀ at the castle:
+<<<<<<< HEAD
   - Hero.pickupFarmer() -Weiya
 - Buying strength points at the merchant: 
   - Merchant Class -Julien
@@ -22,3 +23,15 @@ Video game adaptation of the eponymous board game
 - Replenishing willpower by drinking from the well:
   - Well Class -Weiya
 - Hero Time Marker (who will do it?)
+=======
+  - Hero.pickupFarmer()
+- Buying strength points at the merchant:
+  - Merchant Class
+  - Hero.trade()
+  - Shop Menu
+- Fighting a monster:
+  - GameUnit(Hong Jian) <--Monster Class - Hong Jian
+  - Fight Menu - Hong Jian
+- Replenishing willpower by drinking from the bottle:
+  - Well Class
+>>>>>>> 2cc536e711345daa969862cfd6852054f515eed5
