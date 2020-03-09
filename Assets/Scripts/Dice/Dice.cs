@@ -6,7 +6,7 @@ public class Dice : MonoBehaviour
 {
     Rigidbody rb;
 
-    bool hasLanded;
+    public bool hasLanded;
     bool thrown;
 
     Vector3 initPosition;
@@ -14,6 +14,10 @@ public class Dice : MonoBehaviour
     public int diceValue;
 
     public DiceSide[] diceSides;
+
+    public Dice opposingDice;
+    public healthBar opponentHealth;
+    public healthBar myHealth;
 
 
     private void Start()
@@ -80,8 +84,33 @@ public class Dice : MonoBehaviour
             if (side.OnGround())
             {
                 diceValue = side.sideValue;
-                Debug.Log(diceValue + " has been rolled");
+                Battle();
             }
+        }
+    }
+
+    void Battle()
+    {
+
+        Debug.Log(diceValue + " has been rolled");
+        Debug.Log(opposingDice.diceValue + " OPPONENT");
+
+        if (opposingDice.diceValue > diceValue)
+        {
+            float oppRollValue = opposingDice.diceValue;
+            float dec = (oppRollValue / 10f);
+            myHealth.Fill -= dec;
+        }
+        else if (opposingDice.diceValue < diceValue)
+        {
+            float rollValue = diceValue;
+            float decrement = (rollValue / 10f);
+            opponentHealth.Fill -= decrement;
+        }
+        else if(opposingDice.diceValue == diceValue)
+        {
+            opponentHealth.Fill -= 0;
+            myHealth.Fill -= 0;
         }
     }
 }

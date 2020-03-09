@@ -443,6 +443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57563cad724d04ca2bea45610d14bfd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasLanded: 0
   diceValue: 0
   diceSides:
   - {fileID: 169803472}
@@ -451,6 +452,9 @@ MonoBehaviour:
   - {fileID: 293956038}
   - {fileID: 1322356520}
   - {fileID: 2078797155}
+  opposingDice: {fileID: 0}
+  opponentHealth: {fileID: 0}
+  myHealth: {fileID: 0}
 --- !u!54 &237706705
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1028,8 +1032,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bar: {fileID: 1715783503}
   Fill: 1
-  opposingDice: {fileID: 237706703}
-  myDice: {fileID: 1675055022}
 --- !u!114 &502254234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1334,7 +1336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 20437e4195fd2437c9261f224bc26b01, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.389
+      value: 5.83
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 20437e4195fd2437c9261f224bc26b01, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1342,7 +1344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 20437e4195fd2437c9261f224bc26b01, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.857
+      value: 0.43
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 20437e4195fd2437c9261f224bc26b01, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2046,7 +2048,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675055020}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.206, y: 3.8, z: -6.92}
+  m_LocalPosition: {x: 6.18, y: 3.8, z: -8.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 393904339}
@@ -2070,6 +2072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57563cad724d04ca2bea45610d14bfd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasLanded: 0
   diceValue: 0
   diceSides:
   - {fileID: 393904340}
@@ -2078,6 +2081,9 @@ MonoBehaviour:
   - {fileID: 793961571}
   - {fileID: 157158478}
   - {fileID: 1808482432}
+  opposingDice: {fileID: 237706703}
+  opponentHealth: {fileID: 2043104086}
+  myHealth: {fileID: 502254233}
 --- !u!64 &1675055023
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2630,8 +2636,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bar: {fileID: 932989987}
   Fill: 1
-  opposingDice: {fileID: 1675055022}
-  myDice: {fileID: 237706703}
 --- !u!1 &2078797150
 GameObject:
   m_ObjectHideFlags: 0
