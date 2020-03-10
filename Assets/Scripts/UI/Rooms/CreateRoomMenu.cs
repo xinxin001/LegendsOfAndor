@@ -14,8 +14,11 @@ public class CreateRoomMenu : MonoBehaviourPunCallbacks
     {
         //check if connected before creating a room
 
-        if (!PhotonNetwork.IsConnected)
-            return;
+        if (!PhotonNetwork.IsConnected){
+            Debug.Log("Not connected to server");
+                return;
+        }
+        print("Creating room.");
         //JoinOrCreateRoom
         RoomOptions options = new RoomOptions();
         options.MaxPlayers = 4;
@@ -24,13 +27,13 @@ public class CreateRoomMenu : MonoBehaviourPunCallbacks
 
     public override void OnCreatedRoom()
     {
-        print("Created room successfully");
+        Debug.Log("Created room successfully.", this);
     }
 
 
 
     public override void OnCreateRoomFailed(short returnCode, string message)
     {
-        print("Failed to create room." + message);
+        Debug.Log("Room creation failed: " + message, this);
     }
 }
