@@ -6,8 +6,12 @@ using UnityEngine;
 public class Region
 {
     public string regionId;
-    public string[] adjacentRegionsId;
-    public string nextRegionId;
+    public Vector3 regionCoord;
+    public GameObject[] adjacentRegions;
+    public GameObject nextRegion;
+
+    public Monster[] monsters;
+    public GameObject[] heros;
 
     public int gold;
     public bool fountain;

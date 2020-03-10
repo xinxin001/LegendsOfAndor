@@ -10,7 +10,6 @@ public class Hero : MonoBehaviour
     private int maxWP;
     private int maxSP;
     private int rN;
-    private HeroKind heroKind;
     public ArrayList farmerlist = new ArrayList();
 
     public int getGold {
@@ -34,12 +33,6 @@ public class Hero : MonoBehaviour
     public int getrN
     {
         get { return rN; }
-    }
-    public HeroKind getHerokind{
-        get { return heroKind; }
-    }
-    public void setHerokind(HeroKind hk){
-        heroKind = hk;
     }
     public void PickUpFarmer(Farmer f){
     }

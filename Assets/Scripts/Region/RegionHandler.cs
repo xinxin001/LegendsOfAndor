@@ -7,9 +7,10 @@ public class RegionHandler : MonoBehaviour
     public Region region;
     private SpriteRenderer sprite;
 
-    public Color32 oldColor;
-    public Color32 hoverColor;
     public Color32 startColor;
+    public Color32 hoverColor;
+    public Color32 mouseDownColor;
+    
 
     //This sequences makes the selected Region get highlighted
     void Awake()
@@ -19,10 +20,17 @@ public class RegionHandler : MonoBehaviour
     }
     void OnMouseEnter()
     {
-        oldColor = sprite.color;
         sprite.color = hoverColor;
     }
     void OnMouseExit()
+    {
+        sprite.color = startColor;
+    }
+    void OnMouseDown()
+    {
+        sprite.color = mouseDownColor;
+    }
+    void OnMouseUp()
     {
         sprite.color = startColor;
     }
@@ -31,6 +39,7 @@ public class RegionHandler : MonoBehaviour
     void OnDrawGizmos()
     {
         region.regionId = name;
+        region.regionCoord = GameObject.Find(name).transform.position;
         this.tag = "Region";
     }
 }
