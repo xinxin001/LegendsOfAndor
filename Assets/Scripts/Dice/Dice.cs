@@ -1,19 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Dice : MonoBehaviour
 {
     Rigidbody rb;
 
     public bool hasLanded;
-    bool thrown;
+    public bool thrown;
 
     Vector3 initPosition;
 
     public int diceValue;
 
     public DiceSide[] diceSides;
+
 
     public Dice opposingDice;
     public healthBar opponentHealth;
@@ -32,6 +34,10 @@ public class Dice : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             RollDice();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            SceneManager.LoadScene(2);
         }
 
         if(rb.IsSleeping() && !hasLanded && thrown)
@@ -57,6 +63,8 @@ public class Dice : MonoBehaviour
         else if(thrown && hasLanded)
         {
             Reset();
+            Battle();
+
         }
     }
 
@@ -81,10 +89,9 @@ public class Dice : MonoBehaviour
         diceValue = 0;
         foreach(DiceSide side in diceSides)
         {
-            if (side.OnGround())
+            if (side.OnGround() && hasLanded)
             {
                 diceValue = side.sideValue;
-                Battle();
             }
         }
     }
@@ -107,7 +114,7 @@ public class Dice : MonoBehaviour
             float decrement = (rollValue / 10f);
             opponentHealth.Fill -= decrement;
         }
-        else if(opposingDice.diceValue == diceValue)
+        else if (opposingDice.diceValue == diceValue)
         {
             opponentHealth.Fill -= 0;
             myHealth.Fill -= 0;
