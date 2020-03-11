@@ -2344,8 +2344,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 847f07d85197d4bff9360709abe9fd21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyColor: {fileID: 0}
   empty: 0
+  emptyColor:
+    serializedVersion: 2
+    rgba: 4278190080
 --- !u!1 &277645321
 GameObject:
   m_ObjectHideFlags: 0

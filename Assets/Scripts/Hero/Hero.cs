@@ -11,6 +11,7 @@ public class Hero : MonoBehaviour
     private int maxSP;
     private int rN;
     private HeroKind heroKind;
+    private int willPower;
     public ArrayList farmerlist = new ArrayList();
 
     public int getGold {
@@ -35,6 +36,11 @@ public class Hero : MonoBehaviour
     {
         get { return rN; }
     }
+    public int getwiiPower
+    {
+        get { return willPower; }
+    }
+
     public HeroKind getHerokind{
         get { return heroKind; }
     }
