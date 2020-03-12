@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
-
+[System.Serializable]
 public abstract class GameUnit : MonoBehaviour
 {
     private int SP;
     private int WP;
-    int regionNumber;
+    public GameObject currentRegion;
 
     int getSP()
     {

@@ -2,44 +2,51 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+
 public class Hero : MonoBehaviour
 {
     private int gold;
-    private int timeOfDay;
-    private bool movecomplete;
-    private int maxWP;
+    public int timeOfDay = 7;
+    public int maxWP = 7;
     private int maxSP;
-    private int rN;
-    private HeroKind heroKind;
+    public GameObject currentRegion;
     public ArrayList farmerlist = new ArrayList();
+
+    private void Start()
+    {
+        
+    }
 
     public int getGold {
         get { return gold; }
+    }
+    public void addGold(int amount)
+    {
+        gold = gold + amount;
     }
     public int getTime
     {
         get { return timeOfDay; }
     }
-
-    public bool getmoveStatus{
-        get { return movecomplete; }
+    public void decrementTime()
+    {
+        timeOfDay = timeOfDay - 1;
     }
     public int getmaxWP
     {
         get { return maxWP; }
     }
+    public void subtractMaxWP(int number)
+    {
+        maxWP = maxWP - number;
+    }
     public int getmaxSP{
         get { return maxSP; }
     }
-    public int getrN
+    public void addMaxSP(int addedSP)
     {
-        get { return rN; }
-    }
-    public HeroKind getHerokind{
-        get { return heroKind; }
-    }
-    public void setHerokind(HeroKind hk){
-        heroKind = hk;
+        maxSP = maxSP + addedSP;
     }
     public void PickUpFarmer(Farmer f){
     }

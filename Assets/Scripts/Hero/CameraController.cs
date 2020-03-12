@@ -4,22 +4,13 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public GameObject hero;        //Public variable to store a reference to the player game object
+    public int Speed = 1;
 
-
-    private Vector3 offset;            //Private variable to store the offset distance between the player and camera
-
-    // Use this for initialization
-    void Start()
+    void Update()
     {
-        //Calculate and store the offset value by getting the distance between the player's position and camera's position.
-        offset = transform.position - hero.transform.position;
-    }
+        float xAxisValue = Input.GetAxis("Horizontal") * Speed;
+        float yAxisValue = Input.GetAxis("Vertical") * Speed;
 
-    // LateUpdate is called after Update each frame
-    void LateUpdate()
-    {
-        // Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
-        transform.position = hero.transform.position + offset;
+        transform.position = new Vector3(transform.position.x + xAxisValue, transform.position.y + yAxisValue, transform.position.z);
     }
 }
