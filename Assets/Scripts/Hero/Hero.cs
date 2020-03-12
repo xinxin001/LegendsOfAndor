@@ -13,8 +13,17 @@ public class Hero : MonoBehaviour
     public GameObject currentRegion;
     public ArrayList farmerlist = new ArrayList();
 
+    private void Start()
+    {
+        
+    }
+
     public int getGold {
         get { return gold; }
+    }
+    public void addGold(int amount)
+    {
+        gold = gold + amount;
     }
     public int getTime
     {
@@ -34,6 +43,10 @@ public class Hero : MonoBehaviour
     }
     public int getmaxSP{
         get { return maxSP; }
+    }
+    public void addMaxSP(int addedSP)
+    {
+        maxSP = maxSP + addedSP;
     }
     public void PickUpFarmer(Farmer f){
     }

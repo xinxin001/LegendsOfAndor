@@ -187,7 +187,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13409754}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.918319, y: 3.830696, z: 0.9238281}
+  m_LocalPosition: {x: 10.918319, y: 3.830696, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -207,10 +207,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 63
-    regionCoord: {x: 12.47, y: 4.75, z: -1}
+    regionCoord: {x: 12.47, y: 4.75, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -633,7 +633,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 32357958}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.021682, y: 1.2906961, z: 0.9238281}
+  m_LocalPosition: {x: -14.021682, y: 1.2906961, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -653,10 +653,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 3
-    regionCoord: {x: -12.47, y: 2.21, z: -1}
+    regionCoord: {x: -12.47, y: 2.21, z: -2.9238281}
     adjacentRegions: []
-    nextRegion: {fileID: 0}
-    monsters: []
+    nextRegion: {fileID: 675731072}
+    monster: {fileID: 1535700691}
     heros: []
     gold: 0
     fountain: 0
@@ -859,15 +859,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012531979720, guid: 5bcbf31ded2e353449622ec74f8954da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.059104
+      value: -6.51
       objectReference: {fileID: 0}
     - target: {fileID: 4000012531979720, guid: 5bcbf31ded2e353449622ec74f8954da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3583069
+      value: 4.67
       objectReference: {fileID: 0}
     - target: {fileID: 4000012531979720, guid: 5bcbf31ded2e353449622ec74f8954da, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.630416
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 4000012531979720, guid: 5bcbf31ded2e353449622ec74f8954da, type: 3}
       propertyPath: m_LocalRotation.x
@@ -978,7 +978,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 66136719}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.441682, y: -7.949304, z: 0.9238281}
+  m_LocalPosition: {x: -15.441682, y: -7.949304, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -998,10 +998,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 35
-    regionCoord: {x: -13.89, y: -7.03, z: -1}
+    regionCoord: {x: -13.89, y: -7.03, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -1218,7 +1218,7 @@ Transform:
   - {fileID: 629299426}
   - {fileID: 1535700690}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &74922077
 GameObject:
@@ -1295,7 +1295,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74922077}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.6683178, y: 6.030696, z: 0.9238281}
+  m_LocalPosition: {x: 2.6683178, y: 6.030696, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -1315,10 +1315,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 53
-    regionCoord: {x: 4.22, y: 6.95, z: -1}
+    regionCoord: {x: 4.22, y: 6.95, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -1597,7 +1597,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 85655477}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.523682, y: 3.166696, z: 0.9238281}
+  m_LocalPosition: {x: -19.523682, y: 3.166696, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -1617,10 +1617,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 5
-    regionCoord: {x: -17.972, y: 4.086, z: -1}
+    regionCoord: {x: -17.972, y: 4.086, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -1865,7 +1865,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 87226753}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.681682, y: 10.539696, z: 0.9238281}
+  m_LocalPosition: {x: -14.681682, y: 10.539696, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -1885,10 +1885,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 9
-    regionCoord: {x: -13.13, y: 11.459, z: -1}
+    regionCoord: {x: -13.13, y: 11.459, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -2078,6 +2078,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c26b06ce280010b4ea94117ee11dcac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentRegion: {fileID: 664484455}
+--- !u!114 &87872331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87872327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c12a414faf9994fb1cbc65900591d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  direction: {x: 0, y: 0, z: 0}
+--- !u!65 &87872332
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87872327}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &102273665
 GameObject:
   m_ObjectHideFlags: 0
@@ -2151,12 +2179,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 102273665}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.56, y: -0.9, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.892699, y: -4.875857, z: -7.6015625}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_Father: {fileID: 1322369291}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &102273669
 PolygonCollider2D:
@@ -2293,7 +2321,7 @@ Transform:
   - {fileID: 2084850409}
   - {fileID: 1787088926}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &277645321
 GameObject:
@@ -2370,7 +2398,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 277645321}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.9683185, y: 3.8406963, z: 0.9238281}
+  m_LocalPosition: {x: 6.9683185, y: 3.8406963, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -2390,10 +2418,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 56
-    regionCoord: {x: 8.52, y: 4.76, z: -1}
+    regionCoord: {x: 8.52, y: 4.76, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -2715,12 +2743,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 287896834}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.52, y: 10.19, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.8527, y: 6.214143, z: -7.6015625}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_Father: {fileID: 1322369291}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &287896838
 PolygonCollider2D:
@@ -2826,7 +2854,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308576075}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.848318, y: 5.9006963, z: 0.9238281}
+  m_LocalPosition: {x: 12.848318, y: 5.9006963, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -2846,10 +2874,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 58
-    regionCoord: {x: 14.4, y: 6.82, z: -1}
+    regionCoord: {x: 14.4, y: 6.82, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -3193,7 +3221,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323234533}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.171681, y: -0.9593039, z: 0.9238281}
+  m_LocalPosition: {x: -15.171681, y: -0.9593039, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -3213,10 +3241,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 19
-    regionCoord: {x: -13.62, y: -0.04000002, z: -1}
+    regionCoord: {x: -13.62, y: -0.04000002, z: -2.9238281}
     adjacentRegions: []
-    nextRegion: {fileID: 0}
-    monsters: []
+    nextRegion: {fileID: 32357958}
+    monster: {fileID: 1535700691}
     heros: []
     gold: 0
     fountain: 0
@@ -3437,6 +3465,56 @@ PolygonCollider2D:
       - {x: 1.735, y: -3.48}
       - {x: 1.925, y: -3.4099998}
       - {x: 2.115, y: -3.36}
+--- !u!1 &336889723
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 336889725}
+  - component: {fileID: 336889724}
+  m_Layer: 0
+  m_Name: MonsterManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &336889724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336889723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb48470b4892b044830dc66a204bf72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterList:
+  - {fileID: 87872330}
+  - {fileID: 642752803}
+  - {fileID: 747421727}
+  - {fileID: 1350791678}
+  - {fileID: 629299427}
+  - {fileID: 1535700691}
+--- !u!4 &336889725
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336889723}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.3141308, y: -2.3141606, z: 0.0078125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1760823777}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &369058387
 GameObject:
   m_ObjectHideFlags: 0
@@ -3512,7 +3590,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 369058387}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.312681, y: 8.971696, z: 0.9238281}
+  m_LocalPosition: {x: -16.312681, y: 8.971696, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -3532,10 +3610,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 7
-    regionCoord: {x: -14.761, y: 9.891, z: -1}
+    regionCoord: {x: -14.761, y: 9.891, z: -2.9238281}
     adjacentRegions: []
-    nextRegion: {fileID: 0}
-    monsters: []
+    nextRegion: {fileID: 1962787717}
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -3887,7 +3965,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 409000083}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.928318, y: -1.2893039, z: 0.9238281}
+  m_LocalPosition: {x: 2.928318, y: -1.2893039, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -3907,10 +3985,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 44
-    regionCoord: {x: 4.48, y: -0.37, z: -1}
+    regionCoord: {x: 4.48, y: -0.37, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -4230,7 +4308,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &426193568
 GameObject:
@@ -4307,7 +4385,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 426193568}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.721682, y: 4.230696, z: 0.9238281}
+  m_LocalPosition: {x: -6.721682, y: 4.230696, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -4327,10 +4405,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 13
-    regionCoord: {x: -5.17, y: 5.15, z: -1}
+    regionCoord: {x: -5.17, y: 5.15, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -4686,7 +4764,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 426381346}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.951681, y: 6.550696, z: 0.9238281}
+  m_LocalPosition: {x: -15.951681, y: 6.550696, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -4706,17 +4784,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 0
-    regionCoord: {x: -14.4, y: 7.47, z: -1}
-    adjacentRegions:
-    - {fileID: 369058387}
-    - {fileID: 2103254938}
-    - {fileID: 1465440022}
-    - {fileID: 675731072}
-    - {fileID: 2010002900}
-    - {fileID: 85655477}
-    - {fileID: 589264067}
-    nextRegion: {fileID: 0}
-    monsters: []
+    regionCoord: {x: -14.4, y: 7.47, z: -2.9238281}
+    adjacentRegions: []
+    nextRegion: {fileID: 1962787717}
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -5157,7 +5228,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 455065197}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.891682, y: 7.6006966, z: 0.9238281}
+  m_LocalPosition: {x: -2.891682, y: 7.6006966, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -5177,10 +5248,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 50
-    regionCoord: {x: -1.34, y: 8.52, z: -1}
+    regionCoord: {x: -1.34, y: 8.52, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -5472,11 +5543,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488636137}
   m_LocalRotation: {x: -0.30578128, y: 0.42507234, z: 0.09145363, w: 0.8470228}
-  m_LocalPosition: {x: 1.88, y: 5.01, z: -1.17}
+  m_LocalPosition: {x: -4.58, y: 4.9, z: -8.17}
   m_LocalScale: {x: 1.0347, y: 1.0347, z: 1.0347}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: -36.567, y: 55.785004, z: -7.5140004}
 --- !u!1 &514740300 stripped
 GameObject:
@@ -5497,7 +5568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hero: {fileID: 514740300}
-  speed: 1000
+  speed: 10000
   target: {x: 0, y: 0, z: 0}
 --- !u!114 &514740306
 MonoBehaviour:
@@ -5587,12 +5658,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 520485076}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.53, y: -10.03, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.8627, y: -14.0058565, z: -7.6015625}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 1322369291}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &520485080
 PolygonCollider2D:
@@ -5698,7 +5769,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530472501}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.678318, y: 8.370696, z: 0.9238281}
+  m_LocalPosition: {x: 11.678318, y: 8.370696, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -5718,10 +5789,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 59
-    regionCoord: {x: 13.23, y: 9.29, z: -1}
+    regionCoord: {x: 13.23, y: 9.29, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -6008,7 +6079,7 @@ Camera:
   far clip plane: 1000
   field of view: 155
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -6032,7 +6103,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.22, y: -5.86, z: -10}
+  m_LocalPosition: {x: -5.18, y: -1.59, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6124,12 +6195,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 555098963}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.13, y: 11.97, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.5373, y: 7.9941435, z: -7.6015625}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_Father: {fileID: 752181353}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &555098967
 PolygonCollider2D:
@@ -6245,12 +6316,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557525623}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.72, y: 12.04, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.0527, y: 8.064143, z: -7.6015625}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_Father: {fileID: 752181353}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &557525627
 PolygonCollider2D:
@@ -6370,7 +6441,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 559265113}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.571682, y: 5.830696, z: 0.9238281}
+  m_LocalPosition: {x: -8.571682, y: 5.830696, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -6390,10 +6461,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 12
-    regionCoord: {x: -7.02, y: 6.75, z: -1}
+    regionCoord: {x: -7.02, y: 6.75, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -6673,7 +6744,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 563467489}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.991682, y: -3.179304, z: 0.9238281}
+  m_LocalPosition: {x: -17.991682, y: -3.179304, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -6693,10 +6764,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 22
-    regionCoord: {x: -16.44, y: -2.26, z: -1}
+    regionCoord: {x: -16.44, y: -2.26, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -7038,7 +7109,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584524099}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.581682, y: -8.7793045, z: 0.9238281}
+  m_LocalPosition: {x: -7.581682, y: -8.7793045, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -7058,10 +7129,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 41
-    regionCoord: {x: -6.03, y: -7.8600006, z: -1}
+    regionCoord: {x: -6.03, y: -7.8600006, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -7392,7 +7463,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 589264067}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.741681, y: 3.8206959, z: 0.9238281}
+  m_LocalPosition: {x: -10.741681, y: 3.8206959, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -7412,10 +7483,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 6
-    regionCoord: {x: -9.19, y: 4.74, z: -1}
+    regionCoord: {x: -9.19, y: 4.74, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -7683,6 +7754,38 @@ PolygonCollider2D:
       - {x: 3.225, y: -3.6799998}
       - {x: 3.335, y: -3.6299999}
       - {x: 3.5049999, y: -3.55}
+--- !u!1 &598826672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 598826673}
+  m_Layer: 0
+  m_Name: Shields
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &598826673
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598826672}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.8337083, y: 4.0797415, z: -10.009844}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1962787718}
+  - {fileID: 1051362152}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &605686026
 GameObject:
   m_ObjectHideFlags: 0
@@ -7756,12 +7859,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 605686026}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.08, y: 11.83, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.4127, y: 7.854143, z: -7.6015625}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_Father: {fileID: 752181353}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &605686030
 PolygonCollider2D:
@@ -7907,7 +8010,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 605974089}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.348318, y: 5.980696, z: 0.9238281}
+  m_LocalPosition: {x: 15.348318, y: 5.980696, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -7927,10 +8030,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 62
-    regionCoord: {x: 16.9, y: 6.9, z: -1}
+    regionCoord: {x: 16.9, y: 6.9, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -8166,7 +8269,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623674423}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.058318, y: 6.600696, z: 0.9238281}
+  m_LocalPosition: {x: 5.058318, y: 6.600696, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -8186,10 +8289,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 54
-    regionCoord: {x: 6.61, y: 7.52, z: -1}
+    regionCoord: {x: 6.61, y: 7.52, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -8445,6 +8548,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c26b06ce280010b4ea94117ee11dcac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentRegion: {fileID: 1071171936}
+--- !u!114 &629299429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629299425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c12a414faf9994fb1cbc65900591d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  direction: {x: 0, y: 0, z: 0}
+--- !u!65 &629299430
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629299425}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &642752801 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000010402951368, guid: 5bcbf31ded2e353449622ec74f8954da,
@@ -8469,6 +8600,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c26b06ce280010b4ea94117ee11dcac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentRegion: {fileID: 1271030404}
+--- !u!114 &642752805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642752801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c12a414faf9994fb1cbc65900591d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  direction: {x: 0, y: 0, z: 0}
+--- !u!65 &642752806
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642752801}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &664484455
 GameObject:
   m_ObjectHideFlags: 0
@@ -8544,7 +8703,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 664484455}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.361682, y: 8.660696, z: 0.9238281}
+  m_LocalPosition: {x: -12.361682, y: 8.660696, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -8564,10 +8723,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 8
-    regionCoord: {x: -10.81, y: 9.58, z: -1}
+    regionCoord: {x: -10.81, y: 9.58, z: -2.9238281}
     adjacentRegions: []
-    nextRegion: {fileID: 0}
-    monsters: []
+    nextRegion: {fileID: 369058387}
+    monster: {fileID: 87872330}
     heros: []
     gold: 0
     fountain: 0
@@ -8857,12 +9016,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 672810361}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.59, y: 2.79, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.9227, y: -1.185857, z: -7.6015625}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_Father: {fileID: 1322369291}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &672810365
 PolygonCollider2D:
@@ -8968,7 +9127,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 674043595}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.518318, y: -10.369304, z: 0.9238281}
+  m_LocalPosition: {x: 9.518318, y: -10.369304, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -8988,10 +9147,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 70
-    regionCoord: {x: 11.07, y: -9.45, z: -1}
+    regionCoord: {x: 11.07, y: -9.45, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -9233,7 +9392,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &675731072
 GameObject:
@@ -9310,7 +9469,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675731072}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.931682, y: 3.2506962, z: 0.9238281}
+  m_LocalPosition: {x: -14.931682, y: 3.2506962, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -9330,14 +9489,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 1
-    regionCoord: {x: -13.38, y: 4.17, z: -1}
-    adjacentRegions:
-    - {fileID: 426381346}
-    - {fileID: 1465440022}
-    - {fileID: 2010002900}
-    - {fileID: 32357958}
-    nextRegion: {fileID: 675731072}
-    monsters: []
+    regionCoord: {x: -13.38, y: 4.17, z: -2.9238281}
+    adjacentRegions: []
+    nextRegion: {fileID: 1962787717}
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -9579,7 +9734,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 711527507}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.681682, y: -4.8693037, z: 0.9238281}
+  m_LocalPosition: {x: -7.681682, y: -4.8693037, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -9599,10 +9754,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 28
-    regionCoord: {x: -6.13, y: -3.9499998, z: -1}
+    regionCoord: {x: -6.13, y: -3.9499998, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -9957,12 +10112,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 718770279}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.53, y: -11.89, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.8627, y: -15.865857, z: -7.6015625}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1322369291}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &718770283
 PolygonCollider2D:
@@ -10006,15 +10161,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012531979720, guid: 5bcbf31ded2e353449622ec74f8954da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.059104
+      value: -13.66
       objectReference: {fileID: 0}
     - target: {fileID: 4000012531979720, guid: 5bcbf31ded2e353449622ec74f8954da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3583069
+      value: -14.84
       objectReference: {fileID: 0}
     - target: {fileID: 4000012531979720, guid: 5bcbf31ded2e353449622ec74f8954da, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.630416
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 4000012531979720, guid: 5bcbf31ded2e353449622ec74f8954da, type: 3}
       propertyPath: m_LocalRotation.x
@@ -10125,7 +10280,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744069341}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.851682, y: -6.049304, z: 0.9238281}
+  m_LocalPosition: {x: -13.851682, y: -6.049304, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -10145,10 +10300,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 34
-    regionCoord: {x: -12.3, y: -5.13, z: -1}
+    regionCoord: {x: -12.3, y: -5.13, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -10373,6 +10528,74 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c26b06ce280010b4ea94117ee11dcac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentRegion: {fileID: 1008299754}
+--- !u!114 &747421729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747421725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c12a414faf9994fb1cbc65900591d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  direction: {x: 0, y: 0, z: 0}
+--- !u!65 &747421730
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747421725}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &752181352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 752181353}
+  m_Layer: 0
+  m_Name: Hours Display
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &752181353
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752181352}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.6673, y: 3.975857, z: 6.6015625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2059158174}
+  - {fileID: 555098965}
+  - {fileID: 1587920460}
+  - {fileID: 1930643010}
+  - {fileID: 1792927862}
+  - {fileID: 557525625}
+  - {fileID: 1697985207}
+  - {fileID: 1123536638}
+  - {fileID: 861802906}
+  - {fileID: 605686028}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &810317782
 GameObject:
   m_ObjectHideFlags: 0
@@ -10448,7 +10671,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 810317782}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.31168187, y: 8.990696, z: 0.9238281}
+  m_LocalPosition: {x: -0.31168187, y: 8.990696, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -10468,10 +10691,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 52
-    regionCoord: {x: 1.24, y: 9.91, z: -1}
+    regionCoord: {x: 1.24, y: 9.91, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -10739,12 +10962,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861802904}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.3, y: 11.9, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.6327, y: 7.924143, z: -7.6015625}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_Father: {fileID: 752181353}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &861802908
 PolygonCollider2D:
@@ -10891,7 +11114,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865019136}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.101682, y: -0.2893039, z: 0.9238281}
+  m_LocalPosition: {x: -13.101682, y: -0.2893039, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -10911,10 +11134,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 10
-    regionCoord: {x: -11.55, y: 0.63, z: -1}
+    regionCoord: {x: -11.55, y: 0.63, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -11115,7 +11338,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 869001802}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.068318, y: -1.609304, z: 0.9238281}
+  m_LocalPosition: {x: 7.068318, y: -1.609304, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -11135,10 +11358,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 45
-    regionCoord: {x: 8.62, y: -0.69000006, z: -1}
+    regionCoord: {x: 8.62, y: -0.69000006, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -11431,7 +11654,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876598870}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.061682, y: -2.009304, z: 0.9238281}
+  m_LocalPosition: {x: -6.061682, y: -2.009304, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -11451,10 +11674,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 36
-    regionCoord: {x: -4.51, y: -1.0900002, z: -1}
+    regionCoord: {x: -4.51, y: -1.0900002, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -11777,7 +12000,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 885592700}
   m_LocalRotation: {x: -0, y: -0, z: -0.0025605953, w: 0.9999968}
-  m_LocalPosition: {x: -1.1516819, y: 0.5606961, z: 0.9238281}
+  m_LocalPosition: {x: -1.1516819, y: 0.5606961, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -11797,10 +12020,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 32
-    regionCoord: {x: 0.39999998, y: 1.48, z: -1}
+    regionCoord: {x: 0.39999998, y: 1.48, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -12092,7 +12315,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 948008672}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.288318, y: -5.399304, z: 0.9238281}
+  m_LocalPosition: {x: 7.288318, y: -5.399304, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -12112,10 +12335,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 71
-    regionCoord: {x: 8.84, y: -4.48, z: -1}
+    regionCoord: {x: 8.84, y: -4.48, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -12383,7 +12606,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 985299736}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.13831818, y: -5.789304, z: 0.9238281}
+  m_LocalPosition: {x: 0.13831818, y: -5.789304, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -12403,10 +12626,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 39
-    regionCoord: {x: 1.69, y: -4.87, z: -1}
+    regionCoord: {x: 1.69, y: -4.87, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -12801,7 +13024,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 990569047}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.068318, y: 7.010696, z: 0.9238281}
+  m_LocalPosition: {x: 1.068318, y: 7.010696, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -12821,10 +13044,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 51
-    regionCoord: {x: 2.62, y: 7.93, z: -1}
+    regionCoord: {x: 2.62, y: 7.93, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -13109,7 +13332,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1008299754}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.921682, y: 0.040696084, z: 0.9238281}
+  m_LocalPosition: {x: -19.921682, y: 0.040696084, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -13129,10 +13352,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 21
-    regionCoord: {x: -18.37, y: 0.96, z: -1}
+    regionCoord: {x: -18.37, y: 0.96, z: -2.9238281}
     adjacentRegions: []
-    nextRegion: {fileID: 0}
-    monsters: []
+    nextRegion: {fileID: 2010002900}
+    monster: {fileID: 747421727}
     heros: []
     gold: 0
     fountain: 0
@@ -13296,6 +13519,187 @@ PolygonCollider2D:
       - {x: -0.255, y: -4.64}
       - {x: -0.145, y: -4.52}
       - {x: -0.065, y: -4.47}
+--- !u!1 &1051362151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1051362152}
+  - component: {fileID: 1051362155}
+  - component: {fileID: 1051362154}
+  - component: {fileID: 1051362153}
+  m_Layer: 0
+  m_Name: shield2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1051362152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051362151}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -13.09, y: 4.62, z: 10.009844}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_Children: []
+  m_Father: {fileID: 598826673}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1051362153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051362151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffacd3c69486fbe47935b3d4b2735687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  region:
+    regionId: shield2
+    regionCoord: {x: -17.923708, y: 8.699741, z: 0}
+    adjacentRegions: []
+    nextRegion: {fileID: 1051362151}
+    monster: {fileID: 0}
+    heros: []
+    gold: 0
+    fountain: 0
+    isCastle: 0
+  startColor:
+    serializedVersion: 2
+    rgba: 0
+  hoverColor:
+    serializedVersion: 2
+    rgba: 0
+  mouseDownColor:
+    serializedVersion: 2
+    rgba: 0
+--- !u!60 &1051362154
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051362151}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.48, y: 3.76}
+    newSize: {x: 3.48, y: 3.76}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.75, y: -1.29}
+      - {x: 0.82, y: -1.29}
+      - {x: 0.95, y: -1.22}
+      - {x: 1.06, y: -1.0699999}
+      - {x: 1.17, y: -0.79999995}
+      - {x: 1.1899999, y: -0.42}
+      - {x: 1.2099999, y: -0.34}
+      - {x: 1.2099999, y: -0.24}
+      - {x: 1.1899999, y: -0.22}
+      - {x: 1.1899999, y: 0.16}
+      - {x: 1.1999999, y: 0.39999998}
+      - {x: 1.11, y: 0.51}
+      - {x: 1.05, y: 0.69}
+      - {x: 0.96999997, y: 0.85999995}
+      - {x: 0.88, y: 1.01}
+      - {x: 0.83, y: 1.09}
+      - {x: 0.65, y: 1.25}
+      - {x: 0.58, y: 1.35}
+      - {x: 0.44, y: 1.48}
+      - {x: 0.28, y: 1.55}
+      - {x: -0.31, y: 1.55}
+      - {x: -0.32999998, y: 1.53}
+      - {x: -0.47, y: 1.4599999}
+      - {x: -0.59, y: 1.39}
+      - {x: -0.95, y: 1.04}
+      - {x: -1.13, y: 0.74}
+      - {x: -1.1899999, y: 0.57}
+      - {x: -1.23, y: 0.42999998}
+      - {x: -1.27, y: 0.17}
+      - {x: -1.27, y: -0.07}
+      - {x: -1.22, y: -0.089999996}
+      - {x: -1.1899999, y: -0.45}
+      - {x: -1.1, y: -0.76}
+      - {x: -1.03, y: -0.91999996}
+      - {x: -0.97999996, y: -1}
+      - {x: -0.88, y: -1.15}
+      - {x: -0.66999996, y: -1.36}
+      - {x: -0.57, y: -1.43}
+      - {x: -0.37, y: -1.61}
+      - {x: -0.16, y: -1.63}
+      - {x: 0.099999994, y: -1.63}
+      - {x: 0.28, y: -1.61}
+      - {x: 0.45, y: -1.53}
+      - {x: 0.63, y: -1.39}
+--- !u!212 &1051362155
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051362151}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 7ac710fc733f6b5468822bd93af0d9d4, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.48, y: 3.76}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1071171936
 GameObject:
   m_ObjectHideFlags: 0
@@ -13371,7 +13775,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071171936}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9016819, y: 4.410696, z: 0.9238281}
+  m_LocalPosition: {x: -0.9016819, y: 4.410696, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -13391,10 +13795,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 48
-    regionCoord: {x: 0.65, y: 5.33, z: -1}
+    regionCoord: {x: 0.65, y: 5.33, z: -2.9238281}
     adjacentRegions: []
-    nextRegion: {fileID: 0}
-    monsters: []
+    nextRegion: {fileID: 1648724136}
+    monster: {fileID: 629299427}
     heros: []
     gold: 0
     fountain: 0
@@ -13766,9 +14170,10 @@ GameObject:
   - component: {fileID: 1086688592}
   - component: {fileID: 1086688591}
   - component: {fileID: 1086688594}
+  - component: {fileID: 1086688593}
   m_Layer: 0
-  m_Name: sundial
-  m_TagString: Untagged
+  m_Name: Sundial
+  m_TagString: Sundial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13828,13 +14233,44 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1086688590}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.33, y: 11.29, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1086688593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086688590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffacd3c69486fbe47935b3d4b2735687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  region:
+    regionId: Sundial
+    regionCoord: {x: -3.33, y: 11.29, z: -1}
+    adjacentRegions: []
+    nextRegion: {fileID: 0}
+    monster: {fileID: 0}
+    heros: []
+    gold: 0
+    fountain: 0
+    isCastle: 0
+  startColor:
+    serializedVersion: 2
+    rgba: 0
+  hoverColor:
+    serializedVersion: 2
+    rgba: 3103793663
+  mouseDownColor:
+    serializedVersion: 2
+    rgba: 2938103251
 --- !u!60 &1086688594
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -14010,7 +14446,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097249972}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.311682, y: -9.5693035, z: 0.9238281}
+  m_LocalPosition: {x: -17.311682, y: -9.5693035, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -14030,10 +14466,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 31
-    regionCoord: {x: -15.76, y: -8.65, z: -1}
+    regionCoord: {x: -15.76, y: -8.65, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -14368,7 +14804,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103398734}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.731682, y: -10.179304, z: 0.9238281}
+  m_LocalPosition: {x: -14.731682, y: -10.179304, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -14388,10 +14824,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 33
-    regionCoord: {x: -13.18, y: -9.26, z: -1}
+    regionCoord: {x: -13.18, y: -9.26, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -14653,12 +15089,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123536636}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.7, y: 11.9, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.0326996, y: 7.924143, z: -7.6015625}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_Father: {fileID: 752181353}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1123536640
 PolygonCollider2D:
@@ -14736,19 +15172,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1000010402951368, guid: 5bcbf31ded2e353449622ec74f8954da, type: 3}
       propertyPath: m_Name
-      value: Skral (5)
+      value: Skral
       objectReference: {fileID: 0}
     - target: {fileID: 4000012531979720, guid: 5bcbf31ded2e353449622ec74f8954da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.059104
+      value: -8.95
       objectReference: {fileID: 0}
     - target: {fileID: 4000012531979720, guid: 5bcbf31ded2e353449622ec74f8954da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3583069
+      value: -4.83
       objectReference: {fileID: 0}
     - target: {fileID: 4000012531979720, guid: 5bcbf31ded2e353449622ec74f8954da, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.630416
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 4000012531979720, guid: 5bcbf31ded2e353449622ec74f8954da, type: 3}
       propertyPath: m_LocalRotation.x
@@ -14859,7 +15295,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1130425684}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.268318, y: -7.999304, z: 0.9238281}
+  m_LocalPosition: {x: 11.268318, y: -7.999304, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -14879,10 +15315,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 68
-    regionCoord: {x: 12.82, y: -7.08, z: -1}
+    regionCoord: {x: 12.82, y: -7.08, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -15078,6 +15514,49 @@ PolygonCollider2D:
       - {x: 1.655, y: -3.5149999}
       - {x: 1.6949999, y: -3.425}
       - {x: 1.875, y: -3.445}
+--- !u!1 &1138642934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1138642936}
+  - component: {fileID: 1138642935}
+  m_Layer: 0
+  m_Name: WellManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1138642935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138642934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 793fd660251941547a7bf0e2524006cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1138642936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138642934}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.2520714, y: -6.7225943, z: 4.8401256}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1760823777}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1147668743
 GameObject:
   m_ObjectHideFlags: 0
@@ -15153,7 +15632,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147668743}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.518318, y: -4.609304, z: 0.9238281}
+  m_LocalPosition: {x: 12.518318, y: -4.609304, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -15173,10 +15652,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 66
-    regionCoord: {x: 14.07, y: -3.69, z: -1}
+    regionCoord: {x: 14.07, y: -3.69, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -15499,7 +15978,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179291475}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.638318, y: 0.48069608, z: 0.9238281}
+  m_LocalPosition: {x: 3.638318, y: 0.48069608, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -15519,10 +15998,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 46
-    regionCoord: {x: 5.19, y: 1.4, z: -1}
+    regionCoord: {x: 5.19, y: 1.4, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -15862,12 +16341,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198343917}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.53, y: -8.21, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.8627, y: -12.185857, z: -7.6015625}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 1322369291}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1198343921
 PolygonCollider2D:
@@ -15973,7 +16452,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1213140640}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.508318, y: 8.9306965, z: 0.9238281}
+  m_LocalPosition: {x: 14.508318, y: 8.9306965, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -15993,10 +16472,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 60
-    regionCoord: {x: 16.06, y: 9.85, z: -1}
+    regionCoord: {x: 16.06, y: 9.85, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -16272,7 +16751,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1221624793}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.751682, y: -4.679304, z: 0.9238281}
+  m_LocalPosition: {x: -16.751682, y: -4.679304, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -16292,10 +16771,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 23
-    regionCoord: {x: -15.200001, y: -3.7600002, z: -1}
+    regionCoord: {x: -15.200001, y: -3.7600002, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -16665,7 +17144,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226562787}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.041681, y: 1.0206962, z: 0.9238281}
+  m_LocalPosition: {x: -11.041681, y: 1.0206962, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -16685,10 +17164,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 14
-    regionCoord: {x: -9.49, y: 1.94, z: -1}
+    regionCoord: {x: -9.49, y: 1.94, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -16978,7 +17457,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238420580}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.018318, y: -8.999304, z: 0.9238281}
+  m_LocalPosition: {x: 10.018318, y: -8.999304, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -16998,10 +17477,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 69
-    regionCoord: {x: 11.57, y: -8.08, z: -1}
+    regionCoord: {x: 11.57, y: -8.08, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -17275,7 +17754,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1271030404}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.411682, y: -0.31930387, z: 0.9238281}
+  m_LocalPosition: {x: -17.411682, y: -0.31930387, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -17295,10 +17774,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 20
-    regionCoord: {x: -15.860001, y: 0.6, z: -1}
+    regionCoord: {x: -15.860001, y: 0.6, z: -2.9238281}
     adjacentRegions: []
-    nextRegion: {fileID: 0}
-    monsters: []
+    nextRegion: {fileID: 2010002900}
+    monster: {fileID: 642752803}
     heros: []
     gold: 0
     fountain: 0
@@ -17599,7 +18078,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1271377295}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.72668, y: -6.964304, z: 0.9238281}
+  m_LocalPosition: {x: -19.72668, y: -6.964304, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -17619,10 +18098,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 25
-    regionCoord: {x: -18.175, y: -6.045, z: -1}
+    regionCoord: {x: -18.175, y: -6.045, z: -2.9238281}
     adjacentRegions: []
-    nextRegion: {fileID: 0}
-    monsters: []
+    nextRegion: {fileID: 1701843189}
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -17888,12 +18367,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1294008405}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.56, y: 4.71, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.892699, y: 0.734143, z: -7.6015625}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_Father: {fileID: 1322369291}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1294008409
 PolygonCollider2D:
@@ -17924,6 +18403,50 @@ PolygonCollider2D:
       - {x: -2.22, y: -2.1399999}
       - {x: 2.22, y: -2.1399999}
       - {x: 2.22, y: 2.1399999}
+--- !u!1 &1322369290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1322369291}
+  m_Layer: 0
+  m_Name: Narrator Progress
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1322369291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322369290}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.6673, y: 3.975857, z: 6.6015625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 718770281}
+  - {fileID: 520485078}
+  - {fileID: 1198343919}
+  - {fileID: 1971877919}
+  - {fileID: 1810432265}
+  - {fileID: 1930306794}
+  - {fileID: 102273667}
+  - {fileID: 1353608008}
+  - {fileID: 672810363}
+  - {fileID: 1294008407}
+  - {fileID: 1897410957}
+  - {fileID: 1731828434}
+  - {fileID: 287896836}
+  - {fileID: 1687804334}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1323994410
 GameObject:
   m_ObjectHideFlags: 0
@@ -17999,7 +18522,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1323994410}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.571682, y: 0.80069613, z: 0.9238281}
+  m_LocalPosition: {x: -7.571682, y: 0.80069613, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -18019,10 +18542,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 17
-    regionCoord: {x: -6.02, y: 1.72, z: -1}
+    regionCoord: {x: -6.02, y: 1.72, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -18355,6 +18878,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c26b06ce280010b4ea94117ee11dcac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentRegion: {fileID: 1828325262}
+--- !u!114 &1350791680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350791676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c12a414faf9994fb1cbc65900591d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  direction: {x: 0, y: 0, z: 0}
+--- !u!65 &1350791681
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350791676}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1352508343
 GameObject:
   m_ObjectHideFlags: 0
@@ -18430,7 +18981,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1352508343}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.8083177, y: -12.509304, z: 0.9238281}
+  m_LocalPosition: {x: 6.8083177, y: -12.509304, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -18450,10 +19001,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 82
-    regionCoord: {x: 8.36, y: -11.59, z: -1}
+    regionCoord: {x: 8.36, y: -11.59, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -18715,12 +19266,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1353608006}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.56, y: 0.97, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.892699, y: -3.005857, z: -7.6015625}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_Father: {fileID: 1322369291}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1353608010
 PolygonCollider2D:
@@ -18826,7 +19377,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372745553}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.998319, y: -11.759304, z: 0.9238281}
+  m_LocalPosition: {x: 8.998319, y: -11.759304, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -18846,10 +19397,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 81
-    regionCoord: {x: 10.55, y: -10.84, z: -1}
+    regionCoord: {x: 10.55, y: -10.84, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -19092,7 +19643,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1456414996}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.641682, y: -12.079304, z: 0.9238281}
+  m_LocalPosition: {x: -11.641682, y: -12.079304, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -19112,10 +19663,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 37
-    regionCoord: {x: -10.09, y: -11.16, z: -1}
+    regionCoord: {x: -10.09, y: -11.16, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -19369,12 +19920,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1461536212}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.7125187, y: -1.8900443, z: 2.2851562}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1760823777}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1465440022
 GameObject:
@@ -19451,7 +20002,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1465440022}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.781681, y: 3.4406962, z: 0.9238281}
+  m_LocalPosition: {x: -12.781681, y: 3.4406962, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -19471,10 +20022,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 2
-    regionCoord: {x: -11.23, y: 4.36, z: -1}
+    regionCoord: {x: -11.23, y: 4.36, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -19758,7 +20309,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479356454}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.52168, y: 11.130696, z: 0.9238281}
+  m_LocalPosition: {x: -18.52168, y: 11.130696, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -19778,10 +20329,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 15
-    regionCoord: {x: -16.97, y: 12.05, z: -1}
+    regionCoord: {x: -16.97, y: 12.05, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -20059,7 +20610,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482140746}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.578318, y: 2.160696, z: 0.9238281}
+  m_LocalPosition: {x: 14.578318, y: 2.160696, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -20079,10 +20630,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 61
-    regionCoord: {x: 16.13, y: 3.08, z: -1}
+    regionCoord: {x: 16.13, y: 3.08, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -20380,7 +20931,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1510122484}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.478318, y: -6.3093038, z: 0.9238281}
+  m_LocalPosition: {x: 12.478318, y: -6.3093038, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -20400,10 +20951,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 67
-    regionCoord: {x: 14.03, y: -5.39, z: -1}
+    regionCoord: {x: 14.03, y: -5.39, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -20576,6 +21127,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c26b06ce280010b4ea94117ee11dcac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentRegion: {fileID: 323234533}
+--- !u!114 &1535700693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535700689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c12a414faf9994fb1cbc65900591d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  direction: {x: 0, y: 1, z: 0}
+--- !u!65 &1535700694
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535700689}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1546259320
 GameObject:
   m_ObjectHideFlags: 0
@@ -20651,7 +21230,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1546259320}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.708319, y: -10.959304, z: 0.9238281}
+  m_LocalPosition: {x: 13.708319, y: -10.959304, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -20671,10 +21250,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 80
-    regionCoord: {x: 15.26, y: -10.04, z: -1}
+    regionCoord: {x: 15.26, y: -10.04, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -20949,15 +21528,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012531979720, guid: 5bcbf31ded2e353449622ec74f8954da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.059104
+      value: 6.55
       objectReference: {fileID: 0}
     - target: {fileID: 4000012531979720, guid: 5bcbf31ded2e353449622ec74f8954da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3583069
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4000012531979720, guid: 5bcbf31ded2e353449622ec74f8954da, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.630416
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 4000012531979720, guid: 5bcbf31ded2e353449622ec74f8954da, type: 3}
       propertyPath: m_LocalRotation.x
@@ -21066,12 +21645,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1587920458}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.77, y: 11.97, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.8973002, y: 7.9941435, z: -7.6015625}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_Father: {fileID: 752181353}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1587920462
 PolygonCollider2D:
@@ -21200,7 +21779,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588544479}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.861682, y: -8.609304, z: 0.9238281}
+  m_LocalPosition: {x: -11.861682, y: -8.609304, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -21220,10 +21799,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 30
-    regionCoord: {x: -10.31, y: -7.6900005, z: -1}
+    regionCoord: {x: -10.31, y: -7.6900005, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -21609,7 +22188,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1603287798}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.1983185, y: 1.0706961, z: 0.9238281}
+  m_LocalPosition: {x: 9.1983185, y: 1.0706961, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -21629,10 +22208,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 64
-    regionCoord: {x: 10.75, y: 1.99, z: -1}
+    regionCoord: {x: 10.75, y: 1.99, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -21918,50 +22497,6 @@ PolygonCollider2D:
       - {x: -0.679375, y: -3.7365625}
       - {x: -0.58383787, y: -3.715332}
       - {x: -0.38214844, y: -3.672871}
---- !u!1 &1605072856
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1605072858}
-  - component: {fileID: 1605072857}
-  m_Layer: 0
-  m_Name: Board
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1605072857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1605072856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dba017fc07386d24fad43910b50f600b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  regionsId: 
---- !u!4 &1605072858
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1605072856}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1623064867
 GameObject:
   m_ObjectHideFlags: 0
@@ -22037,7 +22572,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1623064867}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.699682, y: -10.877304, z: 0.9238281}
+  m_LocalPosition: {x: -18.699682, y: -10.877304, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -22057,10 +22592,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 27
-    regionCoord: {x: -17.148, y: -9.958, z: -1}
+    regionCoord: {x: -17.148, y: -9.958, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -22349,7 +22884,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1648724136}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.821682, y: 1.2606962, z: 0.9238281}
+  m_LocalPosition: {x: -3.821682, y: 1.2606962, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -22369,10 +22904,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 16
-    regionCoord: {x: -2.27, y: 2.18, z: -1}
+    regionCoord: {x: -2.27, y: 2.18, z: -2.9238281}
     adjacentRegions: []
-    nextRegion: {fileID: 0}
-    monsters: []
+    nextRegion: {fileID: 426193568}
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -22719,7 +23254,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667241323}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.391682, y: -6.149304, z: 0.9238281}
+  m_LocalPosition: {x: -10.391682, y: -6.149304, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -22739,10 +23274,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 29
-    regionCoord: {x: -8.84, y: -5.23, z: -1}
+    regionCoord: {x: -8.84, y: -5.23, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -23045,7 +23580,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684091754}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.088318, y: -4.839304, z: 0.9238281}
+  m_LocalPosition: {x: 5.088318, y: -4.839304, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -23065,10 +23600,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 43
-    regionCoord: {x: 6.64, y: -3.92, z: -1}
+    regionCoord: {x: 6.64, y: -3.92, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -23416,12 +23951,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687804330}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.55, y: 12.03, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.882699, y: 8.054143, z: -7.6015625}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_Father: {fileID: 1322369291}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1697985205
 GameObject:
@@ -23496,12 +24031,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697985205}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.4, y: 12.14, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.7326994, y: 8.164144, z: -7.6015625}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_Father: {fileID: 752181353}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1697985209
 PolygonCollider2D:
@@ -23661,7 +24196,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701843189}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.76168, y: -3.929304, z: 0.9238281}
+  m_LocalPosition: {x: -19.76168, y: -3.929304, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -23681,10 +24216,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 24
-    regionCoord: {x: -18.21, y: -3.01, z: -1}
+    regionCoord: {x: -18.21, y: -3.01, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -23951,7 +24486,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707316072}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.3516817, y: 6.620696, z: 0.9238281}
+  m_LocalPosition: {x: -5.3516817, y: 6.620696, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -23971,10 +24506,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 49
-    regionCoord: {x: -3.7999997, y: 7.54, z: -1}
+    regionCoord: {x: -3.7999997, y: 7.54, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -24391,12 +24926,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731828432}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.56, y: 8.37, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.892699, y: 4.394143, z: -7.6015625}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_Father: {fileID: 1322369291}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1731828436
 PolygonCollider2D:
@@ -24502,7 +25037,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1735418901}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5383182, y: -2.7193038, z: 0.9238281}
+  m_LocalPosition: {x: 2.5383182, y: -2.7193038, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -24522,10 +25057,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 42
-    regionCoord: {x: 4.09, y: -1.8, z: -1}
+    regionCoord: {x: 4.09, y: -1.8, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -24741,6 +25276,56 @@ PolygonCollider2D:
       - {x: 2.06, y: -3.075}
       - {x: 2.11, y: -3.0249999}
       - {x: 2.21, y: -2.8049998}
+--- !u!1 &1760823775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1760823777}
+  - component: {fileID: 1760823776}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1760823776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760823775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 316a84fe848999d48b1e445b14625f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterManager: {fileID: 336889724}
+  regionManager: {fileID: 1461536213}
+  wellManager: {fileID: 1138642935}
+  warrior: {fileID: 514740306}
+--- !u!4 &1760823777
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760823775}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.7125187, y: 1.8900442, z: -4.2851562}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 336889725}
+  - {fileID: 1461536214}
+  - {fileID: 1138642936}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1772468996
 GameObject:
   m_ObjectHideFlags: 0
@@ -24816,7 +25401,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1772468996}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.4983182, y: 9.040696, z: 0.9238281}
+  m_LocalPosition: {x: 3.4983182, y: 9.040696, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -24836,10 +25421,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 55
-    regionCoord: {x: 5.05, y: 9.96, z: -1}
+    regionCoord: {x: 5.05, y: 9.96, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -25163,7 +25748,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1775297928}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.298319, y: -1.5093038, z: 0.9238281}
+  m_LocalPosition: {x: 10.298319, y: -1.5093038, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -25183,10 +25768,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 65
-    regionCoord: {x: 11.85, y: -0.5899999, z: -1}
+    regionCoord: {x: 11.85, y: -0.5899999, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -25456,7 +26041,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1775340348}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.491681, y: -3.559304, z: 0.9238281}
+  m_LocalPosition: {x: -12.491681, y: -3.559304, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -25476,10 +26061,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 72
-    regionCoord: {x: -10.94, y: -2.64, z: -1}
+    regionCoord: {x: -10.94, y: -2.64, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -25770,7 +26355,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787088924}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.138318, y: -10.559304, z: 0.9238281}
+  m_LocalPosition: {x: 5.138318, y: -10.559304, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -25790,10 +26375,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 84
-    regionCoord: {x: 6.69, y: -9.64, z: -1}
+    regionCoord: {x: 6.69, y: -9.64, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -26059,12 +26644,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1792927860}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.08, y: 11.97, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.5873003, y: 7.9941435, z: -7.6015625}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_Father: {fileID: 752181353}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1792927864
 PolygonCollider2D:
@@ -26190,12 +26775,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810432263}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.53, y: -4.54, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.8627, y: -8.515857, z: -7.6015625}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_Father: {fileID: 1322369291}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1810432267
 PolygonCollider2D:
@@ -26301,7 +26886,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811642913}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.951682, y: -6.5793037, z: 0.9238281}
+  m_LocalPosition: {x: -3.951682, y: -6.5793037, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -26321,10 +26906,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 40
-    regionCoord: {x: -2.4, y: -5.66, z: -1}
+    regionCoord: {x: -2.4, y: -5.66, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -26671,7 +27256,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828325262}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.19168, y: -11.129304, z: 0.9238281}
+  m_LocalPosition: {x: -20.19168, y: -11.129304, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -26691,10 +27276,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 26
-    regionCoord: {x: -18.64, y: -10.21, z: -1}
+    regionCoord: {x: -18.64, y: -10.21, z: -2.9238281}
     adjacentRegions: []
-    nextRegion: {fileID: 0}
-    monsters: []
+    nextRegion: {fileID: 1271377295}
+    monster: {fileID: 1350791678}
     heros: []
     gold: 0
     fountain: 0
@@ -26922,12 +27507,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897410955}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.56, y: 6.52, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.892699, y: 2.544143, z: -7.6015625}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_Father: {fileID: 1322369291}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1897410959
 PolygonCollider2D:
@@ -27033,7 +27618,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1910548442}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.338319, y: 7.8106956, z: 0.9238281}
+  m_LocalPosition: {x: 8.338319, y: 7.8106956, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -27053,10 +27638,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 57
-    regionCoord: {x: 9.89, y: 8.73, z: -1}
+    regionCoord: {x: 9.89, y: 8.73, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -27484,7 +28069,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1912318368}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.028318, y: 3.700696, z: 0.9238281}
+  m_LocalPosition: {x: 3.028318, y: 3.700696, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -27504,10 +28089,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 47
-    regionCoord: {x: 4.58, y: 4.62, z: -1}
+    regionCoord: {x: 4.58, y: 4.62, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -27858,12 +28443,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1930306792}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.56, y: -2.67, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.892699, y: -6.645857, z: -7.6015625}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_Father: {fileID: 1322369291}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1930306796
 PolygonCollider2D:
@@ -27967,12 +28552,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1930643008}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.48, y: 12, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.1873002, y: 8.024143, z: -7.6015625}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_Father: {fileID: 752181353}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1930643012
 PolygonCollider2D:
@@ -28100,7 +28685,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1940702013}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.311682, y: -2.2093039, z: 0.9238281}
+  m_LocalPosition: {x: -10.311682, y: -2.2093039, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -28120,10 +28705,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 18
-    regionCoord: {x: -8.76, y: -1.29, z: -1}
+    regionCoord: {x: -8.76, y: -1.29, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -28390,7 +28975,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1969145986120274, guid: f95d1a9483a8c6a4496c281ffd93702c, type: 3}
       propertyPath: m_Name
-      value: knigthprefab
+      value: Warrior
       objectReference: {fileID: 0}
     - target: {fileID: 4445584750326018, guid: f95d1a9483a8c6a4496c281ffd93702c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28402,7 +28987,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4445584750326018, guid: f95d1a9483a8c6a4496c281ffd93702c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 4445584750326018, guid: f95d1a9483a8c6a4496c281ffd93702c, type: 3}
       propertyPath: m_LocalRotation.x
@@ -28438,6 +29023,187 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f95d1a9483a8c6a4496c281ffd93702c, type: 3}
+--- !u!1 &1962787717
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1962787718}
+  - component: {fileID: 1962787721}
+  - component: {fileID: 1962787720}
+  - component: {fileID: 1962787719}
+  m_Layer: 0
+  m_Name: shield1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1962787718
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962787717}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14.15, y: 4.6, z: 10.009844}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_Children: []
+  m_Father: {fileID: 598826673}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1962787719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962787717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffacd3c69486fbe47935b3d4b2735687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  region:
+    regionId: shield1
+    regionCoord: {x: -18.983707, y: 8.679741, z: 0}
+    adjacentRegions: []
+    nextRegion: {fileID: 1051362151}
+    monster: {fileID: 0}
+    heros: []
+    gold: 0
+    fountain: 0
+    isCastle: 0
+  startColor:
+    serializedVersion: 2
+    rgba: 0
+  hoverColor:
+    serializedVersion: 2
+    rgba: 0
+  mouseDownColor:
+    serializedVersion: 2
+    rgba: 0
+--- !u!60 &1962787720
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962787717}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.48, y: 3.76}
+    newSize: {x: 3.48, y: 3.76}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.75, y: -1.29}
+      - {x: 0.82, y: -1.29}
+      - {x: 0.95, y: -1.22}
+      - {x: 1.06, y: -1.0699999}
+      - {x: 1.17, y: -0.79999995}
+      - {x: 1.1899999, y: -0.42}
+      - {x: 1.2099999, y: -0.34}
+      - {x: 1.2099999, y: -0.24}
+      - {x: 1.1899999, y: -0.22}
+      - {x: 1.1899999, y: 0.16}
+      - {x: 1.1999999, y: 0.39999998}
+      - {x: 1.11, y: 0.51}
+      - {x: 1.05, y: 0.69}
+      - {x: 0.96999997, y: 0.85999995}
+      - {x: 0.88, y: 1.01}
+      - {x: 0.83, y: 1.09}
+      - {x: 0.65, y: 1.25}
+      - {x: 0.58, y: 1.35}
+      - {x: 0.44, y: 1.48}
+      - {x: 0.28, y: 1.55}
+      - {x: -0.31, y: 1.55}
+      - {x: -0.32999998, y: 1.53}
+      - {x: -0.47, y: 1.4599999}
+      - {x: -0.59, y: 1.39}
+      - {x: -0.95, y: 1.04}
+      - {x: -1.13, y: 0.74}
+      - {x: -1.1899999, y: 0.57}
+      - {x: -1.23, y: 0.42999998}
+      - {x: -1.27, y: 0.17}
+      - {x: -1.27, y: -0.07}
+      - {x: -1.22, y: -0.089999996}
+      - {x: -1.1899999, y: -0.45}
+      - {x: -1.1, y: -0.76}
+      - {x: -1.03, y: -0.91999996}
+      - {x: -0.97999996, y: -1}
+      - {x: -0.88, y: -1.15}
+      - {x: -0.66999996, y: -1.36}
+      - {x: -0.57, y: -1.43}
+      - {x: -0.37, y: -1.61}
+      - {x: -0.16, y: -1.63}
+      - {x: 0.099999994, y: -1.63}
+      - {x: 0.28, y: -1.61}
+      - {x: 0.45, y: -1.53}
+      - {x: 0.63, y: -1.39}
+--- !u!212 &1962787721
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962787717}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 04b72c88771bbb04191df0961035ab3c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.48, y: 3.76}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1001 &1963833443
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28451,15 +29217,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012531979720, guid: 5bcbf31ded2e353449622ec74f8954da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.059104
+      value: -11.04
       objectReference: {fileID: 0}
     - target: {fileID: 4000012531979720, guid: 5bcbf31ded2e353449622ec74f8954da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3583069
+      value: -4.54
       objectReference: {fileID: 0}
     - target: {fileID: 4000012531979720, guid: 5bcbf31ded2e353449622ec74f8954da, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.630416
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 4000012531979720, guid: 5bcbf31ded2e353449622ec74f8954da, type: 3}
       propertyPath: m_LocalRotation.x
@@ -28568,12 +29334,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1971877917}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.5, y: -6.38, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.8327, y: -10.355857, z: -7.6015625}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 1322369291}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1971877921
 PolygonCollider2D:
@@ -28604,275 +29370,6 @@ PolygonCollider2D:
       - {x: -2.225, y: -2.135}
       - {x: 2.225, y: -2.135}
       - {x: 2.225, y: 2.135}
---- !u!1 &1996030556
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1996030558}
-  - component: {fileID: 1996030557}
-  - component: {fileID: 1996030560}
-  m_Layer: 0
-  m_Name: shield
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &1996030557
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1996030556}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ed2c8108792e59140968bd3858a5579b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 9.54, y: 17.98}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1996030558
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1996030556}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.82, y: 8.79, z: -1}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 32
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &1996030560
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1996030556}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.54, y: 17.98}
-    newSize: {x: 9.54, y: 17.98}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -4.15, y: -8.639999}
-      - {x: -3.9499998, y: -8.63}
-      - {x: -3.6699998, y: -8.61}
-      - {x: -3.48, y: -8.57}
-      - {x: -3.36, y: -8.5}
-      - {x: -3.1599998, y: -8.38}
-      - {x: -3, y: -8.32}
-      - {x: -2.87, y: -8.19}
-      - {x: -2.8, y: -8.11}
-      - {x: -2.76, y: -8.0199995}
-      - {x: -2.54, y: -7.68}
-      - {x: -2.5, y: -7.58}
-      - {x: -2.4299998, y: -7.45}
-      - {x: -2.37, y: -7.37}
-      - {x: -2.35, y: -7.33}
-      - {x: -2.08, y: -7.06}
-      - {x: -2.03, y: -7.04}
-      - {x: -1.92, y: -6.99}
-      - {x: -1.73, y: -6.91}
-      - {x: -1.64, y: -6.85}
-      - {x: -1.4, y: -6.75}
-      - {x: -1.22, y: -6.66}
-      - {x: -0.87, y: -6.45}
-      - {x: -0.74, y: -6.37}
-      - {x: -0.61, y: -6.22}
-      - {x: -0.48999998, y: -6.04}
-      - {x: -0.41, y: -5.8399997}
-      - {x: -0.35999998, y: -5.62}
-      - {x: -0.34, y: -5.44}
-      - {x: -0.34, y: -4.75}
-      - {x: -0.38, y: -4.66}
-      - {x: -0.38, y: -4.3399997}
-      - {x: -0.32999998, y: -4.18}
-      - {x: -0.26999998, y: -4.11}
-      - {x: -0.26, y: -4.08}
-      - {x: -0.21, y: -3.9199998}
-      - {x: -0.089999996, y: -3.6999998}
-      - {x: -0.049999997, y: -3.48}
-      - {x: 0.02, y: -3.4199998}
-      - {x: 0.06, y: -3.37}
-      - {x: 0.099999994, y: -3.21}
-      - {x: 0.22999999, y: -3.06}
-      - {x: 0.29, y: -3.05}
-      - {x: 0.34, y: -3}
-      - {x: 0.39, y: -2.87}
-      - {x: 0.47, y: -2.76}
-      - {x: 0.58, y: -2.76}
-      - {x: 0.64, y: -2.6799998}
-      - {x: 0.65, y: -2.6299999}
-      - {x: 0.81, y: -2.46}
-      - {x: 0.84999996, y: -2.4099998}
-      - {x: 0.85999995, y: -2.3799999}
-      - {x: 0.87, y: -2.12}
-      - {x: 0.78999996, y: -1.9699999}
-      - {x: 0.78999996, y: -1.8}
-      - {x: 0.82, y: -1.6999999}
-      - {x: 0.88, y: -1.5999999}
-      - {x: 1.01, y: -1.22}
-      - {x: 1.05, y: -1.12}
-      - {x: 1.0699999, y: -1.02}
-      - {x: 1.25, y: -0.72999996}
-      - {x: 1.27, y: -0.69}
-      - {x: 1.4499999, y: -0.52}
-      - {x: 1.73, y: -0.52}
-      - {x: 1.87, y: -0.53999996}
-      - {x: 2.04, y: -0.71999997}
-      - {x: 2.29, y: -0.83}
-      - {x: 2.4299998, y: -0.85999995}
-      - {x: 2.48, y: -0.90999997}
-      - {x: 2.6499999, y: -0.93}
-      - {x: 2.74, y: -0.89}
-      - {x: 2.85, y: -0.85999995}
-      - {x: 3.07, y: -0.85999995}
-      - {x: 3.25, y: -0.94}
-      - {x: 3.33, y: -0.98999995}
-      - {x: 3.61, y: -1.09}
-      - {x: 3.6499999, y: -1.09}
-      - {x: 3.7099998, y: -1.0699999}
-      - {x: 3.6999998, y: -0.59}
-      - {x: 3.6799998, y: -0.29}
-      - {x: 3.6899998, y: -0.28}
-      - {x: 3.6999998, y: -0.24}
-      - {x: 3.72, y: 0.02}
-      - {x: 3.75, y: 0.24}
-      - {x: 3.74, y: 0.37}
-      - {x: 3.72, y: 0.37}
-      - {x: 3.72, y: 0.76}
-      - {x: 3.6899998, y: 0.96999997}
-      - {x: 3.6399999, y: 1.03}
-      - {x: 3.6399999, y: 2.29}
-      - {x: 3.6499999, y: 2.3}
-      - {x: 3.6599998, y: 2.34}
-      - {x: 3.6799998, y: 2.48}
-      - {x: 3.6999998, y: 2.8}
-      - {x: 3.72, y: 3.02}
-      - {x: 3.73, y: 3.36}
-      - {x: 3.74, y: 3.3999999}
-      - {x: 3.82, y: 3.8}
-      - {x: 3.82, y: 4.3399997}
-      - {x: 3.81, y: 4.38}
-      - {x: 3.8, y: 4.72}
-      - {x: 3.79, y: 4.7599998}
-      - {x: 3.78, y: 4.77}
-      - {x: 3.78, y: 5.42}
-      - {x: 3.72, y: 5.52}
-      - {x: 3.6699998, y: 5.5699997}
-      - {x: 3.59, y: 5.58}
-      - {x: 3.47, y: 5.72}
-      - {x: 3.3899999, y: 5.8599997}
-      - {x: 3.32, y: 5.94}
-      - {x: 3.1999998, y: 5.96}
-      - {x: 3.21, y: 6.0299997}
-      - {x: 3.1299999, y: 6.0899997}
-      - {x: 2.97, y: 6.18}
-      - {x: 2.8899999, y: 6.23}
-      - {x: 2.75, y: 6.2599998}
-      - {x: 2.55, y: 6.37}
-      - {x: 2.4099998, y: 6.44}
-      - {x: 2.1299999, y: 6.52}
-      - {x: 1.9699999, y: 6.54}
-      - {x: 1.74, y: 6.64}
-      - {x: 1.49, y: 6.66}
-      - {x: 1.3299999, y: 6.6099997}
-      - {x: 1.3, y: 6.6}
-      - {x: 1.18, y: 6.48}
-      - {x: 1.09, y: 6.45}
-      - {x: 1.0699999, y: 6.52}
-      - {x: 1.09, y: 6.71}
-      - {x: 0.94, y: 6.77}
-      - {x: 0.63, y: 6.77}
-      - {x: 0.48999998, y: 6.79}
-      - {x: 0.19, y: 6.7999997}
-      - {x: 0.14999999, y: 6.81}
-      - {x: -0.17, y: 6.8199997}
-      - {x: -0.21, y: 6.83}
-      - {x: -0.31, y: 6.85}
-      - {x: -0.55, y: 6.87}
-      - {x: -0.77, y: 6.8799996}
-      - {x: -0.82, y: 6.8999996}
-      - {x: -1.09, y: 6.95}
-      - {x: -1.27, y: 6.98}
-      - {x: -1.48, y: 7.0699997}
-      - {x: -1.7099999, y: 7.21}
-      - {x: -2.03, y: 7.37}
-      - {x: -2.1399999, y: 7.44}
-      - {x: -2.3899999, y: 7.69}
-      - {x: -2.51, y: 7.7599998}
-      - {x: -2.8799999, y: 7.96}
-      - {x: -3, y: 8.059999}
-      - {x: -3.1699998, y: 8.21}
-      - {x: -3.3, y: 8.2699995}
-      - {x: -3.9399998, y: 8.2699995}
-      - {x: -3.9499998, y: 8.28}
-      - {x: -3.99, y: 8.3}
-      - {x: -4.0899997, y: 8.33}
-      - {x: -4.2999997, y: 8.36}
-      - {x: -4.45, y: 8.389999}
-      - {x: -4.77, y: 8.389999}
-      - {x: -4.77, y: -8.66}
-      - {x: -4.74, y: -8.7}
-      - {x: -4.72, y: -8.71}
-      - {x: -4.6, y: -8.71}
-      - {x: -4.45, y: -8.66}
-      - {x: -4.19, y: -8.65}
 --- !u!1 &2010002900
 GameObject:
   m_ObjectHideFlags: 0
@@ -28948,7 +29445,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2010002900}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.411682, y: 2.7106962, z: 0.9238281}
+  m_LocalPosition: {x: -17.411682, y: 2.7106962, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -28968,10 +29465,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 4
-    regionCoord: {x: -15.860001, y: 3.63, z: -1}
+    regionCoord: {x: -15.860001, y: 3.63, z: -2.9238281}
     adjacentRegions: []
-    nextRegion: {fileID: 0}
-    monsters: []
+    nextRegion: {fileID: 1962787717}
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -29239,7 +29736,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2049422757}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.5016818, y: -3.0393038, z: 0.9238281}
+  m_LocalPosition: {x: -2.5016818, y: -3.0393038, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -29259,10 +29756,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 38
-    regionCoord: {x: -0.9499999, y: -2.12, z: -1}
+    regionCoord: {x: -0.9499999, y: -2.12, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -29632,12 +30129,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2059158172}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.46, y: 11.96, z: -1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.2073, y: 7.9841433, z: -7.6015625}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_Father: {fileID: 752181353}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &2059158176
 PolygonCollider2D:
@@ -29764,7 +30261,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2084850407}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.918318, y: -1.5293039, z: 0.9238281}
+  m_LocalPosition: {x: 14.918318, y: -1.5293039, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -29784,10 +30281,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 83
-    regionCoord: {x: 16.47, y: -0.61, z: -1}
+    regionCoord: {x: 16.47, y: -0.61, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -30013,7 +30510,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2103254938}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.111682, y: 6.260696, z: 0.9238281}
+  m_LocalPosition: {x: -12.111682, y: 6.260696, z: -1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 115407659}
@@ -30033,10 +30530,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   region:
     regionId: 11
-    regionCoord: {x: -10.56, y: 7.18, z: -1}
+    regionCoord: {x: -10.56, y: 7.18, z: -2.9238281}
     adjacentRegions: []
     nextRegion: {fileID: 0}
-    monsters: []
+    monster: {fileID: 0}
     heros: []
     gold: 0
     fountain: 0
@@ -30338,15 +30835,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012531979720, guid: 5bcbf31ded2e353449622ec74f8954da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.059104
+      value: -13.7
       objectReference: {fileID: 0}
     - target: {fileID: 4000012531979720, guid: 5bcbf31ded2e353449622ec74f8954da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3583069
+      value: -4.26
       objectReference: {fileID: 0}
     - target: {fileID: 4000012531979720, guid: 5bcbf31ded2e353449622ec74f8954da, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.630416
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 4000012531979720, guid: 5bcbf31ded2e353449622ec74f8954da, type: 3}
       propertyPath: m_LocalRotation.x

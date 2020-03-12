@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterHandler : MonoBehaviour
+public class WellManager : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +15,10 @@ public class MonsterHandler : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void refillAllWells()
+    {
+
     }
 }

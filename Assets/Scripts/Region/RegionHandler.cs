@@ -40,6 +40,5 @@ public class RegionHandler : MonoBehaviour
     {
         region.regionId = name;
         region.regionCoord = GameObject.Find(name).transform.position;
-        this.tag = "Region";
     }
 }

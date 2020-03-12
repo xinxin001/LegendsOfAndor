@@ -10,7 +10,7 @@ public class Region
     public GameObject[] adjacentRegions;
     public GameObject nextRegion;
 
-    public Monster[] monsters;
+    public Monster monster;
     public GameObject[] heros;
 
     public int gold;
