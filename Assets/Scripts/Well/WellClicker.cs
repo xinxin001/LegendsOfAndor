@@ -12,13 +12,9 @@ public class WellClicker : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButtonDown(1) && empty == false)         {
-
-                    this.GetComponent<Renderer>().material.color= emptyColor;
-                    empty = true;
+            GetComponent<Renderer>().material.color= emptyColor;
+            empty = true;
                 
         }
-
-
-
     }
 }
