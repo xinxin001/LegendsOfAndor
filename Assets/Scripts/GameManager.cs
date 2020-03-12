@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public RegionManager regionManager;
     public WellManager wellManager;
     public Hero warrior;
+    public GameObject lossMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,7 @@ public class GameManager : MonoBehaviour
             print("New Day!");
             warrior.timeOfDay = 7;
         }
-        if(shield1.GetComponent<RegionHandler>().region.monster != null && shield1.GetComponent<RegionHandler>().region.monster != null)
+        if(shield1.GetComponent<RegionHandler>().region.monster != null && shield1.GetComponent<RegionHandler>().region.monster != null && shield2.GetComponent<RegionHandler>().region.monster != null && shield2.GetComponent<RegionHandler>().region.monster != null)
         {
             gameOver();
         }
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
 
     void gameOver()
     {
-        print("Game Over");
+        lossMenu.SetActive(true);
+        Time.timeScale = 0f;
     }
 }
