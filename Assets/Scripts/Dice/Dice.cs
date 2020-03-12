@@ -1,19 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Dice : MonoBehaviour
 {
     Rigidbody rb;
 
-    bool hasLanded;
-    bool thrown;
+    public bool hasLanded;
+    public bool thrown;
 
     Vector3 initPosition;
 
     public int diceValue;
 
     public DiceSide[] diceSides;
+
+
+    public Dice opposingDice;
+    public healthBar opponentHealth;
+    public healthBar myHealth;
 
 
     private void Start()
@@ -28,6 +34,10 @@ public class Dice : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             RollDice();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            SceneManager.LoadScene(2);
         }
 
         if(rb.IsSleeping() && !hasLanded && thrown)
@@ -53,6 +63,8 @@ public class Dice : MonoBehaviour
         else if(thrown && hasLanded)
         {
             Reset();
+            Battle();
+
         }
     }
 
@@ -77,11 +89,35 @@ public class Dice : MonoBehaviour
         diceValue = 0;
         foreach(DiceSide side in diceSides)
         {
-            if (side.OnGround())
+            if (side.OnGround() && hasLanded)
             {
                 diceValue = side.sideValue;
-                Debug.Log(diceValue + " has been rolled");
             }
+        }
+    }
+
+    void Battle()
+    {
+
+        Debug.Log(diceValue + " has been rolled");
+        Debug.Log(opposingDice.diceValue + " OPPONENT");
+
+        if (opposingDice.diceValue > diceValue)
+        {
+            float oppRollValue = opposingDice.diceValue;
+            float dec = (oppRollValue / 10f);
+            myHealth.Fill -= dec;
+        }
+        else if (opposingDice.diceValue < diceValue)
+        {
+            float rollValue = diceValue;
+            float decrement = (rollValue / 10f);
+            opponentHealth.Fill -= decrement;
+        }
+        else if (opposingDice.diceValue == diceValue)
+        {
+            opponentHealth.Fill -= 0;
+            myHealth.Fill -= 0;
         }
     }
 }
