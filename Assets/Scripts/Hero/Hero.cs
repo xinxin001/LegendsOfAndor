@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Hero : MonoBehaviour
 {
+    /*
     private int gold;
     private int timeOfDay;
     private bool movecomplete;
@@ -17,6 +18,23 @@ public class Hero : MonoBehaviour
     private int helm;
     private int telescope;
     private HeroKind heroKind;
+    public ArrayList farmerlist = new ArrayList();
+    */
+
+    //~~ THESE ARE PUBLIC FOR NOW SO WE CAN SEE THEM IN THE INSPECTOR WINDOW IN UNITY EDITOR. Should be set to private later on.
+    public int gold;
+    public int timeOfDay;
+    public bool movecomplete;
+    public int maxWP;
+    public int maxSP;
+    public int rN;
+    public int wineskin;
+    public int falcon;
+    public int shield;
+    public int bow;
+    public int helm;
+    public int telescope;
+    public HeroKind heroKind;
     public ArrayList farmerlist = new ArrayList();
 
     public int getGold {
@@ -43,10 +61,6 @@ public class Hero : MonoBehaviour
     }
     public int getmaxSP{
         get { return maxSP; }
-    }
-   
-    public int getSP(){
-        return maxSP;
     }
     public int getrN{
         get { return rN; }

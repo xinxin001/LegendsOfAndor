@@ -33366,6 +33366,7 @@ GameObject:
   - component: {fileID: 2094620145}
   - component: {fileID: 2094620144}
   - component: {fileID: 2094620143}
+  - component: {fileID: 2094620149}
   - component: {fileID: 2094620142}
   - component: {fileID: 2094620141}
   - component: {fileID: 2094620140}
@@ -33520,6 +33521,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: -19.041, y: 0.75500005, z: 36.600002}
+--- !u!114 &2094620149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094620139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca46e63d3c612a74781f457b25bf3a75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gold: 0
+  timeOfDay: 0
+  movecomplete: 0
+  maxWP: 0
+  maxSP: 0
+  rN: 0
+  wineskin: 0
+  falcon: 0
+  shield: 0
+  bow: 0
+  helm: 0
+  telescope: 0
+  heroKind: {fileID: 0}
 --- !u!1 &2103254938
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//[RequireComponent(typeof(Hero))]
+
 public class DialogueSystem : MonoBehaviour
 {
 	
@@ -19,6 +21,7 @@ public class DialogueSystem : MonoBehaviour
     Button buyBow;
     Button buyHelm;
     Button buyTelescope;
+    Hero myHero;
    
 
     void Awake(){
@@ -32,7 +35,7 @@ public class DialogueSystem : MonoBehaviour
     	buyHelm = dialoguePanel.transform.Find("BuyHelm").GetComponent<Button>();
     	buyTelescope = dialoguePanel.transform.Find("BuyTelescope").GetComponent<Button>();
     	exitButton = dialoguePanel.transform.Find("ExitButton").GetComponent<Button>();
-  
+  		myHero = CurrentHero.GetComponent<Hero>();
     	
     	//Listeners
     	buySP.onClick.AddListener(buySPFunc);
@@ -61,32 +64,58 @@ public class DialogueSystem : MonoBehaviour
 
     void buySPFunc(){
     	Debug.Log("Buy SP");
-    	int currentSP = CurrentHero.getSP();
-    	CurrentHero.setmaxSP(currentSP);
+    	int currentSP = myHero.getmaxSP;
+    	myHero.setmaxSP(currentSP+1);
+    	int currentGold = myHero.getGold;
+    	myHero.setGold(currentGold - 2);
     }
 
     void buyWineskinFunc(){
     	Debug.Log("Buy WS");
+    	int currentGold = myHero.getGold;
+    	myHero.setGold(currentGold - 2);
+    	int currentWineskin = myHero.getWineskin;
+    	myHero.setWineskin(currentWineskin+1);
     }
 
     void buyFalconFunc(){
     	Debug.Log("Buy Falcon");
+    	int currentGold = myHero.getGold;
+    	myHero.setGold(currentGold - 2);
+    	int current = myHero.getFalcon;
+    	myHero.setFalcon(current+1);
     }
 
     void buyShieldFunc(){
     	Debug.Log("Buy Shield");
+    	int currentGold = myHero.getGold;
+    	myHero.setGold(currentGold - 2);
+    	int current = myHero.getShield;
+    	myHero.setShield(current+1);
     }
 
     void buyBowFunc(){
     	Debug.Log("Buy Bow");
+    	int currentGold = myHero.getGold;
+    	myHero.setGold(currentGold - 2);
+    	int current = myHero.getBow;
+    	myHero.setBow(current+1);
     }
 
     void buyHelmFunc(){
     	Debug.Log("Buy Helm");
+    	int currentGold = myHero.getGold;
+    	myHero.setGold(currentGold - 2);
+    	int current = myHero.getHelm;
+    	myHero.setHelm(current+1);
     }
 
     void buyTelescopeFunc(){
     	Debug.Log("Buy Telescope");
+    	int currentGold = myHero.getGold;
+    	myHero.setGold(currentGold - 2);
+    	int current = myHero.getTelescope;
+    	myHero.setTelescope(current+1);
     }
 
     void exitDialogue(){
