@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 [System.Serializable]
 
-public class Region
+public class Region:MonoBehaviour
 {
     public string regionId;
     public Vector3 regionCoord;

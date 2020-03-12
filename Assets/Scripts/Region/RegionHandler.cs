@@ -35,6 +35,10 @@ public class RegionHandler : MonoBehaviour
         sprite.color = startColor;
     }
 
+    //Method to return all the monsters for a region
+    public Monster[] getMonsters() => region.monsters;
+
+
     //This will init the region with the name of the GameObject
     void OnDrawGizmos()
     {
