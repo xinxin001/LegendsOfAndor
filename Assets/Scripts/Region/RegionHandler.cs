@@ -10,7 +10,7 @@ public class RegionHandler : MonoBehaviour
     public Color32 startColor;
     public Color32 hoverColor;
     public Color32 mouseDownColor;
-    
+
 
     //This sequences makes the selected Region get highlighted
     void Awake()
@@ -33,6 +33,11 @@ public class RegionHandler : MonoBehaviour
     void OnMouseUp()
     {
         sprite.color = startColor;
+    }
+
+    //Method to return all the monsters for a region
+    public Monster getMonster() {
+        return region.monster;
     }
 
     //This will init the region with the name of the GameObject

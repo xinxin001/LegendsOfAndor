@@ -12,7 +12,6 @@ public class Region
 
     public Monster monster;
     public GameObject[] heros;
-
     public int gold;
     public bool fountain;
 

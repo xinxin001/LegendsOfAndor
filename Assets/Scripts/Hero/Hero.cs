@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 
@@ -58,5 +59,30 @@ public class Hero : MonoBehaviour
     public void DropFarmer(Farmer f){
         farmerlist.Remove(f);
     }
+
+    private void Update()
+    {
+        checkMonster();
+    }
+
+    //This method will check if Hero is on same region as monster
+    public void checkMonster()
+    {
+        //Obtain list of monsters for current region:
+        Monster monster = currentRegion.GetComponent<RegionHandler>().getMonster();
+        if (monster != null)
+        {
+            //If you click the f key then it will initialize the fight.
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                SceneManager.LoadScene(0);
+            }
+        }
+    }
+
+    //public void pickupGold()
+    //{
+    //    gold += currentRegion.GetComponent<Region>().gold.getGold();
+    //}
 
 }
