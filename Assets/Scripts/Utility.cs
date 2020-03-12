@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,3 +17,11 @@ public class Utility
         return new Vector2(Mathf.Round(inputVector.x),
                            Mathf.Round(inputVector.y));    }
 }
+=======
+﻿public enum Layer
+{
+    Walkable = 8,
+    Unwalkable = 9,
+    RaycastEndStop = -1
+}
+>>>>>>> 54f5d705c1c2c68a52849fcdd12d09d0a1ab2cea
