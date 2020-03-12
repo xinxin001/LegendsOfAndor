@@ -11,13 +11,7 @@ public class Hero : MonoBehaviour
     public int timeOfDay = 7;
     public int maxWP = 7;
     private int maxSP;
-<<<<<<< HEAD
-    private int rN;
-    private HeroKind heroKind;
-    private int willPower;
-=======
     public GameObject currentRegion;
->>>>>>> 256ac6e12435f5b2f3d5dc81b3be483138fa2d88
     public ArrayList farmerlist = new ArrayList();
 
     private void Start()
@@ -53,22 +47,7 @@ public class Hero : MonoBehaviour
     }
     public void addMaxSP(int addedSP)
     {
-<<<<<<< HEAD
-        get { return rN; }
-    }
-    public int getwiiPower
-    {
-        get { return willPower; }
-    }
-
-    public HeroKind getHerokind{
-        get { return heroKind; }
-    }
-    public void setHerokind(HeroKind hk){
-        heroKind = hk;
-=======
         maxSP = maxSP + addedSP;
->>>>>>> 256ac6e12435f5b2f3d5dc81b3be483138fa2d88
     }
     public void PickUpFarmer(Farmer f){
     }
