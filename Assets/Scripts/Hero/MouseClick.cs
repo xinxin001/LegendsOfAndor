@@ -30,14 +30,29 @@ public class MouseClick : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, 1000))
+         if(Physics.Raycast(ray,out hit, 1000))
         {
-            targetPosition = hit.point;
-            lookAtTarget = new Vector3(targetPosition.x - transform.position.x,
-                transform.position.y,
-                targetPosition.z - transform.position.z);
-            playerRot = Quaternion.LookRotation(lookAtTarget);
-            moving = true;
+
+            //object player clicked on
+            GameObject interactedObject = hit.collider.gameObject;
+
+            //If object is interactable, interact with it
+            if(interactedObject.tag == "Interactable Object")
+            {
+                Debug.Log("Interactable Interacted");
+                //interactedObject.GetComponent<Interactable>().MoveToInteraction(playerAgent);
+                interactedObject.GetComponent<Interactable>().Interact();
+
+            // If obeject is not interabtable, move to location of mouse click
+            }else
+            {
+                targetPosition = hit.point;
+                    lookAtTarget = new Vector3(targetPosition.x - transform.position.x,
+                    transform.position.y,
+                    targetPosition.z - transform.position.z);
+                playerRot = Quaternion.LookRotation(lookAtTarget);
+                moving = true;
+            }
         }
     }
 
