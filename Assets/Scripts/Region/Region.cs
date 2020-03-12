@@ -13,7 +13,8 @@ public class Region:MonoBehaviour
     public Monster[] monsters;
     public GameObject[] heros;
 
-    public int gold;
+    //Here i switched this TELL XIN
+    public Gold gold;
     public bool fountain;
 
     public bool isCastle;

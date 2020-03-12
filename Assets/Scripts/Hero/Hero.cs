@@ -17,6 +17,11 @@ public class Hero : MonoBehaviour
     public int getGold {
         get { return gold; }
     }
+
+    public void setGold(int n) {
+        gold += n;
+    }
+
     public int getTime
     {
         get { return timeOfDay; }
@@ -57,6 +62,10 @@ public class Hero : MonoBehaviour
                 SceneManager.LoadScene(2);
             }
         }
+    }
+
+    public void pickupGold() {
+        gold += currentRegion.GetComponent<Region>().gold.getGold();
     }
 
 
