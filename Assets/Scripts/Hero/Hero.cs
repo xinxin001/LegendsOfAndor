@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+
 public class Hero : MonoBehaviour
 {
     private int gold;
-    private int timeOfDay;
-    private bool movecomplete;
-    private int maxWP;
+    public int timeOfDay = 7;
+    public int maxWP = 7;
     private int maxSP;
-    private int rN;
+    public GameObject currentRegion;
     public ArrayList farmerlist = new ArrayList();
 
     public int getGold {
@@ -19,20 +20,20 @@ public class Hero : MonoBehaviour
     {
         get { return timeOfDay; }
     }
-
-    public bool getmoveStatus{
-        get { return movecomplete; }
+    public void decrementTime()
+    {
+        timeOfDay = timeOfDay - 1;
     }
     public int getmaxWP
     {
         get { return maxWP; }
     }
+    public void subtractMaxWP(int number)
+    {
+        maxWP = maxWP - number;
+    }
     public int getmaxSP{
         get { return maxSP; }
-    }
-    public int getrN
-    {
-        get { return rN; }
     }
     public void PickUpFarmer(Farmer f){
     }
