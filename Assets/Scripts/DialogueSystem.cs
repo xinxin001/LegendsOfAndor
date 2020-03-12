@@ -29,7 +29,7 @@ public class DialogueSystem : MonoBehaviour
     	}
     }
 
-    void startDialogue(){
+    public void startDialogue(){
     	dialoguePanel.SetActive(true);
     }
 

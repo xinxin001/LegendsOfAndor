@@ -41,7 +41,9 @@ public class MouseClick : MonoBehaviour
             {
                 Debug.Log("Interactable Interacted");
                 //interactedObject.GetComponent<Interactable>().MoveToInteraction(playerAgent);
-                interactedObject.GetComponent<Interactable>().Interact();
+                interactedObject.GetComponent<MerchantNPC>().Interact();
+                
+
 
             // If obeject is not interabtable, move to location of mouse click
             }else
