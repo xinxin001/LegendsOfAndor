@@ -21,12 +21,12 @@ public class DialogueSystem : MonoBehaviour
     	buySP.onClick.AddListener(buySPFunc);
     	dialoguePanel.SetActive(false);
     	
-    	/*
+    	
     	if (Instance != null && Instance != this){
-    		Destroy(GameObject);
+    		Destroy(gameObject);
     	}else{
     		Instance = this;
-    	}*/
+    	}
     }
 
     void startDialogue(){
