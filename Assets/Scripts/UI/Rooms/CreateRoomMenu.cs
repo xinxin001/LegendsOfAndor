@@ -20,6 +20,7 @@ public class CreateRoomMenu : MonoBehaviourPunCallbacks
     public void OnClick_CreateRoom()
     {
         //check if connected before creating a room
+
         if (!PhotonNetwork.IsConnected){
             Debug.Log("Not connected to server");
                 return;
