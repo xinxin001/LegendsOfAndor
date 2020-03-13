@@ -12,7 +12,10 @@ public class RoomListingsMenu : MonoBehaviourPunCallbacks
     private RoomListing _roomListing;
 
     private List<RoomListing> _listings = new List<RoomListing>();
-    private RoomsCanvases _roomsCanvases;
+
+   
+
+ private RoomsCanvases _roomsCanvases;
 
 
     public void FirstInitialize(RoomsCanvases canvases)

@@ -15,6 +15,9 @@ public class PlayerListingsMenu : MonoBehaviourPunCallbacks
     private Text _readyUpText;
 
     private List<PlayerListing> _listings = new List<PlayerListing>();
+
+
+
     private RoomsCanvases _roomsCanvases;
     private bool _ready = false;
 
@@ -121,27 +124,35 @@ public class PlayerListingsMenu : MonoBehaviourPunCallbacks
         if (PhotonNetwork.IsMasterClient)
         {
 
-            for(int i=0; i<_listings.Count; i++)
-            {
-                if (_listings[i].Player != PhotonNetwork.LocalPlayer)
-                {
-                    if (!_listings[i].Ready)
-                        return;
-                }
+            List<string> notChosen = new List<string>();
 
-            
+            foreach (Player player in PhotonNetwork.PlayerList)
+            {
+                if (player.CustomProperties["Class"].Equals("NONE"))
+                {
+                    notChosen.Add(player.NickName);
+                }
             }
 
-            //The first two lines are useful for ready up scenes, where you need
-            //every player to be ready, and is also useful if
-            //you need to not have your scenes necessarily synced up
-            //for example in andor, we need to have a scene where everyone
-            //can decide on their hero before the board is generated
-            //Might also want to lock other people out of the room once the game
-            //has started
-            PhotonNetwork.CurrentRoom.IsOpen = false;
-            PhotonNetwork.CurrentRoom.IsVisible = false;
-            PhotonNetwork.LoadLevel(1);
+            if (notChosen.Count != 0)
+            {
+                Debug.Log("Players who have not chosen a hero yet : " + string.Join(",", notChosen.ToArray()));
+                return;
+            }
+            else
+            {
+
+                //The first two lines are useful for ready up scenes, where you need
+                //every player to be ready, and is also useful if
+                //you need to not have your scenes necessarily synced up
+                //for example in andor, we need to have a scene where everyone
+                //can decide on their hero before the board is generated
+                //Might also want to lock other people out of the room once the game
+                //has started
+                PhotonNetwork.CurrentRoom.IsOpen = false;
+                PhotonNetwork.CurrentRoom.IsVisible = false;
+                PhotonNetwork.LoadLevel(1);
+            }
         }
     }
 
