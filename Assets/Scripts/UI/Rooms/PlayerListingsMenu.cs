@@ -11,8 +11,8 @@ public class PlayerListingsMenu : MonoBehaviourPunCallbacks
     private Transform _content;
     [SerializeField]
     private PlayerListing _playerListing;
-    [SerializeField]
-    private Text _readyUpText;
+    // [SerializeField]
+    // private Text _readyUpText;
 
     private List<PlayerListing> _listings = new List<PlayerListing>();
 
@@ -31,16 +31,6 @@ public class PlayerListingsMenu : MonoBehaviourPunCallbacks
     public override void OnEnable()
     {
         base.OnEnable();
-        SetReadyUp(false);
-    }
-
-    private void SetReadyUp(bool state)
-    {
-        _ready = false;
-        if (_ready)
-            _readyUpText.text = "R";
-        else
-            _readyUpText.text = "N";
     }
 
     public override void OnDisable()
@@ -58,8 +48,6 @@ public class PlayerListingsMenu : MonoBehaviourPunCallbacks
     {
         _roomsCanvases = canvases;
     }
-
-
 
 
     private void GetCurrentRoomPlayers()
@@ -156,26 +144,27 @@ public class PlayerListingsMenu : MonoBehaviourPunCallbacks
         }
     }
 
-    public void OnClick_ReadyUp()
-    {
-        if (!PhotonNetwork.IsMasterClient)
-        {
-            SetReadyUp(!_ready);
-            base.photonView.RPC("RPC_ChangeReadyState", RpcTarget.MasterClient,PhotonNetwork.LocalPlayer, _ready);
+    // public void OnClick_ReadyUp()
+    // {
+        // if (!PhotonNetwork.IsMasterClient)
+        // {   
+            // ExitGames.Client.Photon.Hashtable hash = new ExitGames.Client.Photon.Hashtable (){{"Class","None"}};
+            // PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
+            // print("PLAYER CLASS: " + PhotonNetwork.LocalPlayer.CustomProperties["Class"]);
+            // SetReadyUp(!_ready);
+            // base.photonView.RPC("RPC_ChangeReadyState", RpcTarget.MasterClient,PhotonNetwork.LocalPlayer, _ready);
+        // }
+    // }
 
-        }
+    // [PunRPC]
+    // private void RPC_ChangeReadyState(Player player, bool ready)
+    // {
+    //     int index = _listings.FindIndex(x => x.Player == player);
+    //     if (index != -1)
+    //     {
+    //         _listings[index].Ready = ready;
 
-    }
-
-    [PunRPC]
-    private void RPC_ChangeReadyState(Player player, bool ready)
-    {
-        int index = _listings.FindIndex(x => x.Player == player);
-        if (index != -1)
-        {
-            _listings[index].Ready = ready;
-
-        }
-    }
+    //     }
+    // }
  
 }

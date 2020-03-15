@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Photon.Realtime;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class PlayerListing : MonoBehaviour{
     [SerializeField]
@@ -13,7 +15,14 @@ public class PlayerListing : MonoBehaviour{
 
     public void SetPlayerInfo(Player player){
         Player = player;
-        _text.text = player.NickName;
+        // Set default player class
+        ExitGames.Client.Photon.Hashtable hash = new ExitGames.Client.Photon.Hashtable (){{"Class","None"}};
+        Player.SetCustomProperties(hash);
+        
+        _text.text = player.NickName + " - " + Player.CustomProperties["Class"];
     }
 
+    public void Update(){
+        _text.text = Player.NickName + " - " + Player.CustomProperties["Class"];
+    }
 }
