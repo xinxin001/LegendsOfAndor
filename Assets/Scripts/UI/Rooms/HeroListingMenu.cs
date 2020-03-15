@@ -8,92 +8,52 @@ using Photon.Realtime;
 public class HeroListingMenu : MonoBehaviour
 {
 
-    // [SerializeField]
-    // private Text _text;
-
     private ExitGames.Client.Photon.Hashtable _myCustomProperties = new ExitGames.Client.Photon.Hashtable();
 
+    // class setting decorator
     private void SetClass(string toSet)
     {
-
-        _myCustomProperties["Class"] = toSet;
-        PhotonNetwork.LocalPlayer.CustomProperties = _myCustomProperties;
-    }
-
-
-    public void OnClick_SelectWarrior()
-    {   
         Player localPlayer = PhotonNetwork.LocalPlayer;
         Player[] playerList = PhotonNetwork.PlayerList;
         bool taken = false;
         foreach (Player player in playerList)
         {
-            if (player.CustomProperties["Class"].Equals("WARRIOR"))
-                taken = true;
+            if (player.CustomProperties["Class"].Equals(toSet)){
+                if (player.NickName.Equals(localPlayer.NickName)){
+                    toSet = "NONE";
+                } else {
+                    taken = true;
+                }
+            }
         }
 
         if (!taken){
-            SetClass("WARRIOR");
-            Debug.Log(localPlayer.NickName + " has update their class to: " + localPlayer.CustomProperties["Class"]);
+            _myCustomProperties["Class"] = toSet;
+            PhotonNetwork.LocalPlayer.SetCustomProperties(_myCustomProperties);
+            Debug.Log(localPlayer.NickName + " has updated their class to: " + localPlayer.CustomProperties["Class"]);
         } else {
             Debug.Log("Invalid class choice");
         }
     }
 
+
+    public void OnClick_SelectWarrior()
+    {   
+        SetClass("WARRIOR");
+    }
+
     public void OnClick_SelectDwarf()
     {   
-        Player localPlayer = PhotonNetwork.LocalPlayer;
-        Player[] playerList = PhotonNetwork.PlayerList;
-        bool taken = false;
-        foreach (Player player in playerList)
-        {
-            if (player.CustomProperties["Class"].Equals("DWARF"))
-                taken = true;
-        }
-
-        if (!taken){
-            SetClass("DWARF");
-            Debug.Log(localPlayer.NickName + " has update their class to: " + localPlayer.CustomProperties["Class"]);
-        } else{
-            Debug.Log("Invalid class choice");
-        }
+        SetClass("DWARF");
     }
 
     public void OnClick_SelectWizard()
     {
-        Player localPlayer = PhotonNetwork.LocalPlayer;
-        Player[] playerList = PhotonNetwork.PlayerList;
-        bool taken = false;
-        foreach (Player player in playerList)
-        {
-            if (player.CustomProperties["Class"].Equals("WIZARD"))
-                taken = true;
-        }
-
-        if (!taken){
-            SetClass("WIZARD");
-            Debug.Log(localPlayer.NickName + " has update their class to: " + localPlayer.CustomProperties["Class"]);
-        } else{
-            Debug.Log("Invalid class choice");
-        }
+       SetClass("WIZARD");
     }
 
     public void OnClick_SelectArcher()
     {
-        Player localPlayer = PhotonNetwork.LocalPlayer;
-        Player[] playerList = PhotonNetwork.PlayerList;
-        bool taken = false;
-        foreach (Player player in playerList)
-        {
-            if (player.CustomProperties["Class"].Equals("ARCHER"))
-                taken = true;
-        }
-
-        if (!taken){
-            SetClass("ARCHER");
-            Debug.Log(localPlayer.NickName + " has update their class to: " + localPlayer.CustomProperties["Class"]);
-        } else{
-            Debug.Log("Invalid class choice");
-        }
+        SetClass("ARCHER");
     }
 }

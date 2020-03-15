@@ -143,28 +143,4 @@ public class PlayerListingsMenu : MonoBehaviourPunCallbacks
             }
         }
     }
-
-    // public void OnClick_ReadyUp()
-    // {
-        // if (!PhotonNetwork.IsMasterClient)
-        // {   
-            // ExitGames.Client.Photon.Hashtable hash = new ExitGames.Client.Photon.Hashtable (){{"Class","None"}};
-            // PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
-            // print("PLAYER CLASS: " + PhotonNetwork.LocalPlayer.CustomProperties["Class"]);
-            // SetReadyUp(!_ready);
-            // base.photonView.RPC("RPC_ChangeReadyState", RpcTarget.MasterClient,PhotonNetwork.LocalPlayer, _ready);
-        // }
-    // }
-
-    // [PunRPC]
-    // private void RPC_ChangeReadyState(Player player, bool ready)
-    // {
-    //     int index = _listings.FindIndex(x => x.Player == player);
-    //     if (index != -1)
-    //     {
-    //         _listings[index].Ready = ready;
-
-    //     }
-    // }
- 
 }

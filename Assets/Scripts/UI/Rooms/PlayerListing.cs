@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using Photon.Realtime;
 using Photon.Pun;
-using Photon.Realtime;
 
 public class PlayerListing : MonoBehaviour{
     [SerializeField]
