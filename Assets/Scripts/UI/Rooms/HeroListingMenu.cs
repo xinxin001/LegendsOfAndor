@@ -8,25 +8,36 @@ using Photon.Realtime;
 public class HeroListingMenu : MonoBehaviour
 {
 
+    [SerializeField]
+    private GameObject ArcherSelection;
+    [SerializeField]
+    private GameObject DwarfSelection;
+    [SerializeField]
+    private GameObject WarriorSelection;
+    [SerializeField]
+    private GameObject WizardSelection;
     private ExitGames.Client.Photon.Hashtable _myCustomProperties = new ExitGames.Client.Photon.Hashtable();
 
     // class setting decorator
-    private void SetClass(string toSet)
-    {
+    private void SetClass(string toSet, Button _Button, ColorBlock _Color) {
+        int output = 0;
         Player localPlayer = PhotonNetwork.LocalPlayer;
         Player[] playerList = PhotonNetwork.PlayerList;
         bool taken = false;
         foreach (Player player in playerList)
         {
+            // If a player chooses his current class, he's reverted to NONE, otherwise he can't choose the selected class
             if (player.CustomProperties["Class"].Equals(toSet)){
                 if (player.NickName.Equals(localPlayer.NickName)){
                     toSet = "NONE";
+                    output = 1;
                 } else {
                     taken = true;
                 }
             }
         }
 
+        // Update custom properties
         if (!taken){
             _myCustomProperties["Class"] = toSet;
             PhotonNetwork.LocalPlayer.SetCustomProperties(_myCustomProperties);
@@ -34,26 +45,45 @@ public class HeroListingMenu : MonoBehaviour
         } else {
             Debug.Log("Invalid class choice");
         }
+
+        // Update button color
+        // if(output == 1){
+        //     _Color.normalColor = Color.white;
+        //     _Color.highlightedColor = Color.white;
+        // } else if (output == 0){
+        //     _Color.normalColor = Color.red;
+        //     _Color.highlightedColor = Color.red;
+        // }
+        // _Button.colors = _Color;
     }
 
 
     public void OnClick_SelectWarrior()
     {   
-        SetClass("WARRIOR");
+        Button _Button = WarriorSelection.GetComponent<Button>();
+        ColorBlock _Color =  _Button.colors;
+
+        SetClass("WARRIOR", _Button, _Color);
     }
 
     public void OnClick_SelectDwarf()
     {   
-        SetClass("DWARF");
+        Button _Button = DwarfSelection.GetComponent<Button>();
+        ColorBlock _Color =  _Button.colors;
+        SetClass("DWARF", _Button, _Color);
     }
 
     public void OnClick_SelectWizard()
     {
-       SetClass("WIZARD");
+        Button _Button = WizardSelection.GetComponent<Button>();
+        ColorBlock _Color =  _Button.colors;
+       SetClass("WIZARD", _Button, _Color);
     }
 
     public void OnClick_SelectArcher()
     {
-        SetClass("ARCHER");
+        Button _Button = ArcherSelection.GetComponent<Button>();
+        ColorBlock _Color =  _Button.colors;
+        SetClass("ARCHER", _Button, _Color);
     }
 }
