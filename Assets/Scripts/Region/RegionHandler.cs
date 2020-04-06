@@ -18,6 +18,7 @@ public class RegionHandler : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         sprite.color = startColor;
     }
+
     void OnMouseEnter()
     {
         sprite.color = hoverColor;

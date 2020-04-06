@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WellManager : MonoBehaviour
 {
-
+    public List<Well> Wells;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +19,9 @@ public class WellManager : MonoBehaviour
 
     public void refillAllWells()
     {
-
+        for(int i=0; i<Wells.ToArray().Length; i++)
+        {
+            Wells[i].isWellFull = true;
+        }
     }
 }

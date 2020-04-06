@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Region
   - Sundial
+  - Ground
+  - Well
+  - Farmer
   layers:
   - Default
   - TransparentFX

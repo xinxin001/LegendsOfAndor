@@ -9,55 +9,24 @@ public class Hero : MonoBehaviour
 {
     private int gold;
     public int timeOfDay = 7;
-    public int maxWP = 7;
+    public int willPower = 7;
     private int maxSP;
     public GameObject currentRegion;
-    public ArrayList farmerlist = new ArrayList();
+    public int farmers = 0;
+    public string HeroType;
 
     private void Start()
     {
         
     }
 
-    public int getGold {
-        get { return gold; }
-    }
-    public void addGold(int amount)
-    {
-        gold = gold + amount;
-    }
-    public int getTime
-    {
-        get { return timeOfDay; }
-    }
     public void decrementTime()
     {
         timeOfDay = timeOfDay - 1;
     }
-    public int getmaxWP
-    {
-        get { return maxWP; }
-    }
-    public void subtractMaxWP(int number)
-    {
-        maxWP = maxWP - number;
-    }
-    public int getmaxSP{
-        get { return maxSP; }
-    }
-    public void addMaxSP(int addedSP)
-    {
-        maxSP = maxSP + addedSP;
-    }
-    public void PickUpFarmer(Farmer f){
-    }
 
     public void CreateHero(){
         Hero hero = new Hero();
-    }
-
-    public void DropFarmer(Farmer f){
-        farmerlist.Remove(f);
     }
 
     private void Update()
@@ -80,9 +49,16 @@ public class Hero : MonoBehaviour
         }
     }
 
-    //public void pickupGold()
-    //{
-    //    gold += currentRegion.GetComponent<Region>().gold.getGold();
-    //}
+    public void emptyWell(Well well)
+    {
+        if (HeroType.Equals("Warrior"))
+        {
+            willPower += 5;
+        } else
+        {
+            willPower += 3;
+        }
+        well.isWellFull = false;
+    }
 
 }
