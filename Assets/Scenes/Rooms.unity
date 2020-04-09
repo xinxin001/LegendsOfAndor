@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465785, g: 0.49641252, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1114,6 +1114,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3ea0aaa7891e840b191cfa408b6047, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ArcherSelection: {fileID: 1079124512}
+  DwarfSelection: {fileID: 263950087}
+  WarriorSelection: {fileID: 851185454}
+  WizardSelection: {fileID: 195543637}
 --- !u!114 &390633716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1564,8 +1568,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 825669750}
   m_HandleRect: {fileID: 825669749}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.99999976
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3648,7 +3652,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2, y: -0.00006100063}
+  m_AnchoredPosition: {x: 2, y: 0.00000613868}
   m_SizeDelta: {x: 5, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2069037722

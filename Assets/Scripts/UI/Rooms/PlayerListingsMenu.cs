@@ -139,7 +139,7 @@ public class PlayerListingsMenu : MonoBehaviourPunCallbacks
                 //has started
                 PhotonNetwork.CurrentRoom.IsOpen = false;
                 PhotonNetwork.CurrentRoom.IsVisible = false;
-                PhotonNetwork.LoadLevel(1);
+                PhotonNetwork.LoadLevel("networkTest");
             }
         }
     }

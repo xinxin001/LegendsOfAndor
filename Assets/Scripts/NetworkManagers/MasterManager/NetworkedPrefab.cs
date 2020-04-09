@@ -19,13 +19,15 @@ public class NetworkedPrefab
     private string ReturnPrefabPathModified(string path)
     {
         int extensionLength = System.IO.Path.GetExtension(path).Length;
-        int additionalLength = 10;
-        int startIndex = path.ToLower().IndexOf("ressources");
+        int startIndex = path.ToLower().IndexOf("resources");
 
         if (startIndex == -1)
+        {
+            Debug.Log("Resources path now found!");
             return string.Empty;
+        }
         else
-            return path.Substring(startIndex + additionalLength, path.Length - (additionalLength + startIndex + extensionLength));
+            return path.Substring(17, path.Length - 17 - extensionLength);
     }
 
 }

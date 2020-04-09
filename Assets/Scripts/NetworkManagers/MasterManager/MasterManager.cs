@@ -26,6 +26,7 @@ public class MasterManager : SingletonScriptableObject<MasterManager>
 
     public static GameObject NetworkInstantiate(GameObject obj, Vector3 position, Quaternion rotation)
     {
+        Debug.Log("Instantiating...");
         foreach ( NetworkedPrefab networkedPrefab in Instance._networkedPrefabs)
         {
             if (networkedPrefab.Prefab == obj)
@@ -34,6 +35,7 @@ public class MasterManager : SingletonScriptableObject<MasterManager>
                 if (networkedPrefab.Path != string.Empty)
                 {
                     GameObject result = PhotonNetwork.Instantiate(networkedPrefab.Path, position, rotation);
+                    Debug.Log("Game object instantiated");
                     return result;
                 }
                 else
@@ -62,6 +64,9 @@ public class MasterManager : SingletonScriptableObject<MasterManager>
                 string path = AssetDatabase.GetAssetPath(results[i]);
                 Instance._networkedPrefabs.Add(new NetworkedPrefab(results[i], path));
             }
+        }
+        for (int i = 0; i < Instance._networkedPrefabs.Count; i++) {
+            UnityEngine.Debug.Log(Instance._networkedPrefabs[i].Prefab.name + ", " + Instance._networkedPrefabs[i].Path);
         }
 
 #endif

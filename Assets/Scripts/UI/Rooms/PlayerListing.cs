@@ -15,7 +15,7 @@ public class PlayerListing : MonoBehaviour{
     public void SetPlayerInfo(Player player){
         Player = player;
         // Set default player class
-        ExitGames.Client.Photon.Hashtable hash = new ExitGames.Client.Photon.Hashtable (){{"Class","None"}};
+        ExitGames.Client.Photon.Hashtable hash = new ExitGames.Client.Photon.Hashtable (){{"Class","NONE"}};
         Player.SetCustomProperties(hash);
         
         _text.text = player.NickName + " - " + Player.CustomProperties["Class"];

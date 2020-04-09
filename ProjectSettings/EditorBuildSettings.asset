@@ -5,10 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/fightScene.unity
     guid: db9eaa915633bc644b280d1de265fe76
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Legend2.unity
-    guid: 21bb88af156244fa7b724bec8cf9f510
+    path: Assets/Scenes/Rooms.unity
+    guid: 3bf97a068f47e734f99f5dbd7f47ef07
+  - enabled: 1
+    path: Assets/Scenes/networkTest.unity
+    guid: 8f9697d1d2aff5a4a9ee0220b53c8c32
   m_configObjects: {}
