@@ -47,3 +47,4 @@ MonoBehaviour:
     type: 3}
   pfFarmer: {fileID: 1722038925789456041, guid: 8bda6f62e01ddd345ab10c4c48e42144,
     type: 3}
+  pfGold: {fileID: 2578581254434769264, guid: f1e785ee9e24b0749a5ce3a1bcf6996c, type: 3}

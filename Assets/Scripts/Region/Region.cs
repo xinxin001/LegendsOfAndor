@@ -11,9 +11,10 @@ public class Region
     public GameObject nextRegion;
 
     public Monster monster;
+    public Farmer[] farmers;
+    public Gold[] goldStacks;
     public GameObject[] heros;
-    public int gold;
-    public bool fountain;
 
+    public bool fountain;
     public bool isCastle;
 }

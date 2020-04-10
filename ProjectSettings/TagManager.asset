@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Well
   - Farmer
+  - Gold
   layers:
   - Default
   - TransparentFX

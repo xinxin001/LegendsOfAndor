@@ -7,10 +7,11 @@ using UnityEngine.SceneManagement;
 
 public class Hero : MonoBehaviour
 {
-    private int gold;
+    public int gold = 0;
     public int timeOfDay = 7;
+    public int overtime = 3;
+    public int strength = 7;
     public int willPower = 7;
-    private int maxSP;
     public GameObject currentRegion;
     public int farmers = 0;
     public string HeroType;
