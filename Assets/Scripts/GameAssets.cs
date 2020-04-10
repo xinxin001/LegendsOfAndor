@@ -19,4 +19,6 @@ public class GameAssets : MonoBehaviour
     public Transform pfFarmerLostPopup;
 
     public Transform pfFarmer;
+
+    public Transform pfGold;
 }

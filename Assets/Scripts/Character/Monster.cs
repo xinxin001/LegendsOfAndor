@@ -51,7 +51,7 @@ public class Monster : GameUnit
             GameObject nextRegion = currentRegion.GetComponent<RegionHandler>().region.nextRegion; //Gets next region
             currentRegion.GetComponent<RegionHandler>().region.monster = null; //Remove urself from current region
             currentRegion = nextRegion; //next region becomes current region
-            if (nextRegion.GetComponent<RegionHandler>().region.monster != null) //if there's already a monster on the region, do previous steps again
+            if (currentRegion.GetComponent<RegionHandler>().region.monster != null) //if there's already a monster on the region, do previous steps again
             {
                 move();
             }

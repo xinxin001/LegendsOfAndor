@@ -42,6 +42,16 @@ public class RegionHandler : MonoBehaviour
         return region.monster;
     }
 
+    public void addFarmer()
+    {
+
+    }
+
+    public void addGoldStack()
+    {
+
+    }
+
     //This will init the region with the name of the GameObject
     void OnDrawGizmos()
     {

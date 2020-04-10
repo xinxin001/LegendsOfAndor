@@ -53,6 +53,18 @@ public class Cursor : MonoBehaviour
                         Destroy(hit.collider.gameObject);
                     }
                     
+                }
+                else if (hit.collider.gameObject.tag == "Gold")
+                {
+                    print("Pickup farmer");
+                    GameObject goldRegion = hit.collider.gameObject.GetComponent<Gold>().region;
+                    if (isSameRegion(goldRegion))
+                    {
+                        heroClass.gold += hit.collider.gameObject.GetComponent<Gold>().amount;
+                        ColorPopup.Create(UtilsClass.GetMouseWorldPosition(), "Gold picked up!", "Green");
+                        Destroy(hit.collider.gameObject);
+                    }
+
                 } else if(hit.collider.gameObject.tag == "Well")
                 {
                     print("Empty Well");

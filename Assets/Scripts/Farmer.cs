@@ -12,10 +12,19 @@ public class Farmer : MonoBehaviour
 
     public static Farmer Create(GameObject createRegion)
     {
-        Vector3 createRegionPosition = createRegion.transform.position;
-        Transform farmerTransform = Instantiate(GameAssets.i.pfFarmer, createRegionPosition, Quaternion.identity);
-        Farmer farmer = farmerTransform.GetComponent<Farmer>();
-        farmer.region = createRegion;
-        return farmer;
+        //If it's on the Castle, it will increase Castle hp instead
+        if(createRegion.GetComponent<RegionHandler>().region.regionId.Equals("0"))
+        {
+            createRegion.GetComponent<Castle>().CastleHealth += 1;
+            ColorPopup.Create(createRegion.transform.position, "Farmer safely escorted to castle!", "Green");
+            return new Farmer();
+        } else
+        {
+            Vector3 createRegionPosition = createRegion.transform.position;
+            Transform farmerTransform = Instantiate(GameAssets.i.pfFarmer, createRegionPosition, Quaternion.identity);
+            Farmer farmer = farmerTransform.GetComponent<Farmer>();
+            farmer.region = createRegion;
+            return farmer;
+        }
     }
 }
