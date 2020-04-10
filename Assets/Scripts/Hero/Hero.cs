@@ -14,6 +14,7 @@ public class Hero : MonoBehaviour
     public GameObject currentRegion;
     public int farmers = 0;
     public string HeroType;
+    public Fight battleWindow;
 
     private void Start()
     {
@@ -37,16 +38,29 @@ public class Hero : MonoBehaviour
     //This method will check if Hero is on same region as monster
     public void checkMonster()
     {
-        //Obtain list of monsters for current region:
+        // -------> THIS HERE WAS THE OLD WAY OF DOING THINGS, WE HAVE OUR SPECIAL 3D FIGHT SCENE <-----------
+        ////Obtain list of monsters for current region:
+        //Monster monster = currentRegion.GetComponent<RegionHandler>().getMonster();
+        //if (monster != null)
+        //{
+        //    //If you click the f key then it will initialize the fight.
+        //    if (Input.GetKeyDown(KeyCode.Space))
+        //    {
+        //        SceneManager.LoadScene(0);
+        //    }
+        //}
+
         Monster monster = currentRegion.GetComponent<RegionHandler>().getMonster();
         if (monster != null)
         {
             //If you click the f key then it will initialize the fight.
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.F))
             {
-                SceneManager.LoadScene(0);
+                battleWindow.fightingHeroes.SetValue(this, 0);
             }
         }
+
+
     }
 
     public void emptyWell(Well well)
