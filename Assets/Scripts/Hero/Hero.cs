@@ -10,7 +10,7 @@ public class Hero : MonoBehaviour
     private int gold;
     public int timeOfDay = 7;
     public int willPower = 7;
-    private int maxSP;
+    public int maxSP;
     public GameObject currentRegion;
     public int farmers = 0;
     public string HeroType;
@@ -56,7 +56,8 @@ public class Hero : MonoBehaviour
             //If you click the f key then it will initialize the fight.
             if (Input.GetKeyDown(KeyCode.F))
             {
-                battleWindow.fightingHeroes.SetValue(this, 0);
+                battleWindow.fightingHeroes.Add(this);
+                battleWindow.monsters.Add(monster);
             }
         }
 

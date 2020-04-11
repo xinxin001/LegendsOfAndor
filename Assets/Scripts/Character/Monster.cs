@@ -5,8 +5,8 @@ using UnityEngine;
 public class Monster : GameUnit
 {
     new string name;
-    int maxWillPower;
-    int maxStrength;
+    public int maxWillPower;
+    public int maxStrength;
 
     void createMonster(string name)
     {

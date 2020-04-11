@@ -11,13 +11,15 @@ public class dice2 : MonoBehaviour
     // Reference to sprite renderer to change sprites
     private SpriteRenderer rend;
 
+    public int value;
+    public bool isRolled;
+
     // Use this for initialization
     private void Start()
     {
-
+        isRolled = false;
         // Assign Renderer component
         rend = GetComponent<SpriteRenderer>();
-
         // Load dice sides sprites to array from DiceSides subfolder of Resources folder
         diceSides = Resources.LoadAll<Sprite>("DiceSides/");
     }
@@ -25,6 +27,7 @@ public class dice2 : MonoBehaviour
     // If you left click over the dice then RollTheDice coroutine is started
     private void OnMouseDown()
     {
+        isRolled = false;
         StartCoroutine("RollTheDice");
     }
 
@@ -49,15 +52,22 @@ public class dice2 : MonoBehaviour
             rend.sprite = diceSides[randomDiceSide];
 
             // Pause before next itteration
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.15f);
         }
 
         // Assigning final side so you can use this value later in your game
         // for player movement for example
         finalSide = randomDiceSide + 1;
+        value = finalSide;
+        isRolled = true;
 
         // Show final dice value in Console
         Debug.Log(finalSide);
+    }
+
+
+    public int getValue() {
+        return value;
     }
 
 }

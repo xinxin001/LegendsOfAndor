@@ -2107,6 +2107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentRegion: {fileID: 664484455}
+  maxWillPower: 0
+  maxStrength: 0
 --- !u!114 &87872331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2473,6 +2475,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c53ca42b8921b42c1a05678449990e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 0
+  isRolled: 0
 --- !u!61 &125467351
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2711,7 +2715,6 @@ Transform:
   m_LocalPosition: {x: 11.2052, y: 12.98616, z: -0.4738245}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 398675417}
   - {fileID: 431334459}
   m_Father: {fileID: 0}
   m_RootOrder: 15
@@ -3210,6 +3213,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c53ca42b8921b42c1a05678449990e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 0
+  isRolled: 0
 --- !u!61 &214540732
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3293,13 +3298,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 228917698}
+  - component: {fileID: 228917699}
   m_Layer: 0
   m_Name: Archer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &228917698
 Transform:
   m_ObjectHideFlags: 0
@@ -3315,9 +3321,24 @@ Transform:
   - {fileID: 404737168}
   - {fileID: 745959920}
   - {fileID: 1270870988}
+  - {fileID: 569713598}
   m_Father: {fileID: 1257677628}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &228917699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228917697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3c2e1a989794b989d8c0758ab9db54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: {fileID: 569713599}
+  damage: 0
 --- !u!1 &246402549
 GameObject:
   m_ObjectHideFlags: 0
@@ -3471,6 +3492,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c53ca42b8921b42c1a05678449990e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 0
+  isRolled: 0
 --- !u!1 &277645321
 GameObject:
   m_ObjectHideFlags: 0
@@ -4755,6 +4778,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c53ca42b8921b42c1a05678449990e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 0
+  isRolled: 0
 --- !u!61 &358081517
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5240,7 +5265,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1257677628}
-  m_Father: {fileID: 145221658}
+  m_Father: {fileID: 431334459}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5353,6 +5378,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c53ca42b8921b42c1a05678449990e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 0
+  isRolled: 0
 --- !u!61 &404737170
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6812,9 +6839,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 003f8ca1c466d47908937e52a4ac037f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fightingHeroes:
-  - {fileID: 0}
-  monster: {fileID: 0}
+  fightingHeroes: []
+  monsters: []
+  hasBattled: 0
+  Canvas: {fileID: 398675416}
+  warriorUI: {fileID: 1211172789}
+  MageUI: {fileID: 666042223}
+  DwarfUI: {fileID: 2074882547}
+  ArcherUI: {fileID: 228917697}
+  warrior: {fileID: 1211172791}
+  mage: {fileID: 666042225}
+  monster: {fileID: 774371103}
+  dwarf: {fileID: 2074882549}
+  archer: {fileID: 228917699}
+  warriorAttackPower: 0
+  mageAttackPower: 0
+  monsterAttackPower: 0
+  dwarfAttackPower: 0
+  archerAttackPower: 0
+  collectiveBattlePoints: 0
 --- !u!4 &431334459
 Transform:
   m_ObjectHideFlags: 0
@@ -6825,9 +6868,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 433.09247, y: 102.191284, z: -1.3519791}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 398675417}
   m_Father: {fileID: 145221658}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &455065197
 GameObject:
@@ -8790,6 +8834,53 @@ PolygonCollider2D:
       - {x: -0.59, y: -4.44}
       - {x: -0.44, y: -4.29}
       - {x: -0.41, y: -4.37}
+--- !u!1 &569713597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 569713598}
+  - component: {fileID: 569713599}
+  m_Layer: 0
+  m_Name: diceValue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &569713598
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569713597}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -92, y: 130.66667, z: 2.9040122}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 228917698}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &569713599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569713597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a529915b3f54b47ec8cae6cbcc10fb97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dice1: {fileID: 358081516}
+  dice2: {fileID: 404737169}
+  diceValue: 0
+  turnDone: 0
 --- !u!1 &584524099
 GameObject:
   m_ObjectHideFlags: 0
@@ -9563,6 +9654,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c53ca42b8921b42c1a05678449990e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 0
+  isRolled: 0
 --- !u!61 &595322944
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10408,6 +10501,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentRegion: {fileID: 1071171936}
+  maxWillPower: 0
+  maxStrength: 0
 --- !u!114 &629299429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10460,6 +10555,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentRegion: {fileID: 1271030404}
+  maxWillPower: 0
+  maxStrength: 0
 --- !u!114 &642752805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10995,13 +11092,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 666042224}
+  - component: {fileID: 666042225}
   m_Layer: 0
   m_Name: Mage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &666042224
 Transform:
   m_ObjectHideFlags: 0
@@ -11017,9 +11115,24 @@ Transform:
   - {fileID: 1293897203}
   - {fileID: 176393225}
   - {fileID: 1726243909}
+  - {fileID: 1760114099}
   m_Father: {fileID: 1257677628}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &666042225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666042223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3c2e1a989794b989d8c0758ab9db54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: {fileID: 1760114100}
+  damage: 0
 --- !u!1 &672810361
 GameObject:
   m_ObjectHideFlags: 0
@@ -12773,6 +12886,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentRegion: {fileID: 1008299754}
+  maxWillPower: 0
+  maxStrength: 0
 --- !u!114 &747421729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12921,6 +13036,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 774371102}
+  - component: {fileID: 774371103}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Untagged
@@ -12943,9 +13059,24 @@ Transform:
   - {fileID: 214540730}
   - {fileID: 937869191}
   - {fileID: 1687504106}
+  - {fileID: 1618467821}
   m_Father: {fileID: 1257677628}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &774371103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774371101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3c2e1a989794b989d8c0758ab9db54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: {fileID: 1618467822}
+  damage: 0
 --- !u!1 &810317782
 GameObject:
   m_ObjectHideFlags: 0
@@ -14695,6 +14826,53 @@ PolygonCollider2D:
       - {x: 1.4549999, y: -4.2799997}
       - {x: 1.555, y: -4.17}
       - {x: 1.635, y: -4.16}
+--- !u!1 &901026210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 901026211}
+  - component: {fileID: 901026212}
+  m_Layer: 0
+  m_Name: diceValue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &901026211
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901026210}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -92, y: -41.333336, z: 2.9040122}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 2074882548}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &901026212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901026210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a529915b3f54b47ec8cae6cbcc10fb97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dice1: {fileID: 595322943}
+  dice2: {fileID: 125467350}
+  diceValue: 0
+  turnDone: 0
 --- !u!1 &937869190
 GameObject:
   m_ObjectHideFlags: 0
@@ -19030,13 +19208,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1211172790}
+  - component: {fileID: 1211172791}
   m_Layer: 0
   m_Name: Warrior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1211172790
 Transform:
   m_ObjectHideFlags: 0
@@ -19052,9 +19231,24 @@ Transform:
   - {fileID: 1684937381}
   - {fileID: 759578126}
   - {fileID: 1294160406}
+  - {fileID: 1752569665}
   m_Father: {fileID: 1257677628}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1211172791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211172789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3c2e1a989794b989d8c0758ab9db54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: {fileID: 1752569666}
+  damage: 0
 --- !u!1 &1213140640
 GameObject:
   m_ObjectHideFlags: 0
@@ -21210,6 +21404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c53ca42b8921b42c1a05678449990e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 0
+  isRolled: 0
 --- !u!61 &1293897205
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21952,6 +22148,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentRegion: {fileID: 1828325262}
+  maxWillPower: 0
+  maxStrength: 0
 --- !u!114 &1350791680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23362,6 +23560,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c53ca42b8921b42c1a05678449990e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 0
+  isRolled: 0
 --- !u!61 &1474961995
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24426,7 +24626,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 22, y: 244}
+  m_AnchoredPosition: {x: 22, y: 219}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1525598779
@@ -24494,6 +24694,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentRegion: {fileID: 323234533}
+  maxWillPower: 0
+  maxStrength: 0
 --- !u!114 &1535700693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25872,6 +26074,53 @@ PolygonCollider2D:
       - {x: -0.679375, y: -3.7365625}
       - {x: -0.58383787, y: -3.715332}
       - {x: -0.38214844, y: -3.672871}
+--- !u!1 &1618467820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1618467821}
+  - component: {fileID: 1618467822}
+  m_Layer: 0
+  m_Name: diceValue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1618467821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618467820}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -16.932333, y: -10.666667, z: 3.5}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 774371102}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1618467822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618467820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a529915b3f54b47ec8cae6cbcc10fb97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dice1: {fileID: 214540731}
+  dice2: {fileID: 1474961994}
+  diceValue: 0
+  turnDone: 0
 --- !u!1 &1623064867
 GameObject:
   m_ObjectHideFlags: 0
@@ -27765,6 +28014,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c53ca42b8921b42c1a05678449990e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 0
+  isRolled: 0
 --- !u!61 &1684937383
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29437,6 +29688,100 @@ PolygonCollider2D:
       - {x: 2.06, y: -3.075}
       - {x: 2.11, y: -3.0249999}
       - {x: 2.21, y: -2.8049998}
+--- !u!1 &1752569664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1752569665}
+  - component: {fileID: 1752569666}
+  m_Layer: 0
+  m_Name: diceValue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1752569665
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752569664}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1211172790}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1752569666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752569664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a529915b3f54b47ec8cae6cbcc10fb97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dice1: {fileID: 268195452}
+  dice2: {fileID: 1684937382}
+  diceValue: 0
+  turnDone: 0
+--- !u!1 &1760114098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1760114099}
+  - component: {fileID: 1760114100}
+  m_Layer: 0
+  m_Name: diceValue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1760114099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760114098}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -92, y: -384, z: 2.9040122}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 666042224}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1760114100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760114098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a529915b3f54b47ec8cae6cbcc10fb97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dice1: {fileID: 2129715769}
+  dice2: {fileID: 1293897204}
+  diceValue: 0
+  turnDone: 0
 --- !u!1 &1760823775
 GameObject:
   m_ObjectHideFlags: 0
@@ -34864,13 +35209,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2074882548}
+  - component: {fileID: 2074882549}
   m_Layer: 0
   m_Name: Dwarf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2074882548
 Transform:
   m_ObjectHideFlags: 0
@@ -34886,9 +35232,24 @@ Transform:
   - {fileID: 125467349}
   - {fileID: 2043754993}
   - {fileID: 421497261}
+  - {fileID: 901026211}
   m_Father: {fileID: 1257677628}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2074882549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074882547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3c2e1a989794b989d8c0758ab9db54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: {fileID: 901026212}
+  damage: 0
 --- !u!1 &2084850407
 GameObject:
   m_ObjectHideFlags: 0
@@ -35633,6 +35994,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c53ca42b8921b42c1a05678449990e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 0
+  isRolled: 0
 --- !u!61 &2129715770
 BoxCollider2D:
   m_ObjectHideFlags: 0

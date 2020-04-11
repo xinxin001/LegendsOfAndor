@@ -17,7 +17,7 @@ public class battlePopupScript : MonoBehaviour
     void Update()
     {
         // If there are heroes inside the fight, popup the menu.
-        if(fight.fightingHeroes.Length != 0 )
+        if(fight.fightingHeroes.Count != 0 )
         {
             battleMenuPopup.SetActive(true);
         }
