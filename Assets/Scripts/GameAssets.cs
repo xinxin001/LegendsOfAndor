@@ -21,4 +21,24 @@ public class GameAssets : MonoBehaviour
     public Transform pfFarmer;
 
     public Transform pfGold;
+
+    public Transform pfWarrior;
+    public Transform pfWarriorDisplay;
+
+    public Transform pfWizard;
+    public Transform pfWizardDisplay;
+
+    public Transform pfDwarf;
+    public Transform pfDwarfDisplay;
+
+    public Transform pfArcher;
+    public Transform pfArcherDisplay;
+
+    public Transform pfGors;
+
+    public Transform pfSkral;
+
+    public Transform pfWardrak;
+
+    public Transform pfPrinceThorald;
 }

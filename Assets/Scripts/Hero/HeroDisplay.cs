@@ -15,6 +15,36 @@ public class HeroDisplay : MonoBehaviour
 
     public Text dropGoldAmount;
     public Slider dropGoldSlider;
+    public Button controlPrinceThoraldButton;
+
+    public static HeroDisplay Create(Hero spawnHero)
+    {
+        if (spawnHero.HeroType.Equals("Warrior"))
+        {
+            Transform pfWarriorDisplay = Instantiate(GameAssets.i.pfWarriorDisplay);
+            HeroDisplay warriorDisplay = pfWarriorDisplay.GetComponent<HeroDisplay>();
+            warriorDisplay.hero = spawnHero;
+            return warriorDisplay;
+        } else if (spawnHero.HeroType.Equals("Wizard"))
+        {
+            Transform pfWizardDisplay = Instantiate(GameAssets.i.pfWizardDisplay);
+            HeroDisplay wizardDisplay = pfWizardDisplay.GetComponent<HeroDisplay>();
+            wizardDisplay.hero = spawnHero;
+            return wizardDisplay;
+        } else if (spawnHero.HeroType.Equals("Dwarf"))
+        {
+            Transform pfDwarfDisplay = Instantiate(GameAssets.i.pfDwarfDisplay);
+            HeroDisplay dwarfDisplay = pfDwarfDisplay.GetComponent<HeroDisplay>();
+            dwarfDisplay.hero = spawnHero;
+            return dwarfDisplay;
+        } else if (spawnHero.HeroType.Equals("Archer"))
+        {
+            Transform pfArcherDisplay = Instantiate(GameAssets.i.pfArcherDisplay);
+            HeroDisplay archerDisplay = pfArcherDisplay.GetComponent<HeroDisplay>();
+            archerDisplay.hero = spawnHero;
+            return archerDisplay;
+        } return null;
+    }
 
     private void Update()
     {
@@ -25,6 +55,13 @@ public class HeroDisplay : MonoBehaviour
         hours.text = "Hours Left: " + hero.timeOfDay;
         dropGoldAmount.text = "Drop Gold: " + dropGoldSlider.value;
         dropGoldSlider.maxValue = hero.gold;
+        if(hero.controlPrinceThorald == true)
+        {
+            controlPrinceThoraldButton.GetComponent<Button>().GetComponent<Image>().color = Color.red;
+        } else
+        {
+            controlPrinceThoraldButton.GetComponent<Button>().GetComponent<Image>().color = Color.white;
+        }
     }
 
     public void dropFarmers()
@@ -45,9 +82,12 @@ public class HeroDisplay : MonoBehaviour
 
     public void dropGold()
     {
-        Gold.Create(hero.currentRegion, (int) dropGoldSlider.value);
-        hero.gold -= (int) dropGoldSlider.value;
-        ColorPopup.Create(hero.transform.position, "Hero dropped " + dropGoldSlider.value + " gold!", "Orange");
+        if((int)dropGoldSlider.value != 0)
+        {
+            Gold.Create(hero.currentRegion, (int)dropGoldSlider.value);
+            hero.gold -= (int)dropGoldSlider.value;
+            ColorPopup.Create(hero.transform.position, "Hero dropped " + dropGoldSlider.value + " gold!", "Orange");
+        }
     }
 
     public void addOvertime()
@@ -65,5 +105,18 @@ public class HeroDisplay : MonoBehaviour
         {
             ColorPopup.Create(hero.transform.position, "Hero does not have enough willpower!", "Red");
         }
+    }
+
+    //Toggle Control Prince Thorald
+    public void controlPrinceThorald()
+    {
+        hero.controlPrinceThorald = !hero.controlPrinceThorald;
+    }
+
+    public void endTurn()
+    {
+        GameManager game = GameObject.Find("GameManager").GetComponent<GameManager>();
+        ColorPopup.Create(hero.transform.position, "Ended Turn!", "Red");
+        game.nextTurn();
     }
 }

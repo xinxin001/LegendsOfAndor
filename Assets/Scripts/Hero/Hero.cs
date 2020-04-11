@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using CodeMonkey.Utils;
 using UnityEngine.SceneManagement;
 
 [System.Serializable]
@@ -16,9 +18,42 @@ public class Hero : MonoBehaviour
     public int farmers = 0;
     public string HeroType;
 
+    public bool controlPrinceThorald = false;
+
     private void Start()
     {
         
+    }
+
+    public static Hero Create(GameObject spawnRegion, string spawnHeroType)
+    {
+        Transform heroTransform;
+        if (spawnHeroType.Equals("Warrior")){
+            heroTransform = Instantiate(GameAssets.i.pfWarrior, spawnRegion.transform.position, Quaternion.identity);
+            Hero warrior = heroTransform.GetComponent<Hero>();
+            warrior.currentRegion = spawnRegion;
+            return warrior;
+        } else if(spawnHeroType.Equals("Wizard"))
+        {
+            heroTransform = Instantiate(GameAssets.i.pfWizard, spawnRegion.transform.position, Quaternion.identity);
+            Hero wizard = heroTransform.GetComponent<Hero>();
+            wizard.currentRegion = spawnRegion;
+            return wizard;
+        }
+        else if (spawnHeroType.Equals("Dwarf"))
+        {
+            heroTransform = Instantiate(GameAssets.i.pfDwarf, spawnRegion.transform.position, Quaternion.identity);
+            Hero dwarf = heroTransform.GetComponent<Hero>();
+            dwarf.currentRegion = spawnRegion;
+            return dwarf;
+        }
+        else if (spawnHeroType.Equals("Archer"))
+        {
+            heroTransform = Instantiate(GameAssets.i.pfArcher, spawnRegion.transform.position, Quaternion.identity);
+            Hero archer = heroTransform.GetComponent<Hero>();
+            archer.currentRegion = spawnRegion;
+            return archer;
+        } return null;
     }
 
     public void decrementTime()
@@ -62,4 +97,49 @@ public class Hero : MonoBehaviour
         well.isWellFull = false;
     }
 
+    public void move(GameObject region)
+    {
+        float speed = 10000;
+        if (isAdjacentRegion(region) && !isSameRegion(region))
+        {
+            currentRegion = region;
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, region.transform.position, speed * Time.deltaTime);
+            decrementTime();
+        }
+    }
+
+    public void pickupFarmer(GameObject farmerObject)
+    {
+        GameObject farmerRegion = farmerObject.GetComponent<Farmer>().region;
+        if (isSameRegion(farmerRegion))
+        {
+            farmers += 1;
+            ColorPopup.Create(UtilsClass.GetMouseWorldPosition(), "Farmer added!", "Green");
+            Destroy(farmerObject);
+        }
+    }
+
+    public void pickupGold(GameObject goldObject)
+    {
+        GameObject goldRegion = goldObject.GetComponent<Gold>().region;
+        if (isSameRegion(goldRegion))
+        {
+            gold += goldObject.GetComponent<Gold>().amount;
+            ColorPopup.Create(UtilsClass.GetMouseWorldPosition(), "Gold picked up!", "Green");
+            Destroy(goldObject);
+        }
+    }
+
+    public bool isAdjacentRegion(GameObject targetRegion)
+    {
+        string targetRegionName = targetRegion.GetComponent<RegionHandler>().region.regionId;
+        GameObject[] adjacentRegions = currentRegion.GetComponent<RegionHandler>().region.adjacentRegions;
+        return Array.Exists(adjacentRegions, element => element.GetComponent<RegionHandler>().region.regionId.Equals(targetRegionName));
+    }
+
+    public bool isSameRegion(GameObject targetRegion)
+    {
+        string targetRegionName = targetRegion.GetComponent<RegionHandler>().region.regionId;
+        return currentRegion.GetComponent<RegionHandler>().region.regionId.Equals(targetRegionName);
+    }
 }

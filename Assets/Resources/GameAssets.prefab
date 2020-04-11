@@ -48,3 +48,24 @@ MonoBehaviour:
   pfFarmer: {fileID: 1722038925789456041, guid: 8bda6f62e01ddd345ab10c4c48e42144,
     type: 3}
   pfGold: {fileID: 2578581254434769264, guid: f1e785ee9e24b0749a5ce3a1bcf6996c, type: 3}
+  pfWarrior: {fileID: 3822611166944091927, guid: 275bdf82881e02045944f33058005459,
+    type: 3}
+  pfWarriorDisplay: {fileID: 5096318309068438156, guid: e377b9eda082f27419b3d2aa17602d95,
+    type: 3}
+  pfWizard: {fileID: 2594669197710039773, guid: 05e9c4b13397182488b66236247a950e,
+    type: 3}
+  pfWizardDisplay: {fileID: 6030246263591910636, guid: 1d7b6443950cec745a6fd411f701f0c4,
+    type: 3}
+  pfDwarf: {fileID: 6558865854126018769, guid: 22f37bc31bb7e9445a58a3f8a82caa5c, type: 3}
+  pfDwarfDisplay: {fileID: 2251894921339489006, guid: 39df7bd3c389f674d9466705a870d694,
+    type: 3}
+  pfArcher: {fileID: 7344997300504515335, guid: 2b22ae6e386b05e4488d16aafdccb726,
+    type: 3}
+  pfArcherDisplay: {fileID: 6470777232540130934, guid: 8e6290a9be1625a479ee514275dee056,
+    type: 3}
+  pfGors: {fileID: 2954683464415369563, guid: 4479e97c7a3ac7d4c9431ec52005b7db, type: 3}
+  pfSkral: {fileID: 1969467794716813656, guid: c579c57b29b51724b80ea2c66d1338e1, type: 3}
+  pfWardrak: {fileID: 5951005722107886483, guid: cf159a77a60c328498f41ae23a4368bc,
+    type: 3}
+  pfPrinceThorald: {fileID: 4335072794191978645, guid: e2d088521f67ec1459b5ba83a3bcfacd,
+    type: 3}

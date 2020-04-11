@@ -14,6 +14,7 @@ public class Region
     public Farmer[] farmers;
     public Gold[] goldStacks;
     public GameObject[] heros;
+    public PrinceThorald princeThorald;
 
     public bool fountain;
     public bool isCastle;
