@@ -73,7 +73,28 @@ public class Cursor : MonoBehaviour
                         ColorPopup.Create(UtilsClass.GetMouseWorldPosition(), "Well Emptied!", "Green");
                         heroClass.emptyWell(hit.collider.gameObject.GetComponent<Well>());
                     }
-                } 
+                } else if (hit.collider.gameObject.tag == "Merchant")
+                {
+                    print("Select Merchant");
+                    GameObject merchantRegion = hit.collider.gameObject.GetComponent<Merchant>().region;
+                    if (isSameRegion(merchantRegion))
+                    {
+                        ColorPopup.Create(UtilsClass.GetMouseWorldPosition(), "Merchant", "Green");
+                        heroClass.interactMerchant(hit.collider.gameObject.GetComponent<Merchant>());
+                        
+                    }
+                }
+                else if (hit.collider.gameObject.tag == "Witch")
+                {
+                    print("Select Witch");
+                    GameObject witchRegion = hit.collider.gameObject.GetComponent<Witch>().region;
+                    if (isSameRegion(witchRegion))
+                    {
+                        ColorPopup.Create(UtilsClass.GetMouseWorldPosition(), "Witch", "Green");
+                        heroClass.interactWitch(hit.collider.gameObject.GetComponent<Witch>());
+
+                    }
+                }
             }
         }
     }

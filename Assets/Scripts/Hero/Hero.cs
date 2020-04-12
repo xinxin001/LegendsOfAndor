@@ -15,6 +15,10 @@ public class Hero : MonoBehaviour
     public GameObject currentRegion;
     public int farmers = 0;
     public string HeroType;
+    //public MerchantDisplay md;
+    public GameObject MerchantDisplay;
+    public GameObject WitchDisplay;
+
 
     private void Start()
     {
@@ -61,5 +65,29 @@ public class Hero : MonoBehaviour
         }
         well.isWellFull = false;
     }
+    public void interactMerchant(Merchant merchant)
+    {
+        MerchantDisplay.gameObject.SetActive(true);
+       
+    }
+    public void interactWitch(Witch witch)
+    {
+        WitchDisplay.gameObject.SetActive(true);
+
+    }
+    public void exitMerchant() //Dont think this is in use
+    {
+        MerchantDisplay.gameObject.SetActive(false);
+    }
+
+    public int getGold ()
+    {
+        return this.gold;
+    }
+    public void setGold(int g)
+    {
+        this.gold = g;
+    }
+    
 
 }

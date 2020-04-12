@@ -21,4 +21,8 @@ public class GameAssets : MonoBehaviour
     public Transform pfFarmer;
 
     public Transform pfGold;
+
+    public Transform pfMerchant;
+
+    public Transform pfWitch;
 }
