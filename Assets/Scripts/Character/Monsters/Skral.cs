@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class Skral : Monster
 {
-    public int strength = 6;
-    public int willpower = 6;
-    public int gold = 4;
+    
     // Start is called before the first frame update
     void Start()
     {

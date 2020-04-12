@@ -20,6 +20,9 @@ public class Hero : MonoBehaviour
 
     public bool controlPrinceThorald = false;
 
+    public GameObject MerchantDisplay;
+    public GameObject WitchDisplay;
+
     private void Start()
     {
         
@@ -56,6 +59,16 @@ public class Hero : MonoBehaviour
         } return null;
     }
 
+    public int getGold()
+    {
+        return gold;
+    }
+
+    public void setGold(int amount)
+    {
+        gold = amount;
+    }
+
     public void decrementTime()
     {
         timeOfDay = timeOfDay - 1;
@@ -73,14 +86,18 @@ public class Hero : MonoBehaviour
     //This method will check if Hero is on same region as monster
     public void checkMonster()
     {
-        //Obtain list of monsters for current region:
+        //Fight battleWindow = GameObject.Find("BattlePopup").GetComponent<Fight>();
         Monster monster = currentRegion.GetComponent<RegionHandler>().getMonster();
         if (monster != null)
         {
+            Debug.Log("There's a monsta!");
+            //Farmers get destroyed if the Hero is in the same field
+            farmers = 0;
             //If you click the f key then it will initialize the fight.
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.F))
             {
-                SceneManager.LoadScene(0);
+                //battleWindow.fightingHeroes.Add(this);
+                //battleWindow.monsters.Add(monster);
             }
         }
     }
@@ -128,6 +145,20 @@ public class Hero : MonoBehaviour
             ColorPopup.Create(UtilsClass.GetMouseWorldPosition(), "Gold picked up!", "Green");
             Destroy(goldObject);
         }
+    }
+
+    public void interactMerchant(Merchant merchant)
+    {
+        MerchantDisplay.gameObject.SetActive(true);
+
+    }
+    public void interactWitch(Witch witch)
+    {
+        WitchDisplay.gameObject.SetActive(true);
+    }
+    public void exitMerchant() //Dont think this is in use
+    {
+        MerchantDisplay.gameObject.SetActive(false);
     }
 
     public bool isAdjacentRegion(GameObject targetRegion)

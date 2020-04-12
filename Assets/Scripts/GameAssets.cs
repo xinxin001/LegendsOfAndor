@@ -41,4 +41,7 @@ public class GameAssets : MonoBehaviour
     public Transform pfWardrak;
 
     public Transform pfPrinceThorald;
+
+    public Transform pfMerchant;
+    public Transform pfWitch;
 }

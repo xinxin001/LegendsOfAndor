@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class Monster : GameUnit
 {
+    public int strength;
+    public int willpower;
+    public int numberOfDice;
+    public string diceType;
 
+    public int rewardPoints;
     public static Monster Create(GameObject spawnRegion, string monsterType)
     {
         Transform monsterTransform;
@@ -13,6 +18,11 @@ public class Monster : GameUnit
             monsterTransform = Instantiate(GameAssets.i.pfGors, spawnRegion.transform.position, Quaternion.identity);
             Gors gors = monsterTransform.GetComponent<Gors>();
             gors.currentRegion = spawnRegion;
+            gors.strength = 2;
+            gors.willpower = 4;
+            gors.rewardPoints = 2;
+            gors.numberOfDice = 2;
+            gors.diceType = "Red";
             return gors;
         }
         else if (monsterType.Equals("Skral"))
@@ -20,6 +30,11 @@ public class Monster : GameUnit
             monsterTransform = Instantiate(GameAssets.i.pfSkral, spawnRegion.transform.position, Quaternion.identity);
             Skral skral = monsterTransform.GetComponent<Skral>();
             skral.currentRegion = spawnRegion;
+            skral.strength = 6;
+            skral.willpower = 6;
+            skral.rewardPoints = 4;
+            skral.numberOfDice = 2;
+            skral.diceType = "Red";
             return skral;
         }
         else if (monsterType.Equals("Wardrak"))
@@ -27,6 +42,11 @@ public class Monster : GameUnit
             monsterTransform = Instantiate(GameAssets.i.pfWardrak, spawnRegion.transform.position, Quaternion.identity);
             Wardrak wardrak = monsterTransform.GetComponent<Wardrak>();
             wardrak.currentRegion = spawnRegion;
+            wardrak.strength = 10;
+            wardrak.willpower = 7;
+            wardrak.rewardPoints = 6;
+            wardrak.numberOfDice = 2;
+            wardrak.diceType = "Black";
             return wardrak;
         } return null;
     }
