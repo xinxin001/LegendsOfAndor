@@ -14,6 +14,9 @@ public class Testing : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             //RedGreenPopup.Create(UtilsClass.GetMouseWorldPosition(), "Farmer added!", "Green");
+            //GameObject spawnRegion = GameObject.Find("0");
+            //Hero newHero = Hero.Create(spawnRegion, "Warrior");
+            //HeroDisplay.Create(newHero);
         }
     }
 }

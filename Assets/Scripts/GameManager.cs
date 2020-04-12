@@ -43,4 +43,9 @@ public class GameManager : MonoBehaviour
         lossMenu.SetActive(true);
         Time.timeScale = 0f;
     }
+
+    public void nextTurn()
+    {
+        print("Next Turn!");
+    }
 }

@@ -2,96 +2,86 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using CodeMonkey.Utils;
 
 public class Cursor : MonoBehaviour
 {
-    public GameObject hero;
-    public float speed = 10000;
-    public Vector3 target;
+    public Hero hero;
     
     void Update()
     {
         //If the left mouse button is clicked.
         if (Input.GetMouseButtonDown(0))
         {
-            //Get the mouse position on the screen and send a raycast into the game world from that position.
-            Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
-            target = hit.transform.position;
-            Hero heroClass = hero.GetComponent<Hero>();
-
-            //If something was hit, the RaycastHit2D.collider will not be null.
-            if (hit.collider != null)
+            if (!EventSystem.current.IsPointerOverGameObject())
             {
-                print(hit.collider.gameObject.name);
+                //Get the mouse position on the screen and send a raycast into the game world from that position.
+                Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
 
-                //Hero move
-                if (hit.collider.gameObject.tag == "Region"  && isAdjacentRegion(hit.collider.gameObject) && !isSameRegion(hit.collider.gameObject))
+                //If something was hit, the RaycastHit2D.collider will not be null.
+                if (hit.collider != null)
                 {
-                    heroClass.currentRegion = hit.collider.gameObject;
-                    
-                    hero.transform.position = Vector3.MoveTowards(hero.transform.position, target, speed * Time.deltaTime);
-                    heroClass.decrementTime();
-                }
-                //Hero end turn
-                else if(hit.collider.gameObject.tag == "Sundial") // If the player clicked the Sundial, it will end his turn
-                {
-                    GameObject sundial = GameObject.FindGameObjectWithTag("Sundial");
-                    heroClass.decrementTime();
-                    print("End Turn");
-                }
-                //Pickup farmer
-                else if(hit.collider.gameObject.tag == "Farmer")
-                {
-                    print("Pickup farmer");
-                    GameObject farmerRegion = hit.collider.gameObject.GetComponent<Farmer>().region;
-                    if(isSameRegion(farmerRegion))
-                    {
-                        heroClass.farmers += 1;
-                        ColorPopup.Create(UtilsClass.GetMouseWorldPosition(), "Farmer added!", "Green");
-                        Destroy(hit.collider.gameObject);
-                    }
-                    
-                }
-                else if (hit.collider.gameObject.tag == "Gold")
-                {
-                    print("Pickup farmer");
-                    GameObject goldRegion = hit.collider.gameObject.GetComponent<Gold>().region;
-                    if (isSameRegion(goldRegion))
-                    {
-                        heroClass.gold += hit.collider.gameObject.GetComponent<Gold>().amount;
-                        ColorPopup.Create(UtilsClass.GetMouseWorldPosition(), "Gold picked up!", "Green");
-                        Destroy(hit.collider.gameObject);
-                    }
+                    print(hit.collider.gameObject.name);
 
-                } else if(hit.collider.gameObject.tag == "Well")
-                {
-                    print("Empty Well");
-                    GameObject wellRegion = hit.collider.gameObject.GetComponent<Well>().region;
-                    if(isSameRegion(wellRegion)) {
-                        ColorPopup.Create(UtilsClass.GetMouseWorldPosition(), "Well Emptied!", "Green");
-                        heroClass.emptyWell(hit.collider.gameObject.GetComponent<Well>());
+                    //Hero move
+                    if (hit.collider.gameObject.tag == "Region")
+                    {
+                        if(hero.controlPrinceThorald == false)
+                        {
+                            hero.move(hit.collider.gameObject);
+                        } else
+                        {
+                            MonsterManager.princeThorald.move(hit.collider.gameObject);
+                        }
+                    
                     }
-                } 
+                    //Pickup farmer
+                    else if(hit.collider.gameObject.tag == "Farmer")
+                    {
+                        print("Pickup farmer");
+                        hero.pickupFarmer(hit.collider.gameObject);
+                    }
+                    //Pickup gold
+                    else if (hit.collider.gameObject.tag == "Gold")
+                    {
+                        print("Pickup farmer");
+                        hero.pickupGold(hit.collider.gameObject);
+
+                    }
+                    //Empty well
+                    else if(hit.collider.gameObject.tag == "Well")
+                    {
+                        print("Empty Well");
+                        GameObject wellRegion = hit.collider.gameObject.GetComponent<Well>().region;
+                        if(hero.isSameRegion(wellRegion)) {
+                            ColorPopup.Create(UtilsClass.GetMouseWorldPosition(), "Well Emptied!", "Green");
+                            hero.emptyWell(hit.collider.gameObject.GetComponent<Well>());
+                        }
+                    } else if (hit.collider.gameObject.tag == "Merchant")
+                    {
+                        print("Select Merchant");
+                        GameObject merchantRegion = hit.collider.gameObject.GetComponent<Merchant>().region;
+                        if (hero.isSameRegion(merchantRegion))
+                        {
+                            ColorPopup.Create(UtilsClass.GetMouseWorldPosition(), "Merchant", "Green");
+                            hero.interactMerchant(hit.collider.gameObject.GetComponent<Merchant>());
+
+                        }
+                    } else if (hit.collider.gameObject.tag == "Witch")
+                    {
+                        print("Select Witch");
+                        GameObject witchRegion = hit.collider.gameObject.GetComponent<Witch>().region;
+                        if (hero.isSameRegion(witchRegion))
+                        {
+                            ColorPopup.Create(UtilsClass.GetMouseWorldPosition(), "Witch", "Green");
+                            hero.interactWitch(hit.collider.gameObject.GetComponent<Witch>());
+
+                        }
+                    }
+                }
             }
         }
     }
-
-    //Checks if argument region is an adjacent region where the hero can move
-    bool isAdjacentRegion(GameObject targetRegion)
-    {
-        Hero heroClass = hero.GetComponent<Hero>();
-        string targetRegionName = targetRegion.GetComponent<RegionHandler>().region.regionId;
-        GameObject[] adjacentRegions = heroClass.currentRegion.GetComponent<RegionHandler>().region.adjacentRegions;
-        return Array.Exists(adjacentRegions, element => element.GetComponent<RegionHandler>().region.regionId.Equals(targetRegionName));
-    }
-    
-    bool isSameRegion(GameObject targetRegion)
-    {
-        Hero heroClass = hero.GetComponent<Hero>();
-        string targetRegionName = targetRegion.GetComponent<RegionHandler>().region.regionId;
-        return heroClass.currentRegion.GetComponent<RegionHandler>().region.regionId.Equals(targetRegionName);
-    }
-
 }

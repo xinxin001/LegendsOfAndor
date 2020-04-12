@@ -8,6 +8,16 @@ public class Farmer : MonoBehaviour
 
     void Update()
     {
+        checkMonsters();
+    }
+
+    public void checkMonsters()
+    {
+        Monster monster = region.GetComponent<RegionHandler>().getMonster();
+        if (monster != null)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public static Farmer Create(GameObject createRegion)
