@@ -407,7 +407,7 @@ public class HeroDisplay : MonoBehaviour
     private void addItemHead(string item)
     {
         int heroGold = hero.getGold();
-        if (button4Space == "empty")
+        if (button5Space == "empty")
         {
             if (item == "helm")
             {

@@ -12,7 +12,7 @@ public class Hero : MonoBehaviour
     public int gold = 0;
     public int timeOfDay = 7;
     public int overtime = 3;
-    public int strength = 7;
+    public int strength = 2;
     public int willPower = 7;
     public GameObject currentRegion;
     public int farmers = 0;
@@ -72,10 +72,6 @@ public class Hero : MonoBehaviour
     public void decrementTime()
     {
         timeOfDay = timeOfDay - 1;
-    }
-
-    public void CreateHero(){
-        Hero hero = new Hero();
     }
 
     private void Update()
