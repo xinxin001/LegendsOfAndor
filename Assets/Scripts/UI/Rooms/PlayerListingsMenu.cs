@@ -60,6 +60,7 @@ public class PlayerListingsMenu : MonoBehaviourPunCallbacks
         foreach (KeyValuePair<int, Player> playerInfo in PhotonNetwork.CurrentRoom.Players)
         {
             AddPlayerListing(playerInfo.Value);
+            Debug.Log("DEBUG: " + playerInfo.Value.NickName + " has connected to the room!");
         }
 
     }

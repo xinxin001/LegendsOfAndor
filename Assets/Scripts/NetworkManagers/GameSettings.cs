@@ -15,11 +15,14 @@ public class GameSettings : ScriptableObject
         }
     }
     [SerializeField]
-    private string _nickName = "Punfish";
+    private string _nickName = "Guest";
     public string NickName{
         get{
-            int value = Random.Range(0, 999);
-            return _nickName + value.ToString();
+            return _nickName;
+        }
+        set{
+            _nickName = value;
+
         }
     }
 }
