@@ -7,7 +7,12 @@ public class GameManager : MonoBehaviour
     public MonsterManager monsterManager;
     public RegionManager regionManager;
     public WellManager wellManager;
+
     public Hero warrior;
+    public Hero wizard;
+    public Hero dwarf;
+    public Hero archer;
+
     public Castle castle;
     public GameObject lossMenu;
     // Start is called before the first frame update
@@ -23,8 +28,7 @@ public class GameManager : MonoBehaviour
         {
             newDay();
             print("New Day!");
-            warrior.timeOfDay = 7;
-            warrior.overtime = 3;
+            
         }
         if(castle.CastleHealth <= 0)
         {
@@ -36,6 +40,18 @@ public class GameManager : MonoBehaviour
     {
         monsterManager.moveAllMonsters();
         wellManager.refillAllWells();
+
+        warrior.timeOfDay = 7;
+        warrior.overtime = 3;
+
+        wizard.timeOfDay = 7;
+        wizard.overtime = 3;
+
+        dwarf.timeOfDay = 7;
+        dwarf.overtime = 3;
+
+        archer.timeOfDay = 7;
+        archer.overtime = 3;
     }
 
     void gameOver()
