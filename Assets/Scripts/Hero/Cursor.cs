@@ -80,6 +80,17 @@ public class Cursor : MonoBehaviour
 
                         }
                     }
+                    else if (hit.collider.gameObject.tag == "Fog")
+                    {
+                        print("Select Fog");
+                        GameObject fogRegion = hit.collider.gameObject.GetComponent<Fog>().region;
+                        if (hero.isSameRegion(fogRegion))
+                        {
+                            ColorPopup.Create(UtilsClass.GetMouseWorldPosition(), "Fog", "Green");
+                            hero.interactFog(hit.collider.gameObject.GetComponent<Fog>());
+
+                        }
+                    }
                 }
             }
         }

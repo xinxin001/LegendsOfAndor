@@ -156,6 +156,41 @@ public class Hero : MonoBehaviour
     {
         WitchDisplay.gameObject.SetActive(true);
     }
+    public void interactFog(Fog fog)
+    {
+        //Do something with fog
+        fog.reveal();
+        string fogType = fog.getFogType();
+        if (fogType == "EC") //event card
+        {
+            //apply event card to game state
+        } else if (fogType == "SP") //strengthPoint
+        {
+            strength++;
+        }else if (fogType == "WP2") //WillPower +2
+        {
+            willPower += 2;
+        }else if (fogType == "WP3") //WillPower +3
+        {
+            willPower += 3;
+        }
+        else if (fogType == "GD") //Gold
+        {
+            gold++;
+        }
+        else if (fogType == "GR") //Gor
+        {
+            // spawn gor
+        }
+        else if (fogType == "WS") //Wineskin
+        {
+            // action
+        }
+        else if (fogType == "BR") //Brew
+        {
+            // action
+        }
+    }
     public void exitMerchant() //Dont think this is in use
     {
         MerchantDisplay.gameObject.SetActive(false);

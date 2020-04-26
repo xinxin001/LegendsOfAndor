@@ -10,10 +10,12 @@ public class GameManager : MonoBehaviour
     public Hero warrior;
     public Castle castle;
     public GameObject lossMenu;
+    public FogManager fogManager;
     // Start is called before the first frame update
     void Start()
     {
-        
+        fogManager.randomizeFogTokens();
+        //Debug.Log("Starting");
     }
 
     // Update is called once per frame

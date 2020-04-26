@@ -11,6 +11,9 @@ TagManager:
   - Farmer
   - Gold
   - Monster
+  - Merchant
+  - Witch
+  - Fog
   layers:
   - Default
   - TransparentFX
