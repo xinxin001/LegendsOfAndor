@@ -17,8 +17,11 @@ public class Hero : MonoBehaviour
     public GameObject currentRegion;
     public int farmers = 0;
     public string HeroType;
-
     public bool controlPrinceThorald = false;
+    public WineSkin wineSkine;
+    public Shield shield;
+
+
 
     public GameObject MerchantDisplay;
     public GameObject WitchDisplay;
@@ -71,7 +74,16 @@ public class Hero : MonoBehaviour
 
     public void decrementTime()
     {
-        timeOfDay = timeOfDay - 1;
+        if ((wineSkine != null )&& (this.wineSkine.inUse = true) && wineSkine.uses < 3)
+        {
+            timeOfDay = timeOfDay - 0;
+
+        }
+        else
+        {
+            timeOfDay = timeOfDay - 1;
+
+        }
     }
 
     private void Update()

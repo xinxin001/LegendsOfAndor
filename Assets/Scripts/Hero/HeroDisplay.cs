@@ -162,7 +162,7 @@ public class HeroDisplay : MonoBehaviour
         if (heroGold >= 2 && wineskin == false)
         {
             addItemSmall("wineskin");
-
+            hero.wineSkine = new WineSkin();
 
         }
     }
@@ -201,9 +201,8 @@ public class HeroDisplay : MonoBehaviour
         int heroGold = hero.getGold();
         if (heroGold >= 2 && shield == false)
         {
+            hero.shield = new Shield();
             addItemBig("shield");
-
-
         }
     }
     public void addBow()
@@ -241,6 +240,7 @@ public class HeroDisplay : MonoBehaviour
         {
             if (item == "wineskin")
             {
+                addWineskin();
                 wineskin = true;
                 wineskinUses = 2;
                 button1Space = "wineskin";
