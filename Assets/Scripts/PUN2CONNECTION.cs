@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TestConnect : MonoBehaviourPunCallbacks
+public class PUN2CONNECTION : MonoBehaviourPunCallbacks
 {
 
     [SerializeField]

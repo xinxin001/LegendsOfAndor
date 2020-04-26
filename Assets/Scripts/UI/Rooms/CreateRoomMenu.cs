@@ -39,8 +39,6 @@ public class CreateRoomMenu : MonoBehaviourPunCallbacks
         _roomsCanvases.CurrentRoomCanvas.Show();
     }
 
-
-
     public override void OnCreateRoomFailed(short returnCode, string message)
     {
         Debug.Log("Room creation failed: " + message, this);

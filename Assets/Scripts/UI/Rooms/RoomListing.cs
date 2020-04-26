@@ -20,6 +20,7 @@ public class RoomListing : MonoBehaviour{
 
     public void OnClick_Button()
     {
+        //clearMessages();
         PhotonNetwork.JoinRoom(RoomInfo.Name);
     }
 

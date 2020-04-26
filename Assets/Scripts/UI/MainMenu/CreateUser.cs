@@ -29,7 +29,8 @@ public class CreateUser : MonoBehaviourPunCallbacks
             inputField.text = "";
         }
         else {
-            gameSettings.NickName = inputField.text;
+            int randint = new System.Random().Next(0, 100);
+            gameSettings.NickName = inputField.text + randint.ToString();
             placeholderText.text = "Enter a username";
             PhotonNetwork.LoadLevel("Rooms");
         }
