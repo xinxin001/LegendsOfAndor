@@ -10,10 +10,4 @@ public class Skral : Monster
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

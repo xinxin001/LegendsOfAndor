@@ -23,6 +23,7 @@ public class Monster : GameUnit
             gors.rewardPoints = 2;
             gors.numberOfDice = 2;
             gors.diceType = "Red";
+            spawnRegion.GetComponent<RegionHandler>().region.monster = gors;
             return gors;
         }
         else if (monsterType.Equals("Skral"))
@@ -35,6 +36,7 @@ public class Monster : GameUnit
             skral.rewardPoints = 4;
             skral.numberOfDice = 2;
             skral.diceType = "Red";
+            spawnRegion.GetComponent<RegionHandler>().region.monster = skral;
             return skral;
         }
         else if (monsterType.Equals("Wardrak"))
@@ -47,6 +49,7 @@ public class Monster : GameUnit
             wardrak.rewardPoints = 6;
             wardrak.numberOfDice = 2;
             wardrak.diceType = "Black";
+            spawnRegion.GetComponent<RegionHandler>().region.monster = wardrak;
             return wardrak;
         } return null;
     }
@@ -56,7 +59,7 @@ public class Monster : GameUnit
         return name;
     }
 
-    private void Update()
+    void Update()
     {
         currentRegion.GetComponent<RegionHandler>().region.monster = this;
     }

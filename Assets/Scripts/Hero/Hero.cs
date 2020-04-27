@@ -14,18 +14,96 @@ public class Hero : MonoBehaviour
     public int overtime = 3;
     public int strength = 2;
     public int willPower = 7;
-    public GameObject currentRegion;
+    public int numberOfDice;
     public int farmers = 0;
+    
+    public GameObject currentRegion;
+
     public string HeroType;
+    public string HeroName;
 
     public bool controlPrinceThorald = false;
 
-    public GameObject MerchantDisplay;
-    public GameObject WitchDisplay;
+    public enum HeroState
+    {
+        ACTIONNEWREGION,
+        ACTION,
+        FIGHTING,
+        WAITING,
+        ENDEDDAY,
+        DEAD
+    }
+    public HeroState currentState = HeroState.WAITING;
 
     private void Start()
     {
         
+    }
+
+    public void Update()
+    {
+        checkMonster();
+        if (timeOfDay <= 0)
+        {
+            currentState = HeroState.ENDEDDAY;
+        }
+        if(willPower <= 0)
+        {
+            currentState = HeroState.DEAD;
+        }
+
+        if(willPower > 0 && willPower <= 6)
+        {
+            if(HeroType == "Warrior")
+            {
+                numberOfDice = 2;
+            } else if(HeroType == "Wizard")
+            {
+                numberOfDice = 1;
+            } else if(HeroType == "Dwarf")
+            {
+                numberOfDice = 1;
+            } else if(HeroType.Equals("Archer"))
+            {
+                numberOfDice = 3;
+            }
+        } else if(willPower > 6 && willPower <=13)
+        {
+            if (HeroType == "Warrior")
+            {
+                numberOfDice = 3;
+            }
+            else if (HeroType == "Wizard")
+            {
+                numberOfDice = 1;
+            }
+            else if (HeroType == "Dwarf")
+            {
+                numberOfDice = 2;
+            }
+            else if (HeroType.Equals("Archer"))
+            {
+                numberOfDice = 4;
+            }
+        } else if(willPower > 13)
+        {
+            if (HeroType == "Warrior")
+            {
+                numberOfDice = 4;
+            }
+            else if (HeroType == "Wizard")
+            {
+                numberOfDice = 1;
+            }
+            else if (HeroType == "Dwarf")
+            {
+                numberOfDice = 3;
+            }
+            else if (HeroType.Equals("Archer"))
+            {
+                numberOfDice = 5;
+            }
+        }
     }
 
     public static Hero Create(GameObject spawnRegion, string spawnHeroType)
@@ -34,27 +112,48 @@ public class Hero : MonoBehaviour
         if (spawnHeroType.Equals("Warrior")){
             heroTransform = Instantiate(GameAssets.i.pfWarrior, spawnRegion.transform.position, Quaternion.identity);
             Hero warrior = heroTransform.GetComponent<Hero>();
+            warrior.HeroName = "Thorn";
             warrior.currentRegion = spawnRegion;
+
+            HeroDisplay heroDisplay = HeroDisplay.Create(warrior);
+
+            spawnRegion.GetComponent<RegionHandler>().region.heros.Add(warrior);
+
             return warrior;
         } else if(spawnHeroType.Equals("Wizard"))
         {
             heroTransform = Instantiate(GameAssets.i.pfWizard, spawnRegion.transform.position, Quaternion.identity);
             Hero wizard = heroTransform.GetComponent<Hero>();
+            wizard.HeroName = "Eara";
             wizard.currentRegion = spawnRegion;
+
+            HeroDisplay heroDisplay = HeroDisplay.Create(wizard);
+
+            spawnRegion.GetComponent<RegionHandler>().region.heros.Add(wizard);
             return wizard;
         }
         else if (spawnHeroType.Equals("Dwarf"))
         {
             heroTransform = Instantiate(GameAssets.i.pfDwarf, spawnRegion.transform.position, Quaternion.identity);
             Hero dwarf = heroTransform.GetComponent<Hero>();
+            dwarf.HeroName = "Kram";
             dwarf.currentRegion = spawnRegion;
+
+            HeroDisplay heroDisplay = HeroDisplay.Create(dwarf);
+
+            spawnRegion.GetComponent<RegionHandler>().region.heros.Add(dwarf);
             return dwarf;
         }
         else if (spawnHeroType.Equals("Archer"))
         {
             heroTransform = Instantiate(GameAssets.i.pfArcher, spawnRegion.transform.position, Quaternion.identity);
             Hero archer = heroTransform.GetComponent<Hero>();
+            archer.HeroName = "Chada";
             archer.currentRegion = spawnRegion;
+
+            HeroDisplay heroDisplay = HeroDisplay.Create(archer);
+
+            spawnRegion.GetComponent<RegionHandler>().region.heros.Add(archer);
             return archer;
         } return null;
     }
@@ -72,11 +171,6 @@ public class Hero : MonoBehaviour
     public void decrementTime()
     {
         timeOfDay = timeOfDay - 1;
-    }
-
-    private void Update()
-    {
-        checkMonster();
     }
 
     //This method will check if Hero is on same region as monster
@@ -113,11 +207,21 @@ public class Hero : MonoBehaviour
     public void move(GameObject region)
     {
         float speed = 10000;
-        if (isAdjacentRegion(region) && !isSameRegion(region))
+        if(timeOfDay > 0)
         {
-            currentRegion = region;
-            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, region.transform.position, speed * Time.deltaTime);
-            decrementTime();
+            if (isAdjacentRegion(region) && !isSameRegion(region))
+            {
+                currentRegion.GetComponent<RegionHandler>().region.heros.Remove(this);
+                currentRegion = region;
+                region.GetComponent<RegionHandler>().region.heros.Add(this);
+                gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, region.transform.position, speed * Time.deltaTime);
+                decrementTime();
+                currentState = HeroState.ACTIONNEWREGION;
+            }
+        }
+        else
+        {
+            ColorPopup.Create(UtilsClass.GetMouseWorldPosition(), "Hero has no more time left in the day!", "Red");
         }
     }
 
@@ -145,16 +249,86 @@ public class Hero : MonoBehaviour
 
     public void interactMerchant(Merchant merchant)
     {
-        MerchantDisplay.gameObject.SetActive(true);
-
+        if(currentState == HeroState.ACTION)
+        {
+            merchant.interact(this);
+        } else
+        {
+            ColorPopup.Create(UtilsClass.GetMouseWorldPosition(), "Hero has to wait a turn to interact with the Merchant", "Green");
+        }
     }
     public void interactWitch(Witch witch)
     {
-        WitchDisplay.gameObject.SetActive(true);
+        if (currentState == HeroState.ACTION)
+        {
+            witch.interact(this);
+        }
+        else
+        {
+            ColorPopup.Create(UtilsClass.GetMouseWorldPosition(), "Hero has to wait a turn to interact with the Witch", "Green");
+        }
     }
-    public void exitMerchant() //Dont think this is in use
+
+    public void interactFog(Fog fog)
     {
-        MerchantDisplay.gameObject.SetActive(false);
+        //Do something with fog
+        fog.reveal();
+        string fogType = fog.getFogType();
+        if (fogType == "EC") //event card
+        {
+            //apply event card to game state
+        }
+        else if (fogType == "SP") //strengthPoint
+        {
+            strength++;
+        }
+        else if (fogType == "WP2") //WillPower +2
+        {
+            willPower += 2;
+        }
+        else if (fogType == "WP3") //WillPower +3
+        {
+            willPower += 3;
+        }
+        else if (fogType == "GD") //Gold
+        {
+            gold++;
+        }
+        else if (fogType == "GR") //Gor
+        {
+            // spawn gor
+        }
+        else if (fogType == "WS") //Wineskin
+        {
+            // action
+        }
+        else if (fogType == "BR") //Brew
+        {
+            // action
+        }
+        fog.isUsed = true;
+    }
+
+    public void refreshDay()
+    {
+        timeOfDay = 7;
+        overtime = 3;
+        currentState = HeroState.ACTION;
+    }
+
+    public void endTurn()
+    {
+        currentState = HeroState.WAITING;
+        decrementTime();
+        GameManager game = GameObject.Find("GameManager").GetComponent<GameManager>();
+        game.nextTurn(); 
+    }
+
+    public void endDay()
+    {
+        currentState = HeroState.ENDEDDAY;
+        GameManager game = GameObject.Find("GameManager").GetComponent<GameManager>();
+        game.endDay();
     }
 
     public bool isAdjacentRegion(GameObject targetRegion)

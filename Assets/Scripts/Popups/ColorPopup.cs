@@ -29,7 +29,6 @@ public class ColorPopup : MonoBehaviour
     public void Setup(string popupText, string color)
     {
         textMesh.SetText(popupText);
-        print(color.Equals("Red"));
         if(color.Equals("Red"))
         {
             //Set Text color to Red

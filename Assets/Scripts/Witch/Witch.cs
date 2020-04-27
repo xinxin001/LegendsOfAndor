@@ -5,6 +5,10 @@ using UnityEngine;
 public class Witch : MonoBehaviour
 {
     public GameObject region;
+    public GameObject warriorDisplay;
+    public GameObject wizardDisplay;
+    public GameObject dwarfDisplay;
+    public GameObject archerDisplay;
 
     void Update()
     {
@@ -18,8 +22,8 @@ public class Witch : MonoBehaviour
         witch.region = createRegion;
         return witch;
     }
-    public static void interact()
+    public void interact(Hero hero)
     {
-
+        warriorDisplay.SetActive(true);
     }
 }

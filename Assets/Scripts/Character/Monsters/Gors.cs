@@ -11,10 +11,4 @@ public class Gors : Monster
         
     }
 
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -38,4 +38,10 @@ public class MonsterManager : MonoBehaviour
             monsterList[i].move();
         }
     }
+
+    public void DestroyMonster(Monster monster)
+    {
+        monsterList.Remove(monster);
+        Destroy(monster.gameObject);
+    }
 }

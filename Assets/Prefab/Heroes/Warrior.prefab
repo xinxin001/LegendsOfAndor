@@ -98,10 +98,17 @@ MonoBehaviour:
   overtime: 3
   strength: 7
   willPower: 7
-  currentRegion: {fileID: 0}
+  numberOfDice: 0
   farmers: 0
+  currentRegion: {fileID: 0}
   HeroType: Warrior
+  HeroName: Thorn
   controlPrinceThorald: 0
+  MerchantDisplay: {fileID: 4846931921257064967, guid: fcbe73edf6be46244b336276286d591f,
+    type: 3}
+  WitchDisplay: {fileID: 7715078918592488303, guid: 755210ca75653e54b84fc3f6ba62d61d,
+    type: 3}
+  currentState: 3
 --- !u!114 &3822611166944091925
 MonoBehaviour:
   m_ObjectHideFlags: 0

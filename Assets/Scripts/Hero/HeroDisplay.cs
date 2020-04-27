@@ -59,24 +59,28 @@ public class HeroDisplay : MonoBehaviour
         {
             Transform pfWarriorDisplay = Instantiate(GameAssets.i.pfWarriorDisplay);
             HeroDisplay warriorDisplay = pfWarriorDisplay.GetComponent<HeroDisplay>();
+            warriorDisplay.transform.SetParent(GameObject.Find("UI").transform, false);
             warriorDisplay.hero = spawnHero;
             return warriorDisplay;
         } else if (spawnHero.HeroType.Equals("Wizard"))
         {
             Transform pfWizardDisplay = Instantiate(GameAssets.i.pfWizardDisplay);
             HeroDisplay wizardDisplay = pfWizardDisplay.GetComponent<HeroDisplay>();
+            wizardDisplay.transform.SetParent(GameObject.Find("UI").transform, false);
             wizardDisplay.hero = spawnHero;
             return wizardDisplay;
         } else if (spawnHero.HeroType.Equals("Dwarf"))
         {
             Transform pfDwarfDisplay = Instantiate(GameAssets.i.pfDwarfDisplay);
             HeroDisplay dwarfDisplay = pfDwarfDisplay.GetComponent<HeroDisplay>();
+            dwarfDisplay.transform.SetParent(GameObject.Find("UI").transform, false);
             dwarfDisplay.hero = spawnHero;
             return dwarfDisplay;
         } else if (spawnHero.HeroType.Equals("Archer"))
         {
             Transform pfArcherDisplay = Instantiate(GameAssets.i.pfArcherDisplay);
             HeroDisplay archerDisplay = pfArcherDisplay.GetComponent<HeroDisplay>();
+            archerDisplay.transform.SetParent(GameObject.Find("UI").transform, false);
             archerDisplay.hero = spawnHero;
             return archerDisplay;
         } return null;
@@ -97,6 +101,11 @@ public class HeroDisplay : MonoBehaviour
         } else
         {
             controlPrinceThoraldButton.GetComponent<Button>().GetComponent<Image>().color = Color.white;
+        }
+        print(hero.currentState);
+        if(hero.currentState == Hero.HeroState.ACTION || hero.currentState == Hero.HeroState.ACTIONNEWREGION)
+        {
+            gameObject.GetComponent<Image>().color = Color.green;
         }
     }
 
@@ -151,9 +160,14 @@ public class HeroDisplay : MonoBehaviour
 
     public void endTurn()
     {
-        GameManager game = GameObject.Find("GameManager").GetComponent<GameManager>();
+        hero.endTurn();
         ColorPopup.Create(hero.transform.position, "Ended Turn!", "Red");
-        game.nextTurn();
+    }
+
+    public void endDay()
+    {
+        hero.endDay();
+        ColorPopup.Create(hero.transform.position, "Ended Day!", "Red");
     }
 
     public void addWineskin()
@@ -234,6 +248,7 @@ public class HeroDisplay : MonoBehaviour
         button3.gameObject.SetActive(false);
 
     }
+
     private void addItemSmall(string item)
     {
         int heroGold = hero.getGold();
@@ -369,7 +384,6 @@ public class HeroDisplay : MonoBehaviour
                 hero.setGold(heroGold - 2);
                 button4.GetComponent<Image>().sprite = ImageShield;
                 button4.gameObject.SetActive(true);
-                Debug.Log("added shield");
             }
             else if (item == "bow")
             {
@@ -379,7 +393,6 @@ public class HeroDisplay : MonoBehaviour
                 hero.setGold(heroGold - 2);
                 button4.GetComponent<Image>().sprite = ImageBow;
                 button4.gameObject.SetActive(true);
-                Debug.Log("added bow");
             }
             else if (item == "falcon")
             {
@@ -389,7 +402,6 @@ public class HeroDisplay : MonoBehaviour
                 hero.setGold(heroGold - 2);
                 button4.GetComponent<Image>().sprite = ImageFalcon;
                 button4.gameObject.SetActive(true);
-                Debug.Log("added falcon");
             }
             else
             {
