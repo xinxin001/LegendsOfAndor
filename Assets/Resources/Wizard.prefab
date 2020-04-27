@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2594669197710039775}
   - component: {fileID: 2594669197710039774}
   - component: {fileID: 114388870790594976}
+  - component: {fileID: 114610381294797772}
   m_Layer: 0
   m_Name: Wizard
   m_TagString: Untagged
@@ -113,12 +114,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2594669197710039761}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23f0b42c6d9ef2848afa24d80460f32a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hero: {fileID: 2594669197710039775}
+  archer: {fileID: 7344997300504515333, guid: 02e4a9f9e177fef49be2e7023e658942, type: 3}
+  dwarf: {fileID: 8274509953117570408, guid: c808221605fc52a49846cc9355b45270, type: 3}
+  warrior: {fileID: 3822611166944091924, guid: 9c2ea906decbec549b05b7fe489a52ec, type: 3}
+  wizard: {fileID: 2594669197710039775}
 --- !u!114 &114388870790594976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,9 +138,25 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   Group: 0
   prefixField: -1
-  Synchronization: 0
+  Synchronization: 3
   OwnershipTransfer: 0
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 114610381294797772}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &114610381294797772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2594669197710039761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 1

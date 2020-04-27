@@ -112,9 +112,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7344997300504515328}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23f0b42c6d9ef2848afa24d80460f32a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hero: {fileID: 7344997300504515333}
+  archer: {fileID: 7344997300504515333}
+  dwarf: {fileID: 6558865854126018775, guid: 22f37bc31bb7e9445a58a3f8a82caa5c, type: 3}
+  warrior: {fileID: 3822611166944091924, guid: 275bdf82881e02045944f33058005459, type: 3}
+  wizard: {fileID: 2594669197710039775, guid: 05e9c4b13397182488b66236247a950e, type: 3}

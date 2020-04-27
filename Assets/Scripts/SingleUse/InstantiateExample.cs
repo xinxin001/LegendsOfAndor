@@ -84,4 +84,9 @@ public class InstantiateExample : MonoBehaviourPunCallbacks
         }
     }
 
+    [PunRPC]
+    public void updateHero(string heroClass) {
+        return;
+    }
+
 }

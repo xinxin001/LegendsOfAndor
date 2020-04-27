@@ -9,7 +9,11 @@ using Photon.Pun;
 
 public class Cursor : MonoBehaviourPunCallbacks
 {
-    public Hero hero;
+    public Hero archer;
+    public Hero dwarf;
+    public Hero warrior;
+    public Hero wizard;
+
 
     void Update()
     {
@@ -19,88 +23,98 @@ public class Cursor : MonoBehaviourPunCallbacks
             //Get the mouse position on the screen and send a raycast into the game world from that position.
             if (!EventSystem.current.IsPointerOverGameObject())
             {
-                PhotonView photonView = PhotonView.Get(this);
-                photonView.RPC("updatePosition", RpcTarget.All, hero.gameObject);
-            }
-        }
-    }
+                Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
 
-    [PunRPC]
-    public void updatePosition(GameObject heroObj)
-    {
-
-        Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
-
-        Hero moveHero = heroObj.GetComponent<Hero>();
-
-        //If something was hit, the RaycastHit2D.collider will not be null.
-        if (hit.collider != null)
-        {
-            print(hit.collider.gameObject.name);
-
-            //Hero move
-            if (hit.collider.gameObject.tag == "Region")
-            {
-                if (moveHero.controlPrinceThorald == false)
+                //If something was hit, the RaycastHit2D.collider will not be null.
+                if (hit.collider != null)
                 {
-                    moveHero.move(hit.collider.gameObject);
-                }
-                else
-                {
-                    MonsterManager.princeThorald.move(hit.collider.gameObject);
-                }
+                    print(hit.collider.gameObject.name);
 
-            }
-            //Pickup farmer
-            else if (hit.collider.gameObject.tag == "Farmer")
-            {
-                moveHero.pickupFarmer(hit.collider.gameObject);
-            }
-            //Pickup gold
-            else if (hit.collider.gameObject.tag == "Gold")
-            {
-                moveHero.pickupGold(hit.collider.gameObject);
+                    Debug.Log("HELLO: " + PhotonNetwork.LocalPlayer.CustomProperties["Class"].ToString());
+                    Hero moveHero = warrior;
+                    switch (PhotonNetwork.LocalPlayer.CustomProperties["Class"].ToString())
+                    {
+                        case "ARCHER":
+                            moveHero = archer;
+                            break;
+                        case "DWARF":
+                            moveHero = dwarf;
+                            break;
+                        case "WARRIOR":
+                            moveHero = warrior;
+                            break;
+                        case "WIZARD":
+                            moveHero = wizard;
+                            break;
+                    }
 
-            }
-            //Empty well
-            else if (hit.collider.gameObject.tag == "Well")
-            {
-                GameObject wellRegion = hit.collider.gameObject.GetComponent<Well>().region;
-                if (moveHero.isSameRegion(wellRegion))
-                {
-                    ColorPopup.Create(UtilsClass.GetMouseWorldPosition(), "Well Emptied!", "Green");
-                    moveHero.emptyWell(hit.collider.gameObject.GetComponent<Well>());
-                }
-            }
-            else if (hit.collider.gameObject.tag == "Merchant")
-            {
-                print("Select Merchant");
-                GameObject merchantRegion = hit.collider.gameObject.GetComponent<Merchant>().region;
-                if (moveHero.isSameRegion(merchantRegion))
-                {
-                    moveHero.interactMerchant(hit.collider.gameObject.GetComponent<Merchant>());
+                    //Hero move
+                    if (hit.collider.gameObject.tag == "Region")
+                    {
+                        if (moveHero.controlPrinceThorald == false)
+                        {
+                            moveHero.move(hit.collider.gameObject);
+                        }
+                        else
+                        {
+                            MonsterManager.princeThorald.move(hit.collider.gameObject);
+                        }
 
-                }
-            }
-            else if (hit.collider.gameObject.tag == "Witch")
-            {
-                print("Select Witch");
-                GameObject witchRegion = hit.collider.gameObject.GetComponent<Witch>().region;
-                if (moveHero.isSameRegion(witchRegion))
-                {
-                    moveHero.interactWitch(hit.collider.gameObject.GetComponent<Witch>());
+                    }
+                    //Pickup farmer
+                    else if (hit.collider.gameObject.tag == "Farmer")
+                    {
+                        moveHero.pickupFarmer(hit.collider.gameObject);
+                    }
+                    //Pickup gold
+                    else if (hit.collider.gameObject.tag == "Gold")
+                    {
+                        moveHero.pickupGold(hit.collider.gameObject);
 
+                    }
+                    //Empty well
+                    else if (hit.collider.gameObject.tag == "Well")
+                    {
+                        GameObject wellRegion = hit.collider.gameObject.GetComponent<Well>().region;
+                        if (moveHero.isSameRegion(wellRegion))
+                        {
+                            ColorPopup.Create(UtilsClass.GetMouseWorldPosition(), "Well Emptied!", "Green");
+                            moveHero.emptyWell(hit.collider.gameObject.GetComponent<Well>());
+                        }
+                    }
+                    else if (hit.collider.gameObject.tag == "Merchant")
+                    {
+                        print("Select Merchant");
+                        GameObject merchantRegion = hit.collider.gameObject.GetComponent<Merchant>().region;
+                        if (moveHero.isSameRegion(merchantRegion))
+                        {
+                            moveHero.interactMerchant(hit.collider.gameObject.GetComponent<Merchant>());
+
+                        }
+                    }
+                    else if (hit.collider.gameObject.tag == "Witch")
+                    {
+                        print("Select Witch");
+                        GameObject witchRegion = hit.collider.gameObject.GetComponent<Witch>().region;
+                        if (moveHero.isSameRegion(witchRegion))
+                        {
+                            moveHero.interactWitch(hit.collider.gameObject.GetComponent<Witch>());
+
+                        }
+                    }
+                    else if (hit.collider.gameObject.tag == "Fog")
+                    {
+                        GameObject fogRegion = hit.collider.gameObject.GetComponent<Fog>().region;
+                        if (moveHero.isSameRegion(fogRegion) && !hit.collider.gameObject.GetComponent<Fog>().isUsed)
+                        {
+                            ColorPopup.Create(UtilsClass.GetMouseWorldPosition(), "Fog", "Green");
+                            moveHero.interactFog(hit.collider.gameObject.GetComponent<Fog>());
+                        }
+                    }
                 }
-            }
-            else if (hit.collider.gameObject.tag == "Fog")
-            {
-                GameObject fogRegion = hit.collider.gameObject.GetComponent<Fog>().region;
-                if (moveHero.isSameRegion(fogRegion) && !hit.collider.gameObject.GetComponent<Fog>().isUsed)
-                {
-                    ColorPopup.Create(UtilsClass.GetMouseWorldPosition(), "Fog", "Green");
-                    moveHero.interactFog(hit.collider.gameObject.GetComponent<Fog>());
-                }
+                //PhotonView photonView = PhotonView.Get(this);
+                //photonView.RPC("updatePosition", RpcTarget.All, PhotonNetwork.LocalPlayer.CustomProperties["Class"].ToString());
             }
         }
     }

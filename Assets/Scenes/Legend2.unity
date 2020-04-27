@@ -6057,7 +6057,8 @@ MonoBehaviour:
   prefixField: -1
   Synchronization: 0
   OwnershipTransfer: 0
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 0}
   viewIdField: 122
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -21935,7 +21936,8 @@ MonoBehaviour:
   prefixField: -1
   Synchronization: 0
   OwnershipTransfer: 0
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 0}
   viewIdField: 120
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -28353,7 +28355,8 @@ MonoBehaviour:
   prefixField: -1
   Synchronization: 0
   OwnershipTransfer: 0
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 0}
   viewIdField: 118
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -43670,6 +43673,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2594669197710039774, guid: 05e9c4b13397182488b66236247a950e,
+        type: 3}
+      propertyPath: wizard
+      value: 
+      objectReference: {fileID: 2594669196487844855}
+    - target: {fileID: 2594669197710039774, guid: 05e9c4b13397182488b66236247a950e,
+        type: 3}
+      propertyPath: dwarf
+      value: 
+      objectReference: {fileID: 6558865853538519508}
+    - target: {fileID: 2594669197710039774, guid: 05e9c4b13397182488b66236247a950e,
+        type: 3}
+      propertyPath: archer
+      value: 
+      objectReference: {fileID: 7344997301248097716}
+    - target: {fileID: 2594669197710039774, guid: 05e9c4b13397182488b66236247a950e,
+        type: 3}
+      propertyPath: warrior
+      value: 
+      objectReference: {fileID: 1682132344}
+    - target: {fileID: 2594669197710039774, guid: 05e9c4b13397182488b66236247a950e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2594669197710039775, guid: 05e9c4b13397182488b66236247a950e,
         type: 3}
       propertyPath: currentRegion
@@ -43963,6 +43991,26 @@ PrefabInstance:
       propertyPath: gold
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 3822611166944091925, guid: 275bdf82881e02045944f33058005459,
+        type: 3}
+      propertyPath: warrior
+      value: 
+      objectReference: {fileID: 1682132344}
+    - target: {fileID: 3822611166944091925, guid: 275bdf82881e02045944f33058005459,
+        type: 3}
+      propertyPath: wizard
+      value: 
+      objectReference: {fileID: 2594669196487844855}
+    - target: {fileID: 3822611166944091925, guid: 275bdf82881e02045944f33058005459,
+        type: 3}
+      propertyPath: dwarf
+      value: 
+      objectReference: {fileID: 6558865853538519508}
+    - target: {fileID: 3822611166944091925, guid: 275bdf82881e02045944f33058005459,
+        type: 3}
+      propertyPath: archer
+      value: 
+      objectReference: {fileID: 7344997301248097716}
     - target: {fileID: 3822611166944091927, guid: 275bdf82881e02045944f33058005459,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -46130,6 +46178,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 214256614}
     m_Modifications:
+    - target: {fileID: 6558865854126018768, guid: 22f37bc31bb7e9445a58a3f8a82caa5c,
+        type: 3}
+      propertyPath: warrior
+      value: 
+      objectReference: {fileID: 1682132344}
+    - target: {fileID: 6558865854126018768, guid: 22f37bc31bb7e9445a58a3f8a82caa5c,
+        type: 3}
+      propertyPath: archer
+      value: 
+      objectReference: {fileID: 7344997301248097716}
+    - target: {fileID: 6558865854126018768, guid: 22f37bc31bb7e9445a58a3f8a82caa5c,
+        type: 3}
+      propertyPath: wizard
+      value: 
+      objectReference: {fileID: 2594669196487844855}
+    - target: {fileID: 6558865854126018768, guid: 22f37bc31bb7e9445a58a3f8a82caa5c,
+        type: 3}
+      propertyPath: dwarf
+      value: 
+      objectReference: {fileID: 6558865853538519508}
+    - target: {fileID: 6558865854126018768, guid: 22f37bc31bb7e9445a58a3f8a82caa5c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6558865854126018769, guid: 22f37bc31bb7e9445a58a3f8a82caa5c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -46284,6 +46357,31 @@ PrefabInstance:
       propertyPath: WitchDisplay
       value: 
       objectReference: {fileID: 1752403956}
+    - target: {fileID: 7344997300504515334, guid: 2b22ae6e386b05e4488d16aafdccb726,
+        type: 3}
+      propertyPath: archer
+      value: 
+      objectReference: {fileID: 7344997301248097716}
+    - target: {fileID: 7344997300504515334, guid: 2b22ae6e386b05e4488d16aafdccb726,
+        type: 3}
+      propertyPath: dwarf
+      value: 
+      objectReference: {fileID: 6558865853538519508}
+    - target: {fileID: 7344997300504515334, guid: 2b22ae6e386b05e4488d16aafdccb726,
+        type: 3}
+      propertyPath: wizard
+      value: 
+      objectReference: {fileID: 2594669196487844855}
+    - target: {fileID: 7344997300504515334, guid: 2b22ae6e386b05e4488d16aafdccb726,
+        type: 3}
+      propertyPath: warrior
+      value: 
+      objectReference: {fileID: 1682132344}
+    - target: {fileID: 7344997300504515334, guid: 2b22ae6e386b05e4488d16aafdccb726,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7344997300504515335, guid: 2b22ae6e386b05e4488d16aafdccb726,
         type: 3}
       propertyPath: m_LocalPosition.x

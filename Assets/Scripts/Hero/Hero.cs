@@ -113,8 +113,6 @@ public class Hero : MonoBehaviourPunCallbacks
         if (spawnHeroType.Equals("Warrior")){
 
             heroTransform = Instantiate(GameAssets.i.pfWarrior, spawnRegion.transform.position, Quaternion.identity);
-
-
             Hero warrior = heroTransform.GetComponent<Hero>();
             warrior.HeroName = "Thorn";
             warrior.currentRegion = spawnRegion;
@@ -124,6 +122,7 @@ public class Hero : MonoBehaviourPunCallbacks
             spawnRegion.GetComponent<RegionHandler>().region.heros.Add(warrior);
 
             return warrior;
+
         } else if(spawnHeroType.Equals("Wizard"))
         {
             heroTransform = Instantiate(GameAssets.i.pfWizard, spawnRegion.transform.position, Quaternion.identity);
@@ -136,6 +135,7 @@ public class Hero : MonoBehaviourPunCallbacks
             spawnRegion.GetComponent<RegionHandler>().region.heros.Add(wizard);
             return wizard;
         }
+
         else if (spawnHeroType.Equals("Dwarf"))
         {
             heroTransform = Instantiate(GameAssets.i.pfDwarf, spawnRegion.transform.position, Quaternion.identity);
@@ -148,6 +148,7 @@ public class Hero : MonoBehaviourPunCallbacks
             spawnRegion.GetComponent<RegionHandler>().region.heros.Add(dwarf);
             return dwarf;
         }
+
         else if (spawnHeroType.Equals("Archer"))
         {
             heroTransform = Instantiate(GameAssets.i.pfArcher, spawnRegion.transform.position, Quaternion.identity);
