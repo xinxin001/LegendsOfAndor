@@ -8,10 +8,10 @@ using Photon.Realtime;
 public class InstantiateExample : MonoBehaviourPunCallbacks
 {
     public HeroManager heroManager;
-    public GameObject archerStartingPos;
-    public GameObject dwarfStartingPos;
-    public GameObject warriorStartingPos;
-    public GameObject wizardStartingPos;
+    public GameObject archerStartingPos = GameObject.Find("14");
+    public GameObject dwarfStartingPos = GameObject.Find("7");
+    public GameObject warriorStartingPos = GameObject.Find("25");
+    public GameObject wizardStartingPos = GameObject.Find("34");
 
     [SerializeField]
     private GameObject _archer;
@@ -82,7 +82,7 @@ public class InstantiateExample : MonoBehaviourPunCallbacks
     [PunRPC]
     public void updateHero(string heroClass) {
         Player localPlayer = PhotonNetwork.LocalPlayer;
-        Hero hero = archerObj.GetComponent<Hero>();
+        Hero hero = null;
         switch (heroClass)
         {
             case "ARCHER":
