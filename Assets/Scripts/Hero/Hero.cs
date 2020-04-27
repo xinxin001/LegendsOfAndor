@@ -8,7 +8,7 @@ using Photon.Pun;
 
 [System.Serializable]
 
-public class Hero : MonoBehaviourPunCallbacks
+public class Hero : MonoBehaviourPunCallbacks, IPunObservable
 {
     public int gold = 0;
     public int timeOfDay = 7;
@@ -35,6 +35,36 @@ public class Hero : MonoBehaviourPunCallbacks
         DEAD
     }
     public HeroState currentState = HeroState.WAITING;
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info) {
+        if (stream.IsWriting) {
+            stream.SendNext(gold);
+            stream.SendNext(timeOfDay);
+            stream.SendNext(overtime);
+            stream.SendNext(strength);
+            stream.SendNext(willPower);
+            stream.SendNext(numberOfDice);
+            stream.SendNext(farmers);
+            stream.SendNext(HeroType);
+            stream.SendNext(HeroName);
+            stream.SendNext(controlPrinceThorald);
+            stream.SendNext(currentState);
+
+        } else if (stream.IsReading){
+            gold = (int)stream.ReceiveNext();
+            timeOfDay = (int)stream.ReceiveNext();
+            overtime = (int)stream.ReceiveNext();
+            strength = (int)stream.ReceiveNext();
+            willPower = (int)stream.ReceiveNext();
+            numberOfDice = (int)stream.ReceiveNext();
+            farmers = (int)stream.ReceiveNext();
+            HeroType = (string)stream.ReceiveNext();
+            HeroName = (string)stream.ReceiveNext();
+            controlPrinceThorald = (bool)stream.ReceiveNext();
+            currentState = (HeroState)stream.ReceiveNext();
+
+        }
+    }
 
     private void Start()
     {
