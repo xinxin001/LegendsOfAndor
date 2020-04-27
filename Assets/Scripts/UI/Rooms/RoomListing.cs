@@ -20,7 +20,10 @@ public class RoomListing : MonoBehaviour{
     {
         //clearMessages();
         PhotonNetwork.JoinRoom(RoomInfo.Name);
-        _text.text = RoomInfo.Name + " " + RoomInfo.PlayerCount + "/" + RoomInfo.MaxPlayers;
     }
 
+    private void Update()
+    {
+        _text.text = RoomInfo.Name + " " + RoomInfo.PlayerCount + "/" + RoomInfo.MaxPlayers;
+    }
 }
