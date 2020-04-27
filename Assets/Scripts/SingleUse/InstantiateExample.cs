@@ -25,67 +25,91 @@ public class InstantiateExample : MonoBehaviourPunCallbacks
     [SerializeField]
     private GameObject _wizard;
 
+
+    private GameObject archerObj;
+    private GameObject dwarfObj;
+    private GameObject warriorObj;
+    private GameObject wizardObj;
+
     private void Awake()
     {
         Player localPlayer = PhotonNetwork.LocalPlayer;
         string to_use = localPlayer.CustomProperties["Class"].ToString();
         HeroDisplay heroDisplay;
+        PhotonView photonView = PhotonView.Get(this);
+        Hero hero;
 
         switch (to_use) {
 
             case "ARCHER":
-                GameObject archerObj = MasterManager.NetworkInstantiate(_archer, archerStartingPos.transform.position, Quaternion.identity);
-                Hero archer = archerObj.GetComponent<Hero>();
-                archer.HeroName = localPlayer.CustomProperties["Class"].ToString();
-                archer.currentRegion = archerStartingPos;
-                heroDisplay = HeroDisplay.Create(archer);
-                archerStartingPos.GetComponent<RegionHandler>().region.heros.Add(archer);
+                archerObj = MasterManager.NetworkInstantiate(_archer, archerStartingPos.transform.position, Quaternion.identity);
+                photonView.RPC("updateHero", RpcTarget.All, "ARCHER");
 
-                heroManager.AddHero(archer);
+                hero = archerObj.GetComponent<Hero>();
+                hero.currentRegion.GetComponent<RegionHandler>().region.heros.Add(hero);
                 Debug.Log("Archer spawned");
                 break;
 
             case "DWARF":
-                GameObject dwarfObj = MasterManager.NetworkInstantiate(_dwarf, dwarfStartingPos.transform.position, Quaternion.identity);
-                Hero dwarf = dwarfObj.GetComponent<Hero>();
-                dwarf.HeroName = localPlayer.CustomProperties["Class"].ToString();
-                dwarf.currentRegion = dwarfStartingPos;
-                heroDisplay = HeroDisplay.Create(dwarf);
-                dwarfStartingPos.GetComponent<RegionHandler>().region.heros.Add(dwarf);
+                dwarfObj = MasterManager.NetworkInstantiate(_dwarf, dwarfStartingPos.transform.position, Quaternion.identity);
+                photonView.RPC("updateHero", RpcTarget.All, "DWARF");
 
-                heroManager.AddHero(dwarf);
+                hero = dwarfObj.GetComponent<Hero>();
+                hero.currentRegion.GetComponent<RegionHandler>().region.heros.Add(hero);
                 Debug.Log("Dwarf spawned");
                 break;
 
             case "WARRIOR":
-                GameObject warriorObj = MasterManager.NetworkInstantiate(_warrior, warriorStartingPos.transform.position, Quaternion.identity);
-                Hero warrior = warriorObj.GetComponent<Hero>();
-                warrior.HeroName = localPlayer.CustomProperties["Class"].ToString();
-                warrior.currentRegion = warriorStartingPos;
-                heroDisplay = HeroDisplay.Create(warrior);
-                warriorStartingPos.GetComponent<RegionHandler>().region.heros.Add(warrior);
+                warriorObj = MasterManager.NetworkInstantiate(_warrior, warriorStartingPos.transform.position, Quaternion.identity);
+                photonView.RPC("updateHero", RpcTarget.All, "WARRIOR");
 
-                heroManager.AddHero(warrior);
+                hero = warriorObj.GetComponent<Hero>();
+                hero.currentRegion.GetComponent<RegionHandler>().region.heros.Add(hero);
                 Debug.Log("Warrior spawned");
                 break;
 
             case "WIZARD":
-                GameObject wizardObj = MasterManager.NetworkInstantiate(_wizard, wizardStartingPos.transform.position, Quaternion.identity);
-                Hero wizard = wizardObj.GetComponent<Hero>();
-                wizard.HeroName = localPlayer.CustomProperties["Class"].ToString();
-                wizard.currentRegion = wizardStartingPos;
-                heroDisplay = HeroDisplay.Create(wizard);
-                wizardStartingPos.GetComponent<RegionHandler>().region.heros.Add(wizard);
+                wizardObj = MasterManager.NetworkInstantiate(_wizard, wizardStartingPos.transform.position, Quaternion.identity);
+                photonView.RPC("updateHero", RpcTarget.All, "WIZARD");
 
-                heroManager.AddHero(wizard);
+                hero = wizardObj.GetComponent<Hero>();
+                hero.currentRegion.GetComponent<RegionHandler>().region.heros.Add(hero);
                 Debug.Log("Wizard spawned");
                 break;
-
         }
     }
 
     [PunRPC]
     public void updateHero(string heroClass) {
+        Player localPlayer = PhotonNetwork.LocalPlayer;
+        Hero hero = archerObj.GetComponent<Hero>();
+        switch (heroClass)
+        {
+            case "ARCHER":
+                hero = archerObj.GetComponent<Hero>();
+                hero.currentRegion = archerStartingPos;
+                break;
+
+            case "DWARF":
+                hero = dwarfObj.GetComponent<Hero>();
+                hero.currentRegion = dwarfStartingPos;
+                Debug.Log("HEH");
+                break;
+
+            case "WARRIOR":
+                hero = warriorObj.GetComponent<Hero>();
+                hero.currentRegion = warriorStartingPos;
+                break;
+
+            case "WIZARD":
+                hero = wizardObj.GetComponent<Hero>();
+                hero.currentRegion = wizardStartingPos;
+                break;
+        }
+
+        hero.HeroName = localPlayer.NickName;
+        hero.currentRegion.GetComponent<RegionHandler>().region.heros.Add(hero);
+        heroManager.AddHero(hero);
         return;
     }
 
