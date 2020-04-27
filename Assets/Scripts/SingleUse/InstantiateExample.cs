@@ -33,7 +33,12 @@ public class InstantiateExample : MonoBehaviourPunCallbacks
 
     private void Awake()
     {
+        archerStartingPos = GameObject.Find("25");
+        dwarfStartingPos = GameObject.Find("7");
+        warriorStartingPos = GameObject.Find("14");
+        wizardStartingPos = GameObject.Find("34");
         Player localPlayer = PhotonNetwork.LocalPlayer;
+
         string to_use = localPlayer.CustomProperties["Class"].ToString();
         HeroDisplay heroDisplay;
         PhotonView photonView = PhotonView.Get(this);
@@ -45,8 +50,8 @@ public class InstantiateExample : MonoBehaviourPunCallbacks
                 archerObj = MasterManager.NetworkInstantiate(_archer, archerStartingPos.transform.position, Quaternion.identity);
                 photonView.RPC("updateHero", RpcTarget.All, "ARCHER");
 
-                hero = archerObj.GetComponent<Hero>();
-                hero.currentRegion.GetComponent<RegionHandler>().region.heros.Add(hero);
+                //hero = archerObj.GetComponent<Hero>();
+                //hero.currentRegion.GetComponent<RegionHandler>().region.heros.Add(hero);
                 Debug.Log("Archer spawned");
                 break;
 
@@ -54,8 +59,8 @@ public class InstantiateExample : MonoBehaviourPunCallbacks
                 dwarfObj = MasterManager.NetworkInstantiate(_dwarf, dwarfStartingPos.transform.position, Quaternion.identity);
                 photonView.RPC("updateHero", RpcTarget.All, "DWARF");
 
-                hero = dwarfObj.GetComponent<Hero>();
-                hero.currentRegion.GetComponent<RegionHandler>().region.heros.Add(hero);
+                //hero = dwarfObj.GetComponent<Hero>();
+                //hero.currentRegion.GetComponent<RegionHandler>().region.heros.Add(hero);
                 Debug.Log("Dwarf spawned");
                 break;
 
@@ -63,8 +68,8 @@ public class InstantiateExample : MonoBehaviourPunCallbacks
                 warriorObj = MasterManager.NetworkInstantiate(_warrior, warriorStartingPos.transform.position, Quaternion.identity);
                 photonView.RPC("updateHero", RpcTarget.All, "WARRIOR");
 
-                hero = warriorObj.GetComponent<Hero>();
-                hero.currentRegion.GetComponent<RegionHandler>().region.heros.Add(hero);
+                //hero = warriorObj.GetComponent<Hero>();
+                //hero.currentRegion.GetComponent<RegionHandler>().region.heros.Add(hero);
                 Debug.Log("Warrior spawned");
                 break;
 
@@ -72,8 +77,8 @@ public class InstantiateExample : MonoBehaviourPunCallbacks
                 wizardObj = MasterManager.NetworkInstantiate(_wizard, wizardStartingPos.transform.position, Quaternion.identity);
                 photonView.RPC("updateHero", RpcTarget.All, "WIZARD");
 
-                hero = wizardObj.GetComponent<Hero>();
-                hero.currentRegion.GetComponent<RegionHandler>().region.heros.Add(hero);
+                //hero = wizardObj.GetComponent<Hero>();
+                //hero.currentRegion.GetComponent<RegionHandler>().region.heros.Add(hero);
                 Debug.Log("Wizard spawned");
                 break;
         }
@@ -93,7 +98,6 @@ public class InstantiateExample : MonoBehaviourPunCallbacks
             case "DWARF":
                 hero = dwarfObj.GetComponent<Hero>();
                 hero.currentRegion = dwarfStartingPos;
-                Debug.Log("HEH");
                 break;
 
             case "WARRIOR":
