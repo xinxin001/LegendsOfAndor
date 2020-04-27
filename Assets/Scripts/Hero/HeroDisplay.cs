@@ -103,9 +103,13 @@ public class HeroDisplay : MonoBehaviour
             controlPrinceThoraldButton.GetComponent<Button>().GetComponent<Image>().color = Color.white;
         }
         print(hero.currentState);
-        if(hero.currentState == Hero.HeroState.ACTION || hero.currentState == Hero.HeroState.ACTIONNEWREGION)
+        Color imageColor = gameObject.GetComponent<Image>().color;
+        if (hero.currentState == Hero.HeroState.ACTION || hero.currentState == Hero.HeroState.ACTIONNEWREGION)
         {
             gameObject.GetComponent<Image>().color = Color.green;
+        } else
+        {
+            gameObject.GetComponent<Image>().color = imageColor;
         }
     }
 
