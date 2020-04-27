@@ -16,12 +16,11 @@ public class RoomListing : MonoBehaviour{
         _text.text = roomInfo.Name + " " +roomInfo.PlayerCount + "/" + roomInfo.MaxPlayers;
     }
 
-
-
     public void OnClick_Button()
     {
         //clearMessages();
         PhotonNetwork.JoinRoom(RoomInfo.Name);
+        _text.text = RoomInfo.Name + " " + RoomInfo.PlayerCount + "/" + RoomInfo.MaxPlayers;
     }
 
 }
