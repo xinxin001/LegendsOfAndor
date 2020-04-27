@@ -8,7 +8,7 @@ using Photon.Pun;
 
 [System.Serializable]
 
-public class Hero : MonoBehaviour
+public class Hero : MonoBehaviourPunCallbacks
 {
     public int gold = 0;
     public int timeOfDay = 7;

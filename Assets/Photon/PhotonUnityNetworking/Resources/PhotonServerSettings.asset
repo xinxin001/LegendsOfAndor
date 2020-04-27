@@ -37,5 +37,6 @@ MonoBehaviour:
   - RPC_ChangeReadyState
   - SendMessageToChat
   - sendMessageRPC
+  - updatePosition
   DisableAutoOpenWizard: 1
   ShowSettings: 1
