@@ -40,20 +40,17 @@ public class Cursor : MonoBehaviour
                     //Pickup farmer
                     else if(hit.collider.gameObject.tag == "Farmer")
                     {
-                        print("Pickup farmer");
                         hero.pickupFarmer(hit.collider.gameObject);
                     }
                     //Pickup gold
                     else if (hit.collider.gameObject.tag == "Gold")
                     {
-                        print("Pickup farmer");
                         hero.pickupGold(hit.collider.gameObject);
 
                     }
                     //Empty well
                     else if(hit.collider.gameObject.tag == "Well")
                     {
-                        print("Empty Well");
                         GameObject wellRegion = hit.collider.gameObject.GetComponent<Well>().region;
                         if(hero.isSameRegion(wellRegion)) {
                             ColorPopup.Create(UtilsClass.GetMouseWorldPosition(), "Well Emptied!", "Green");
@@ -65,7 +62,6 @@ public class Cursor : MonoBehaviour
                         GameObject merchantRegion = hit.collider.gameObject.GetComponent<Merchant>().region;
                         if (hero.isSameRegion(merchantRegion))
                         {
-                            ColorPopup.Create(UtilsClass.GetMouseWorldPosition(), "Merchant", "Green");
                             hero.interactMerchant(hit.collider.gameObject.GetComponent<Merchant>());
 
                         }
@@ -75,9 +71,17 @@ public class Cursor : MonoBehaviour
                         GameObject witchRegion = hit.collider.gameObject.GetComponent<Witch>().region;
                         if (hero.isSameRegion(witchRegion))
                         {
-                            ColorPopup.Create(UtilsClass.GetMouseWorldPosition(), "Witch", "Green");
                             hero.interactWitch(hit.collider.gameObject.GetComponent<Witch>());
 
+                        }
+                    }
+                    else if (hit.collider.gameObject.tag == "Fog")
+                    {
+                        GameObject fogRegion = hit.collider.gameObject.GetComponent<Fog>().region;
+                        if (hero.isSameRegion(fogRegion) && !hit.collider.gameObject.GetComponent<Fog>().isUsed)
+                        {
+                            ColorPopup.Create(UtilsClass.GetMouseWorldPosition(), "Fog", "Green");
+                            hero.interactFog(hit.collider.gameObject.GetComponent<Fog>());
                         }
                     }
                 }

@@ -10,11 +10,6 @@ public class Wardrak : Monster
         strength = 10;
         willpower = 7;
         rewardPoints = 6;
-}
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
+
 }

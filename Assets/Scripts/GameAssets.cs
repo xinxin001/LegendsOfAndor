@@ -44,4 +44,18 @@ public class GameAssets : MonoBehaviour
 
     public Transform pfMerchant;
     public Transform pfWitch;
+
+    public Transform pfMerchantDisplayWarrior;
+    public Transform pfWitchDisplayWarrior;
+
+    public Transform pfMerchantDisplayDwarf;
+    public Transform pfWitchDisplayDwarf;
+
+    public Transform pfMerchantDisplayWizard;
+    public Transform pfWitchDisplayWizard;
+
+    public Transform pfMerchantDisplayArcher;
+    public Transform pfWitchDisplayArcher;
+
+    public Transform pfFog;
 }

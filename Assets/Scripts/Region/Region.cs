@@ -13,7 +13,7 @@ public class Region
     public Monster monster;
     public Farmer[] farmers;
     public Gold[] goldStacks;
-    public GameObject[] heros;
+    public List<Hero> heros;
     public PrinceThorald princeThorald;
 
     public bool fountain;

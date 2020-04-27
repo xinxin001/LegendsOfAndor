@@ -22,7 +22,8 @@ public class Castle : MonoBehaviour
         updateShields();
         if(region.monster != null)
         {
-            Destroy(region.monster.gameObject);
+            MonsterManager monsterManager = GameObject.Find("MonsterManager").GetComponent<MonsterManager>();
+            monsterManager.DestroyMonster(region.monster.gameObject.GetComponent<Monster>());
             region.monster = null;
             CastleHealth -= 1;
         }

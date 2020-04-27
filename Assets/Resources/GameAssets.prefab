@@ -69,3 +69,15 @@ MonoBehaviour:
     type: 3}
   pfPrinceThorald: {fileID: 4335072794191978645, guid: e2d088521f67ec1459b5ba83a3bcfacd,
     type: 3}
+  pfMerchant: {fileID: 1519541462712351215, guid: ea8a69cede7a34841a6b7c778aeafdc5,
+    type: 3}
+  pfWitch: {fileID: 3615876161174408883, guid: 2654dca97751c6f42a8b5529b045c57e, type: 3}
+  pfMerchantDisplayWarrior: {fileID: 0}
+  pfWitchDisplayWarrior: {fileID: 0}
+  pfMerchantDisplayDwarf: {fileID: 0}
+  pfWitchDisplayDwarf: {fileID: 0}
+  pfMerchantDisplayWizard: {fileID: 0}
+  pfWitchDisplayWizard: {fileID: 0}
+  pfMerchantDisplayArcher: {fileID: 0}
+  pfWitchDisplayArcher: {fileID: 0}
+  pfFog: {fileID: 7683339760384998583, guid: 0900b35aa8c6af2498b59371ae9ec33d, type: 3}

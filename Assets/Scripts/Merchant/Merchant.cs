@@ -5,8 +5,10 @@ using UnityEngine;
 public class Merchant : MonoBehaviour
 {
     public GameObject region;
-
-    
+    public GameObject warriorDisplay;
+    public GameObject wizardDisplay;
+    public GameObject dwarfDisplay;
+    public GameObject archerDisplay;
 
     void Update()
     {
@@ -20,8 +22,8 @@ public class Merchant : MonoBehaviour
         merchant.region = createRegion;
         return merchant;
     }
-    public static void interact()
+    public void interact(Hero hero)
     {
-
+        warriorDisplay.SetActive(true);
     }
 }
