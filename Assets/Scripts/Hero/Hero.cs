@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using CodeMonkey.Utils;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
 
 [System.Serializable]
 
@@ -110,7 +111,10 @@ public class Hero : MonoBehaviour
     {
         Transform heroTransform;
         if (spawnHeroType.Equals("Warrior")){
+
             heroTransform = Instantiate(GameAssets.i.pfWarrior, spawnRegion.transform.position, Quaternion.identity);
+
+
             Hero warrior = heroTransform.GetComponent<Hero>();
             warrior.HeroName = "Thorn";
             warrior.currentRegion = spawnRegion;

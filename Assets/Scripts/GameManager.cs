@@ -30,11 +30,12 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         fogManager.randomizeFogTokens();
-        GameObject region14 = GameObject.Find("14");
-        GameObject region15 = GameObject.Find("15");
-        heroManager.AddHero(region14, "Warrior");
-        heroManager.AddHero(region15, "Archer");
+        //GameObject region14 = GameObject.Find("14");
+        //GameObject region15 = GameObject.Find("15");
+        //heroManager.AddHero(region14, "Warrior");
+        //heroManager.AddHero(region15, "Archer");
         newGameTurnOrder();
     }
 

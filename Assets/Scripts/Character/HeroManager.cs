@@ -26,6 +26,11 @@ public class HeroManager : MonoBehaviour
         return newHero;
     }
 
+    public Hero AddHero(Hero hero) {
+        heroList.Add(hero);
+        return hero;
+    }
+
     public void RemoveHero(Hero hero)
     {
         heroList.Remove(hero);
