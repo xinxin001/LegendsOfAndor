@@ -210,7 +210,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc48a3630f69bef49b5226d5617f75f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 830520139013803618, guid: fadbcf435ced322408307cfce5418578, type: 3}
+  _archer: {fileID: 7344997300504515328, guid: 02e4a9f9e177fef49be2e7023e658942, type: 3}
+  _dwarf: {fileID: 6558865854126018770, guid: c808221605fc52a49846cc9355b45270, type: 3}
+  _warrior: {fileID: 3822611166944091931, guid: 9c2ea906decbec549b05b7fe489a52ec,
+    type: 3}
+  _wizard: {fileID: 2594669197710039761, guid: cbbee72a97293814a89d480303fb65ec, type: 3}
 --- !u!4 &789432968
 Transform:
   m_ObjectHideFlags: 0

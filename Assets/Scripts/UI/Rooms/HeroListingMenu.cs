@@ -45,16 +45,6 @@ public class HeroListingMenu : MonoBehaviour
         } else {
             Debug.Log("Invalid class choice");
         }
-
-        // Update button color
-        // if(output == 1){
-        //     _Color.normalColor = Color.white;
-        //     _Color.highlightedColor = Color.white;
-        // } else if (output == 0){
-        //     _Color.normalColor = Color.red;
-        //     _Color.highlightedColor = Color.red;
-        // }
-        // _Button.colors = _Color;
     }
 
 
