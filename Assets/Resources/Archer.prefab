@@ -99,12 +99,13 @@ MonoBehaviour:
   overtime: 3
   strength: 7
   willPower: 7
-  currentRegion: {fileID: 0}
+  numberOfDice: 0
   farmers: 0
+  currentRegion: {fileID: 0}
   HeroType: Archer
+  HeroName: 
   controlPrinceThorald: 0
-  MerchantDisplay: {fileID: 0}
-  WitchDisplay: {fileID: 0}
+  currentState: 3
 --- !u!114 &7344997300504515334
 MonoBehaviour:
   m_ObjectHideFlags: 0
