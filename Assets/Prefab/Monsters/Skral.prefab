@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1969467794716813659}
   - component: {fileID: 1969467794716813657}
   m_Layer: 0
-  m_Name: Skral19
+  m_Name: Skral
   m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,4 +168,6 @@ MonoBehaviour:
   currentRegion: {fileID: 0}
   strength: 6
   willpower: 6
-  gold: 4
+  numberOfDice: 0
+  diceType: 
+  rewardPoints: 6

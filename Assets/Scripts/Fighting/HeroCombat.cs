@@ -6,11 +6,8 @@ using UnityEngine.UI;
 public class HeroCombat : MonoBehaviour
 {
     public Hero hero;
-    public Text dice1;
-    public Text dice2;
-    public Text dice3;
-    public Text dice4;
-    public Text dice5;
+    public Text diceNumber;
+    public Text highestRoll;
     public Text attackPower;
 
     public bool rolled;
@@ -24,16 +21,15 @@ public class HeroCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        diceNumber.text = "Number of Dice: " + hero.numberOfDice;
+        highestRoll.text = "Highest Roll: " + hero.roll;
+        attackPower.text = "Attack Power: " + hero.attackPower;
     }
 
-    void exitFight()
+    public void exit()
     {
-
-    }
-
-    void rollDice()
-    {
-
+        BattleManager battleManager = GameObject.Find("BattleBoard").GetComponent<BattleManager>();
+        battleManager.fightingHeroes.Remove(hero);
+        battleManager.gameObject.SetActive(false);
     }
 }

@@ -96,10 +96,12 @@ MonoBehaviour:
   gold: 0
   timeOfDay: 7
   overtime: 3
-  strength: 7
+  strength: 2
   willPower: 7
   numberOfDice: 0
   farmers: 0
+  roll: 0
+  attackPower: 0
   currentRegion: {fileID: 0}
   HeroType: Archer
   HeroName: Chada
@@ -112,7 +114,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7344997300504515328}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23f0b42c6d9ef2848afa24d80460f32a, type: 3}
   m_Name: 

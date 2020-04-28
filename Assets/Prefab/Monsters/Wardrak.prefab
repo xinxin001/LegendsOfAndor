@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5645342062549475529}
   m_Layer: 0
   m_Name: Wardrak
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,4 +95,8 @@ MonoBehaviour:
   currentRegion: {fileID: 0}
   strength: 10
   willpower: 7
-  gold: 6
+  numberOfDice: 0
+  diceType: 
+  roll: 0
+  attackPower: 0
+  rewardPoints: 10

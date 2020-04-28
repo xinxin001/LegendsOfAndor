@@ -15,15 +15,21 @@ public class GameManager : MonoBehaviour
     public LinkedList<Hero> currentTurnOrder = new LinkedList<Hero>();
     public LinkedList<Hero> nextTurnOrder = new LinkedList<Hero>();
 
-    public string[] Narrator;
+    public NarratorProgress Narrator;
 
     public Castle castle;
     public GameObject lossMenu;
+    public GameObject winMenu;
 
     public enum GameState
     {
         HEROACTION,
         NARRATORACTION
+    }
+
+    public enum NarratorProgress
+    {
+        ZERO, A, B, C, D, E, F, G, H, I, J, K, L, M, N
     }
     public GameState currentGameState = GameState.HEROACTION;
 
@@ -36,6 +42,8 @@ public class GameManager : MonoBehaviour
         heroManager.AddHero(region14, "Warrior");
         heroManager.AddHero(region15, "Archer");
         newGameTurnOrder();
+        Narrator = NarratorProgress.ZERO;
+        NarratorEvent();
     }
 
     // Update is called once per frame
@@ -50,6 +58,7 @@ public class GameManager : MonoBehaviour
         }
         if (heroManager.didDayEnd())
         {
+            NarratorEvent();
             newDay();
             print("New Day!");
         }
@@ -140,5 +149,102 @@ public class GameManager : MonoBehaviour
     {
         lossMenu.SetActive(true);
         Time.timeScale = 0f;
+    }
+
+    void gameWon()
+    {
+        winMenu.SetActive(true);
+    }
+
+    void NarratorEvent()
+    {
+        GameObject region8 = GameObject.Find("8");
+        GameObject region20 = GameObject.Find("20");
+        GameObject region21 = GameObject.Find("21");
+        GameObject region26 = GameObject.Find("26");
+        GameObject region27 = GameObject.Find("27");
+        GameObject region48 = GameObject.Find("48");
+        GameObject region19 = GameObject.Find("19");
+        GameObject region7 = GameObject.Find("7");
+        GameObject region14 = GameObject.Find("14");
+        GameObject region25 = GameObject.Find("25");
+        GameObject region34 = GameObject.Find("34");
+        GameObject region24 = GameObject.Find("24");
+        GameObject region36 = GameObject.Find("36");
+        GameObject region56 = GameObject.Find("56");
+        if(Narrator == NarratorProgress.ZERO)
+        {
+            Monster.Create(region8, "Gors");
+            Monster.Create(region20, "Gors");
+            Monster.Create(region21, "Gors");
+            Monster.Create(region26, "Gors");
+            Monster.Create(region48, "Gors");
+            Monster.Create(region19, "Skral");
+            Farmer.Create(region24);
+            Narrator = NarratorProgress.A;
+        }
+        else if (Narrator == NarratorProgress.A)
+        {
+            
+            Narrator = NarratorProgress.B;
+        } else if( Narrator == NarratorProgress.B)
+        {
+            Narrator = NarratorProgress.C;
+        }
+        else if (Narrator == NarratorProgress.C)
+        {
+            Monster towerSkral = Monster.Create(region56, "Skral");
+            towerSkral.strength = 30;
+            Narrator = NarratorProgress.D;
+        }
+        else if (Narrator == NarratorProgress.D)
+        {
+            Narrator = NarratorProgress.E;
+        }
+        else if (Narrator == NarratorProgress.E)
+        {
+            Narrator = NarratorProgress.F;
+        }
+        else if (Narrator == NarratorProgress.F)
+        {
+            Narrator = NarratorProgress.G;
+        }
+        else if (Narrator == NarratorProgress.G)
+        {
+            Monster.Create(region26, "Wardrak");
+            Monster.Create(region27, "Wardrak");
+            Narrator = NarratorProgress.H;
+        }
+        else if (Narrator == NarratorProgress.H)
+        {
+            Narrator = NarratorProgress.I;
+        }
+        else if (Narrator == NarratorProgress.I)
+        {
+            Narrator = NarratorProgress.J;
+        }
+        else if (Narrator == NarratorProgress.J)
+        {
+            Narrator = NarratorProgress.K;
+        }
+        else if (Narrator == NarratorProgress.K)
+        {
+            Narrator = NarratorProgress.L;
+        }
+        else if (Narrator == NarratorProgress.L)
+        {
+            Narrator = NarratorProgress.M;
+        }
+        else if (Narrator == NarratorProgress.M)
+        {
+            Narrator = NarratorProgress.N;
+        }
+        else if (Narrator == NarratorProgress.N)
+        {
+            if(monsterManager.monsterList.Count == 0)
+            {
+
+            }
+        }
     }
 }
