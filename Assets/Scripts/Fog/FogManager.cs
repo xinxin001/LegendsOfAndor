@@ -23,7 +23,6 @@ public class FogManager : MonoBehaviourPunCallbacks, IPunObservable
     void Start()
     {
         FogTypes = PhotonNetwork.MasterClient.CustomProperties["FogList"].ToString().Split(',').ToList();
-        Debug.Log("FOG LIST: " + PhotonNetwork.MasterClient.CustomProperties["FogList"].ToString());
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)

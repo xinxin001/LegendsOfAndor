@@ -17,6 +17,7 @@ public class Cursor : MonoBehaviourPunCallbacks
 
     void Update()
     {
+
         //If the left mouse button is clicked.
         if (Input.GetMouseButtonDown(0))
         {
@@ -30,8 +31,6 @@ public class Cursor : MonoBehaviourPunCallbacks
                 if (hit.collider != null)
                 {
                     print(hit.collider.gameObject.name);
-
-                    Debug.Log("HELLO: " + PhotonNetwork.LocalPlayer.CustomProperties["Class"].ToString());
                     Hero moveHero = warrior;
                     switch (PhotonNetwork.LocalPlayer.CustomProperties["Class"].ToString())
                     {
@@ -113,12 +112,26 @@ public class Cursor : MonoBehaviourPunCallbacks
                         }
                     }
                 }
-                //PhotonView photonView = PhotonView.Get(this);
-                //photonView.RPC("updatePosition", RpcTarget.All, PhotonNetwork.LocalPlayer.CustomProperties["Class"].ToString());
             }
         }
         if (Input.GetMouseButtonDown(1))
         {
+            Hero hero = warrior;
+            switch (PhotonNetwork.LocalPlayer.CustomProperties["Class"].ToString())
+            {
+                case "ARCHER":
+                    hero = archer;
+                    break;
+                case "DWARF":
+                    hero = dwarf;
+                    break;
+                case "WARRIOR":
+                    hero = warrior;
+                    break;
+                case "WIZARD":
+                    hero = wizard;
+                    break;
+            }
             Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
             if (!EventSystem.current.IsPointerOverGameObject())
@@ -136,6 +149,22 @@ public class Cursor : MonoBehaviourPunCallbacks
         }
         if(Input.GetKeyDown(KeyCode.F))
         {
+            Hero hero = warrior;
+            switch (PhotonNetwork.LocalPlayer.CustomProperties["Class"].ToString())
+            {
+                case "ARCHER":
+                    hero = archer;
+                    break;
+                case "DWARF":
+                    hero = dwarf;
+                    break;
+                case "WARRIOR":
+                    hero = warrior;
+                    break;
+                case "WIZARD":
+                    hero = wizard;
+                    break;
+            }
             hero.fight();
         }
     }

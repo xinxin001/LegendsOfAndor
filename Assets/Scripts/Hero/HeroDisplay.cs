@@ -16,6 +16,7 @@ public class HeroDisplay : MonoBehaviour
     public Text dropGoldAmount;
     public Slider dropGoldSlider;
     public Button controlPrinceThoraldButton;
+    public GameObject goldPrefab;
 
     private bool wineskin = false;
     private bool helm = false;
@@ -133,7 +134,7 @@ public class HeroDisplay : MonoBehaviour
     {
         if((int)dropGoldSlider.value != 0)
         {
-            Gold.Create(hero.currentRegion, (int)dropGoldSlider.value);
+            Gold.Create(hero.currentRegion, (int)dropGoldSlider.value, goldPrefab);
             hero.gold -= (int)dropGoldSlider.value;
             ColorPopup.Create(hero.transform.position, "Hero dropped " + dropGoldSlider.value + " gold!", "Orange");
         }

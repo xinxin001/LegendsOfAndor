@@ -103,6 +103,8 @@ MonoBehaviour:
   numberOfDice: 0
   farmers: 0
   rank: 0
+  roll: 0
+  attackPower: 0
   currentRegion: {fileID: 0}
   HeroType: Warrior
   HeroName: 

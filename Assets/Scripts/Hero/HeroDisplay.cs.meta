@@ -3,7 +3,30 @@ guid: 38c54d9ad9406914ebdc41cab24414a8
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - hero: {instanceID: 0}
+  - strength: {instanceID: 0}
+  - willpower: {instanceID: 0}
+  - farmers: {instanceID: 0}
+  - gold: {instanceID: 0}
+  - hours: {instanceID: 0}
+  - dropGoldAmount: {instanceID: 0}
+  - dropGoldSlider: {instanceID: 0}
+  - controlPrinceThoraldButton: {instanceID: 0}
+  - goldPrefab: {fileID: 5408032126653183918, guid: dc172c161e405d04b9a3831913308966,
+      type: 3}
+  - button1: {instanceID: 0}
+  - button2: {instanceID: 0}
+  - button3: {instanceID: 0}
+  - button4: {instanceID: 0}
+  - button5: {instanceID: 0}
+  - ImageWineskin: {instanceID: 0}
+  - ImageHelm: {instanceID: 0}
+  - ImageShield: {instanceID: 0}
+  - ImageFalcon: {instanceID: 0}
+  - ImageTelescope: {instanceID: 0}
+  - ImageBow: {instanceID: 0}
+  - ImageBrew: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

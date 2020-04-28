@@ -65,7 +65,6 @@ public class Hero : MonoBehaviourPunCallbacks, IPunObservable
             HeroName = (string)stream.ReceiveNext();
             controlPrinceThorald = (bool)stream.ReceiveNext();
             currentState = (HeroState)stream.ReceiveNext();
-
         }
     }
 
@@ -285,7 +284,8 @@ public class Hero : MonoBehaviourPunCallbacks, IPunObservable
         {
             gold += goldObject.GetComponent<Gold>().amount;
             ColorPopup.Create(UtilsClass.GetMouseWorldPosition(), "Gold picked up!", "Green");
-            Destroy(goldObject);
+            //Destroy(goldObject);
+            PhotonNetwork.Destroy(goldObject);
         }
     }
 
