@@ -117,5 +117,26 @@ public class Cursor : MonoBehaviourPunCallbacks
                 //photonView.RPC("updatePosition", RpcTarget.All, PhotonNetwork.LocalPlayer.CustomProperties["Class"].ToString());
             }
         }
+        if (Input.GetMouseButtonDown(1))
+        {
+            Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
+            if (!EventSystem.current.IsPointerOverGameObject())
+            {
+                if (hit.collider.gameObject.tag == "Merchant")
+                {
+                    print("Select Merchant");
+                    GameObject merchantRegion = hit.collider.gameObject.GetComponent<Merchant>().region;
+                    if (hero.isSameRegion(merchantRegion))
+                    {
+                        hero.buyStrength();
+                    }
+                }
+            }
+        }
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            hero.fight();
+        }
     }
 }

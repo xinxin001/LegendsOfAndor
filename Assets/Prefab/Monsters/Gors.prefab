@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5308071952564701677}
   m_Layer: 0
   m_Name: Gors
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,4 +142,8 @@ MonoBehaviour:
   currentRegion: {fileID: 0}
   strength: 2
   willpower: 4
-  gold: 2
+  numberOfDice: 0
+  diceType: 
+  roll: 0
+  attackPower: 0
+  rewardPoints: 2

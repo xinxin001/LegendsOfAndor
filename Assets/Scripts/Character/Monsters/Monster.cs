@@ -8,6 +8,8 @@ public class Monster : GameUnit
     public int willpower;
     public int numberOfDice;
     public string diceType;
+    public int roll;
+    public int attackPower;
 
     public int rewardPoints;
     public static Monster Create(GameObject spawnRegion, string monsterType)

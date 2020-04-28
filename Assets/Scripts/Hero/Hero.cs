@@ -18,6 +18,8 @@ public class Hero : MonoBehaviourPunCallbacks, IPunObservable
     public int numberOfDice;
     public int farmers = 0;
     public int rank;
+    public int roll = 0;
+    public int attackPower;
     
     public GameObject currentRegion;
 
@@ -382,5 +384,28 @@ public class Hero : MonoBehaviourPunCallbacks, IPunObservable
     {
         string targetRegionName = targetRegion.GetComponent<RegionHandler>().region.regionId;
         return currentRegion.GetComponent<RegionHandler>().region.regionId.Equals(targetRegionName);
+    }
+
+    public void fight()
+    {
+        if(currentRegion.GetComponent<RegionHandler>().region.monster != null)
+        {
+            GameManager gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+            gameManager.battleManager.gameObject.SetActive(true);
+            gameManager.battleManager.StartNewBattle(currentRegion.GetComponent<RegionHandler>().region.heros, currentRegion.GetComponent<RegionHandler>().region.monster);
+        }
+    }
+
+    public void buyStrength()
+    {
+        if(gold >= 2)
+        {
+            strength += 1;
+            gold -= 2;
+            ColorPopup.Create(gameObject.transform.position, "Bought Strength Point!", "Green");
+        } else
+        {
+            ColorPopup.Create(gameObject.transform.position, "Not enough gold!", "Red"); ; ;
+        }
     }
 }
