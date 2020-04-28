@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using System.Linq;
 
-public class FogManager : MonoBehaviour
+public class FogManager : MonoBehaviourPunCallbacks, IPunObservable
 {
     // Start is called before the first frame update
     public List<Fog> Fogs;
@@ -20,24 +22,21 @@ public class FogManager : MonoBehaviour
 
     void Start()
     {
-        //shuffle the fogtypes list
-        var count = FogTypes.Count;
-        var last = count - 1;
-        for (var i = 0; i < last; ++i)
-        {
-            var r = UnityEngine.Random.Range(i, count);
-            var tmp = FogTypes[i];
-            FogTypes[i] = FogTypes[r];
-            FogTypes[r] = tmp;
-        }
-
-
+        FogTypes = PhotonNetwork.MasterClient.CustomProperties["FogList"].ToString().Split(',').ToList();
+        Debug.Log("FOG LIST: " + PhotonNetwork.MasterClient.CustomProperties["FogList"].ToString());
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        
+        if (stream.IsWriting)
+        {
+            stream.SendNext(FogTypes);
+
+        }
+        else if (stream.IsReading)
+        {
+            FogTypes = (List<string>)stream.ReceiveNext();
+        }
     }
 
     public void randomizeFogTokens()

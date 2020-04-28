@@ -52,10 +52,10 @@ public class MasterManager : SingletonScriptableObject<MasterManager>
     }
 
     //    // RUN ONCE
-//    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-//    private static void PopulateNetworkedPrefabs()
-//    {
-//#if UNITY_EDITOR
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    private static void PopulateNetworkedPrefabs()
+    {
+#if UNITY_EDITOR
         //Instance._networkedPrefabs.Clear();
 
         //GameObject[] results = Resources.LoadAll<GameObject>("");
@@ -72,7 +72,6 @@ public class MasterManager : SingletonScriptableObject<MasterManager>
         //{
         //    UnityEngine.Debug.Log(Instance._networkedPrefabs[i].Prefab.name + ", " + Instance._networkedPrefabs[i].Path);
         //}
-
-//#endif
-//    }
+#endif
+    }
 }

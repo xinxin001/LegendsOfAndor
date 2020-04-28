@@ -39,5 +39,6 @@ MonoBehaviour:
   - sendMessageRPC
   - updatePosition
   - updateHero
+  - revealToken
   DisableAutoOpenWizard: 1
   ShowSettings: 1

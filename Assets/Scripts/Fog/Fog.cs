@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using CodeMonkey.Utils;
+using Photon.Pun;
 
 [RequireComponent(typeof(PolygonCollider2D))]
 
 
-public class Fog : MonoBehaviour
+public class Fog : MonoBehaviourPunCallbacks, IPunObservable
 {
     private SpriteRenderer spriteRenderer;
     private SpriteRenderer spriteR;
@@ -22,6 +23,29 @@ public class Fog : MonoBehaviour
     public Color32 hoverColor;
     public Color32 startColor;
     public Color32 emptyColor;
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            stream.SendNext(spriteRenderer);
+            stream.SendNext(spriteR);
+            stream.SendNext(isUsed);
+            stream.SendNext(fogType);
+            stream.SendNext(image);
+            stream.SendNext(hidden);
+
+        }
+        else if (stream.IsReading)
+        {
+            spriteRenderer = (SpriteRenderer)stream.ReceiveNext();
+            spriteR = (SpriteRenderer)stream.ReceiveNext();
+            isUsed = (bool)stream.ReceiveNext();
+            fogType = (string)stream.ReceiveNext();
+            image = (Sprite)stream.ReceiveNext();
+            hidden = (Sprite)stream.ReceiveNext();
+        }
+    }
 
     void Awake()
     {
@@ -42,7 +66,15 @@ public class Fog : MonoBehaviour
     public void reveal()
     {
         Debug.Log("I am here");
+        //spriteRenderer.sprite = image;
+        PhotonView photonView = PhotonView.Get(this);
+        photonView.RPC("revealToken", RpcTarget.All);
+    }
+
+    [PunRPC]
+    public void revealToken() {
         spriteRenderer.sprite = image;
+        isUsed = true;
     }
 
     public void Update()
