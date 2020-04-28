@@ -102,6 +102,7 @@ MonoBehaviour:
   willPower: 7
   numberOfDice: 0
   farmers: 0
+  rank: 0
   currentRegion: {fileID: 0}
   HeroType: Dwarf
   HeroName: 

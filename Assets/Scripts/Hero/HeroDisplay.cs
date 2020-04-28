@@ -160,6 +160,7 @@ public class HeroDisplay : MonoBehaviour
     public void controlPrinceThorald()
     {
         hero.controlPrinceThorald = !hero.controlPrinceThorald;
+
     }
 
     public void endTurn()

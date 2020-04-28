@@ -7,11 +7,6 @@ using UnityEngine;
 public class PrinceThorald : GameUnit
 {
     public int timeOfDay = 4;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     private void Update()
     {
