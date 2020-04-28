@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Narrator : MonoBehaviour
 {
+
+    public Text progressText;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,15 +17,6 @@ public class Narrator : MonoBehaviour
     void Update()
     {
         GameManager gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        if(gameManager.Narrator == GameManager.NarratorProgress.A)
-        {
-            GameObject A = GameObject.Find("A");
-            gameObject.transform.position = A.transform.position;
-        }
-        else if (gameManager.Narrator == GameManager.NarratorProgress.B)
-        {
-            GameObject B = GameObject.Find("B");
-            gameObject.transform.position = B.transform.position;
-        }
+        progressText.text = "Narrator Progress: " + gameManager.Narrator.ToString();
     }
 }
