@@ -51,8 +51,6 @@ public class MasterManager : SingletonScriptableObject<MasterManager>
         return null;
     }
 
-
-
 //    // RUN ONCE
 //    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
 //    private static void PopulateNetworkedPrefabs()
