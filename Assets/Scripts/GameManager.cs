@@ -63,6 +63,24 @@ public class GameManager : MonoBehaviourPunCallbacks
         {
             currentTurnOrder.AddLast(hero);
         }
+        Hero[] orderArray = new Hero[currentTurnOrder.Count];
+        currentTurnOrder.CopyTo(orderArray, 0);
+
+        //Sort array
+        int i = 1;
+        while(i < orderArray.Length)
+        {
+            int j = i;
+            while(j > 0 && orderArray[j-1].rank > orderArray[j].rank)
+            {
+                Hero dummy = orderArray[j];
+                orderArray[j] = orderArray[j - 1];
+                orderArray[j - 1] = dummy;
+            }
+            i++;
+        }
+        LinkedList<Hero> placeholder = new LinkedList<Hero>(orderArray);
+        currentTurnOrder = placeholder;
         currentTurnHero = currentTurnOrder.First;
         currentTurnHero.Value.currentState = Hero.HeroState.ACTION;
     }

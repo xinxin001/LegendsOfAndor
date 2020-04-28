@@ -17,6 +17,7 @@ public class Hero : MonoBehaviourPunCallbacks, IPunObservable
     public int willPower = 7;
     public int numberOfDice;
     public int farmers = 0;
+    public int rank;
     
     public GameObject currentRegion;
 
@@ -146,6 +147,7 @@ public class Hero : MonoBehaviourPunCallbacks, IPunObservable
             Hero warrior = heroTransform.GetComponent<Hero>();
             warrior.HeroName = "Thorn";
             warrior.currentRegion = spawnRegion;
+            warrior.rank = 14;
 
             HeroDisplay heroDisplay = HeroDisplay.Create(warrior);
 
@@ -159,6 +161,7 @@ public class Hero : MonoBehaviourPunCallbacks, IPunObservable
             Hero wizard = heroTransform.GetComponent<Hero>();
             wizard.HeroName = "Eara";
             wizard.currentRegion = spawnRegion;
+            wizard.rank = 34;
 
             HeroDisplay heroDisplay = HeroDisplay.Create(wizard);
 
@@ -172,6 +175,7 @@ public class Hero : MonoBehaviourPunCallbacks, IPunObservable
             Hero dwarf = heroTransform.GetComponent<Hero>();
             dwarf.HeroName = "Kram";
             dwarf.currentRegion = spawnRegion;
+            dwarf.rank = 7;
 
             HeroDisplay heroDisplay = HeroDisplay.Create(dwarf);
 
@@ -185,6 +189,7 @@ public class Hero : MonoBehaviourPunCallbacks, IPunObservable
             Hero archer = heroTransform.GetComponent<Hero>();
             archer.HeroName = "Chada";
             archer.currentRegion = spawnRegion;
+            archer.rank = 25;
 
             HeroDisplay heroDisplay = HeroDisplay.Create(archer);
 
