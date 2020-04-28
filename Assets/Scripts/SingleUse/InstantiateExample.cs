@@ -5,13 +5,13 @@ using Photon.Pun;
 using UnityEngine.UI;
 using Photon.Realtime;
 
-public class InstantiateExample : MonoBehaviourPunCallbacks
+public class InstantiateExample : MonoBehaviour
 {
     public HeroManager heroManager;
-    public GameObject archerStartingPos = GameObject.Find("14");
-    public GameObject dwarfStartingPos = GameObject.Find("7");
-    public GameObject warriorStartingPos = GameObject.Find("25");
-    public GameObject wizardStartingPos = GameObject.Find("34");
+    public GameObject archerStartingPos;
+    public GameObject dwarfStartingPos;
+    public GameObject warriorStartingPos;
+    public GameObject wizardStartingPos;
 
     [SerializeField]
     private GameObject _archer;
@@ -41,80 +41,119 @@ public class InstantiateExample : MonoBehaviourPunCallbacks
 
         string to_use = localPlayer.CustomProperties["Class"].ToString();
         HeroDisplay heroDisplay;
+        GameObject heroObj;
         PhotonView photonView = PhotonView.Get(this);
         Hero hero;
 
-        switch (to_use) {
-
-            case "ARCHER":
-                archerObj = MasterManager.NetworkInstantiate(_archer, archerStartingPos.transform.position, Quaternion.identity);
-                photonView.RPC("updateHero", RpcTarget.All, "ARCHER");
-
-                //hero = archerObj.GetComponent<Hero>();
-                //hero.currentRegion.GetComponent<RegionHandler>().region.heros.Add(hero);
-                Debug.Log("Archer spawned");
-                break;
-
-            case "DWARF":
-                dwarfObj = MasterManager.NetworkInstantiate(_dwarf, dwarfStartingPos.transform.position, Quaternion.identity);
-                photonView.RPC("updateHero", RpcTarget.All, "DWARF");
-
-                //hero = dwarfObj.GetComponent<Hero>();
-                //hero.currentRegion.GetComponent<RegionHandler>().region.heros.Add(hero);
-                Debug.Log("Dwarf spawned");
-                break;
-
-            case "WARRIOR":
-                warriorObj = MasterManager.NetworkInstantiate(_warrior, warriorStartingPos.transform.position, Quaternion.identity);
-                photonView.RPC("updateHero", RpcTarget.All, "WARRIOR");
-
-                //hero = warriorObj.GetComponent<Hero>();
-                //hero.currentRegion.GetComponent<RegionHandler>().region.heros.Add(hero);
-                Debug.Log("Warrior spawned");
-                break;
-
-            case "WIZARD":
-                wizardObj = MasterManager.NetworkInstantiate(_wizard, wizardStartingPos.transform.position, Quaternion.identity);
-                photonView.RPC("updateHero", RpcTarget.All, "WIZARD");
-
-                //hero = wizardObj.GetComponent<Hero>();
-                //hero.currentRegion.GetComponent<RegionHandler>().region.heros.Add(hero);
-                Debug.Log("Wizard spawned");
-                break;
-        }
-    }
-
-    [PunRPC]
-    public void updateHero(string heroClass) {
-        Player localPlayer = PhotonNetwork.LocalPlayer;
-        Hero hero = null;
-        switch (heroClass)
+        switch (to_use)
         {
             case "ARCHER":
-                hero = archerObj.GetComponent<Hero>();
+                heroObj = MasterManager.NetworkInstantiate(_archer, archerStartingPos.transform.position, Quaternion.identity);
+                hero = heroObj.GetComponent<Hero>();
+                hero.HeroName = localPlayer.NickName;
                 hero.currentRegion = archerStartingPos;
+                heroDisplay = HeroDisplay.Create(hero);
+                archerStartingPos.GetComponent<RegionHandler>().region.heros.Add(hero);
                 break;
-
             case "DWARF":
-                hero = dwarfObj.GetComponent<Hero>();
+                heroObj = MasterManager.NetworkInstantiate(_dwarf, dwarfStartingPos.transform.position, Quaternion.identity);
+                hero = heroObj.GetComponent<Hero>();
+                hero.HeroName = localPlayer.NickName;
                 hero.currentRegion = dwarfStartingPos;
+                heroDisplay = HeroDisplay.Create(hero);
+                dwarfStartingPos.GetComponent<RegionHandler>().region.heros.Add(hero);
                 break;
-
             case "WARRIOR":
-                hero = warriorObj.GetComponent<Hero>();
+                heroObj = MasterManager.NetworkInstantiate(_warrior, warriorStartingPos.transform.position, Quaternion.identity);
+                hero = heroObj.GetComponent<Hero>();
+                hero.HeroName = localPlayer.NickName;
                 hero.currentRegion = warriorStartingPos;
+                heroDisplay = HeroDisplay.Create(hero);
+                warriorStartingPos.GetComponent<RegionHandler>().region.heros.Add(hero);
+                break;
+            case "WIZARD":
+                heroObj = MasterManager.NetworkInstantiate(_wizard, wizardStartingPos.transform.position, Quaternion.identity);
+                hero = heroObj.GetComponent<Hero>();
+                hero.HeroName = localPlayer.NickName;
+                hero.currentRegion = wizardStartingPos;
+                heroDisplay = HeroDisplay.Create(hero);
+                wizardStartingPos.GetComponent<RegionHandler>().region.heros.Add(hero);
                 break;
 
-            case "WIZARD":
-                hero = wizardObj.GetComponent<Hero>();
-                hero.currentRegion = wizardStartingPos;
-                break;
         }
 
-        hero.HeroName = localPlayer.NickName;
-        hero.currentRegion.GetComponent<RegionHandler>().region.heros.Add(hero);
-        heroManager.AddHero(hero);
-        return;
-    }
+        //    switch (to_use)
+        //    {
 
+        //        case "ARCHER":
+        //            archerObj = MasterManager.NetworkInstantiate(_archer, archerStartingPos.transform.position, Quaternion.identity);
+        //            photonView.RPC("updateHero", RpcTarget.All, "ARCHER");
+
+        //            //hero = archerObj.GetComponent<Hero>();
+        //            //hero.currentRegion.GetComponent<RegionHandler>().region.heros.Add(hero);
+        //            Debug.Log("Archer spawned");
+        //            break;
+
+        //        case "DWARF":
+        //            dwarfObj = MasterManager.NetworkInstantiate(_dwarf, dwarfStartingPos.transform.position, Quaternion.identity);
+        //            photonView.RPC("updateHero", RpcTarget.All, "DWARF");
+
+        //            //hero = dwarfObj.GetComponent<Hero>();
+        //            //hero.currentRegion.GetComponent<RegionHandler>().region.heros.Add(hero);
+        //            Debug.Log("Dwarf spawned");
+        //            break;
+
+        //        case "WARRIOR":
+        //            warriorObj = MasterManager.NetworkInstantiate(_warrior, warriorStartingPos.transform.position, Quaternion.identity);
+        //            photonView.RPC("updateHero", RpcTarget.All, "WARRIOR");
+
+        //            //hero = warriorObj.GetComponent<Hero>();
+        //            //hero.currentRegion.GetComponent<RegionHandler>().region.heros.Add(hero);
+        //            Debug.Log("Warrior spawned");
+        //            break;
+
+        //        case "WIZARD":
+        //            wizardObj = MasterManager.NetworkInstantiate(_wizard, wizardStartingPos.transform.position, Quaternion.identity);
+        //            photonView.RPC("updateHero", RpcTarget.All, "WIZARD");
+
+        //            //hero = wizardObj.GetComponent<Hero>();
+        //            //hero.currentRegion.GetComponent<RegionHandler>().region.heros.Add(hero);
+        //            Debug.Log("Wizard spawned");
+        //            break;
+        //    }
+        //}
+
+        //[PunRPC]
+        //public void updateHero(string heroClass) {
+        //    Player localPlayer = PhotonNetwork.LocalPlayer;
+        //    Hero hero = null;
+        //    switch (heroClass)
+        //    {
+        //        case "ARCHER":
+        //            hero = archerObj.GetComponent<Hero>();
+        //            hero.currentRegion = archerStartingPos;
+        //            break;
+
+        //        case "DWARF":
+        //            hero = dwarfObj.GetComponent<Hero>();
+        //            hero.currentRegion = dwarfStartingPos;
+        //            break;
+
+        //        case "WARRIOR":
+        //            hero = warriorObj.GetComponent<Hero>();
+        //            hero.currentRegion = warriorStartingPos;
+        //            break;
+
+        //        case "WIZARD":
+        //            hero = wizardObj.GetComponent<Hero>();
+        //            hero.currentRegion = wizardStartingPos;
+        //            break;
+        //    }
+
+        //    hero.HeroName = localPlayer.NickName;
+        //    hero.currentRegion.GetComponent<RegionHandler>().region.heros.Add(hero);
+        //    heroManager.AddHero(hero);
+        //    return;
+        //}
+    }
 }
